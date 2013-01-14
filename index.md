@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: Steven Bassett.
 tagline: Nice to meet you.
 ---
