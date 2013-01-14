@@ -2,6 +2,14 @@
 html, body {
   background-color: #eee;
 }
+body{
+	padding-top: 45px;
+}
+@media (max-width: 979px){
+	body{
+		padding-top: 0;
+	}
+}
 .navbar {
   margin-bottom: 0;
 }
