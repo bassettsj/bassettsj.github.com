@@ -1,14 +1,15 @@
 ---
-title: Drupalize your  data, Using Drupal as a client for a Fedora Commons digital archive
+title: Drupalize your  data.
 layout: post
 category : Drupal Products
 tags : [Drupal, Fedora Commons, Custom Module]
-tagline :
+tagline : Lessons so far.
 ---
 {% include JB/setup %}
 
+{% excerpt %}
 After banging my head against the wall trying to figure out how to create content that works with all the wonderful Drupal API hooks, but doesn’t live within the Drupal database and filesystem. The Digital Repository Service at Northeastern University Libraries is a custom project with three components, an RESTful API that sends information about objects in the repository, an Apache Solr search index that allows for advanced search, and then my challenge, creating a Drupal based module to communicate between the two. The objects will need to be available for other modules and functions in the Drupal system. Sounds like a pretty reasonable goal right, well it has become a challenge. So much of the Drupal API is database driven, so creating a module that will utilize little of the database storage has become a challenge.
-
+{% end excerpt %}
 ### Why not use Islandora project?
 
 The University Libraries team has investigated already available systems, and decided they needed greater flexibility than the [Islandora modules](http://islandora.ca/) would provide. The project is already very mature and very complex, so we couldn’t just use a small portion of the project and then extend it from there.
