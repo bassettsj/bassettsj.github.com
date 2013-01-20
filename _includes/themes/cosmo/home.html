@@ -13,13 +13,7 @@
     	            <a href="{{ post.url }}">{{ post.title }}</a>
     	            <span>({{ post.date | date:"%Y-%m-%d" }})</span>
     	            <div>
-    	            	{% for post in site.posts %}
-    	            	    {% if post.excerpt %}
-    	            	        {{ post.excerpt | markdownify }}
-    	            	    {% else %}
-    	            	        {{ post.content }}
-    	            	    {% endif %}
-    	            	{% endfor %}
+    	            	
     	            </div>
     	    </li>
     	    
@@ -36,11 +30,3 @@
 
 </div>
 
-<div class="entry">
-  {% if excerpt and post.excerpt %}
-    {{ post.excerpt }}
-    <p> <a href="{{ post.url }}/#more" class="more-link"><span class="readmore">Read the rest of this entry »</span></a></p>
-  {% else %}
-    {{ post.content | mark_excerpt }}
-  {% endif %}
-</div>
