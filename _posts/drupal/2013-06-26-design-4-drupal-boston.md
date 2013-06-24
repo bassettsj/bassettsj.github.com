@@ -1,7 +1,7 @@
 ---
 title: "Design4Drupal - Boston 2013"
 layout: post
-category :"Confrences"
+category : "Confrences"
 tags : ["Drupal", "Front-end Development", "Design"]
 tagline : "Design Matters"
 ---
@@ -188,7 +188,10 @@ What about contrib? Well we need to contribute back to [D.O](http://drupal.org).
 
 [OpenFramework by Standford University](https://openframework.stanford.edu/)
 
-<iframe width="1280" height="720" src="http://www.youtube.com/embed/HaJnhYPLvx0" frameborder="0" allowfullscreen></iframe>
+
+[James Panton - Death of a Themer](http://www.youtube.com/embed/HaJnhYPLvx0)
+
+
 
 Code Enigma
 
@@ -196,16 +199,16 @@ Aten Design Group
 
 Centre + Prototype. Centre is used as the scaffolding. Prototype is used actually to style. 
 
-```
-- inc
-  - hook bae themplate called in template.php
-- sass
-  - base, components, layours, etc
-- Js
- -main.js, modularized Javascripts
-- layouts
- - templates and templates overrides
-```
+
+* inc
+  * hook bae themplate called in template.php
+* sass
+  * base, components, layours, etc
+* Js
+ * main.js, modularized Javascripts
+* layouts
+ * templates and templates overrides
+
 
 #### Nothing will be a one-size-fits-all solution
 
