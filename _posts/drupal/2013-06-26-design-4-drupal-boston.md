@@ -92,6 +92,7 @@ Ease of use we have.
 Ken Woodsworth
 
 [Slides on SpeakerDeck](https://speakerdeck.com/kenwoodworth/design-smarter-not-harder)
+
 Now creating a design for each page, then creating a design for each device becomes impossible. 
 
 Designing for interactions is a moving and impossible target.
