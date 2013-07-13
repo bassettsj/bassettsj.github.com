@@ -12,3 +12,6 @@ Thumbs.db
 *.sublime-*
 
 *.private
+
+node_modules
+resume_steven
