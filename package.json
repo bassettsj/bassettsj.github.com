@@ -1,0 +1,25 @@
+{
+  "name": "bassettsj.github.com",
+  "version": "0.0.0",
+  "description": "Just a personal webstie",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bassettsj/bassettsj.github.com.git"
+  },
+  "keywords": [
+    "blog",
+    "jekyll"
+  ],
+  "author": "Steven Bassett",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/bassettsj/bassettsj.github.com/issues"
+  },
+  "devDependencies": {
+    "grunt-jekyll": "~0.3.8"
+  }
+}
