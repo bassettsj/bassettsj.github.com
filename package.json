@@ -20,6 +20,7 @@
     "url": "https://github.com/bassettsj/bassettsj.github.com/issues"
   },
   "devDependencies": {
-    "grunt-jekyll": "~0.3.8"
+    "grunt-jekyll": "~0.3.8",
+    "grunt": "~0.4.1"
   }
 }
