@@ -3,7 +3,7 @@ layout: post
 category : blogging
 tags : [coffee, beer, web design, about me]
 ---
-{% include JB/setup %}
+
 
 #Hello World!
 

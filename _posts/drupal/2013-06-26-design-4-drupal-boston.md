@@ -5,7 +5,7 @@ category : "Confrences"
 tags : ["Drupal", "Front-end Development", "Design"]
 tagline : "Design Matters"
 ---
-{% include JB/setup %}
+
 
 
 

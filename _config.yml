@@ -128,4 +128,6 @@ markdown: rdiscount
 
 
 rdiscount:
-  extensions: ['smart','autolinks','footnotes' ]
+  extensions: ['smart']
+
+excerpt_separator: '{{ excerpt }}'

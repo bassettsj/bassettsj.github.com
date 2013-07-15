@@ -3,23 +3,23 @@ module.exports = function (grunt) {
   grunt.initConfig({
     //load the package.json for files
     pkg: grunt.file.readJSON('package.json'),
-    recess: {
-      dist:{
-        options: {
-            compile: true
-        },
-        files: {
-             'css/global.css'  : ['_less/global.less']
-        },
-      },
-    },
-    watch: {
-      less: {
-        files: "_less/**.less",
-        tasks: "recess:dist",
-      }
+    // recess: {
+    //   dist:{
+    //     options: {
+    //         compile: true
+    //     },
+    //     files: {
+    //          'css/global.css'  : ['_less/global.less']
+    //     },
+    //   },
+    // },
+    // watch: {
+    //   less: {
+    //     files: "_less/**.less",
+    //     tasks: "recess:dist",
+    //   }
 
-    },
+    // },
     jekyll:{
       serve:{
         options: {
@@ -30,14 +30,14 @@ module.exports = function (grunt) {
         },
       },
     },
-    copy: {
-      fontAwesome: {
-        src: '_font_awesome/font/*',
-        dest: 'font/',
-        expand: true,
-        flatten: true,
-      }
-    }
+    // copy: {
+    //   fontAwesome: {
+    //     src: '_font_awesome/font/*',
+    //     dest: 'font/',
+    //     expand: true,
+    //     flatten: true,
+    //   }
+    // }
 
 
   });
@@ -46,10 +46,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTassk('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
   //grunt.registerTask('default',  ['copy:fontAwesome','recess', 'jekyll:serve' ]);
-  grunt.registerTask('jekll-serve', ['jekyll:serve']);
+  grunt.registerTask('default', ['jekyll:serve']);
 
 };
