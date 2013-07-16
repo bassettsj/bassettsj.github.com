@@ -59,3 +59,45 @@ The launch of Drupal 7 was a perfect opportunity to begin the process of revampi
 * Filelocker 2
 * Github Enterprise and Jenkins for code management and deployment
 * Improved infrastructure
+
+### Harvard Web Publishing & OpenScholar
+
+The Harvard Web Publishing (HWP) group is a key pillar in Harvard's strategy around public websites for departments, projects, research centers, and faculty. Formed out of a strategic, collaborative effort between Harvard University Information Technology, the Institute for Quantitative Social Science, and Harvard Public Affairs and Communications, HWP provides a low-cost yet powerful solution for Web publishing needs. Our integrated, self-service platform based on OpenScholar; visual design templates; and content strategy guides help Harvard community members create an effective, attractive website with minimal effort and cost.
+ 
+In this talk, we will review the business case and demo the technology.
+ 
+Ethan Kiczek, Director, Harvard Web Publishing
+Oren Robinson, Web Application Developer, Harvard 
+
+* http://hwp.harvard.edu
+* http://openscholar.harvard.edu/
+* https://groups.drupal.org/openscholar
+* https://portland2013.drupal.org/session/openscholar-saas-platform
+
+--- 
+
+#### My Notes
+
+![Open Scholar](http://openscholar.harvard.edu/profiles/openscholar/themes/custom/openscholar_theme/images/logo.png)
+
+Decentrailized IT, Expensive, no consistency across sites, bad experiences, varying technologies, inconsistent support. 
+
+Web Publishing
+
+Simplified service catalog with serl0service and high touch options,
+Clean, consistent designs, scalable, extensable.
+
+Based on [OpenScholar](http://openscholar.harvard.edu/)
+
+Spins up quickly, maintainable by non-technical staff and features are distributed through an analogy of Apps & Widgets.
+
+Cross-Site search is possible, Custom Domains, continuously enhanced by Harvard development team, IQSS and open source community.
+
+Provides content strategy, best practices, and site quality monintoring.
+
+Project management.
+
+Classroom and online training; customized trainining is available.
+
+Support is avalable, platform sites.
+
