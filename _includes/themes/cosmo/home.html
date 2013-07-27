@@ -43,13 +43,18 @@
           </footer>
         </article>
     	  {% endfor %}
+
     </section>
+    <div>
+      <hr>
+      <a href="{{site.baseurl}}archive.html" class="btn btn-block btn-large">View More Posts in the Archive</a>
+    </div>
   </div>
-  <div class="span4">
-  	<h4>Archive</h4>
-  	{% assign posts_collate = site.posts %}
-	{% include JB/posts_collate %}
-  </div>
+  {% include components/profile.html %}
+
+
+
+
 
 </div>
 
