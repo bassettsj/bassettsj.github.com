@@ -1,7 +1,7 @@
 ---
 title: "Design4Drupal - Boston 2013"
 layout: post
-category : "Confrences"
+category : Conferences
 tags : ["Drupal", "Front-end Development", "Design"]
 tagline : "Design Matters"
 ---

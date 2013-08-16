@@ -1,6 +1,11 @@
 ---
-layout: post
-project: "ScholarOne Search"
+title: "Scholar OneSearch"
+layout: project
+tags:
+  - Libraries
+  - Catelog
+  - Reskinning
+category: projects
 tagline: "Re-skinning Northeastern University Libraries' Primo UI"
 ---
 
