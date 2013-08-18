@@ -12,7 +12,6 @@ images:
   - src: /images/nyc-camp-2013/logo-mongodb.png
     alt: mongo db image
   - src: /images/nyc-camp-2013/vagrant.png  
-
 ---
 
 
