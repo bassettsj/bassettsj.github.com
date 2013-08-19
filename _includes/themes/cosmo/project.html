@@ -8,10 +8,11 @@
   </h1>
 
 </div>
-
-{% for img in page.images %}
-  <img src="{{img.src}}" alt="{{img.alt}}" class="{{img.class}}">
-{% endfor %}
+{% if page.images != empty %}
+  {% for img in page.images %}
+    <img src="{{img.src}}" alt="{{img.alt}}" class="{{img.class}}">
+  {% endfor %}
+{% endif %}
 <div class="row">
   <div class="span8">
     {{ content }}

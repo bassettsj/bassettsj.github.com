@@ -7,11 +7,12 @@ tagline : "Design Matters"
 ---
 
 
-
+![Design for Drupal 2013](/assets/img/conferences/design-4-drupal.png){:class="img-polaroid"}
 
 ## Day 1
 
 ### Designing for a Moving Target
+
 #### RichardBanfield
 
 
