@@ -80,3 +80,17 @@ h1, h2, h3 {
 	color:#FFF;
 }
 
+.posts{
+  margin: 0 0 0 0;
+}
+
+.posts article{
+/*  border-bottom: 1px solid #eeeeee;*/
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+
+}
+.posts header{
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 0 1em 0;
+}

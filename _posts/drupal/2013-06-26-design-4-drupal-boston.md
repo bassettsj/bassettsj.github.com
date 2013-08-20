@@ -106,25 +106,27 @@ Why are we moving towards flat design? Maybe RWD.
 
 Inception Principle
 
-Design Process Process
+### Design Process Process
+
 
 1. Establish Goals
-  1. Large
-  2. Many Smaller
+    1. Large
+    2. Many Smaller
 2. Communication
-  1. Make sure that everyone knows the project goals.
-  2. Include the client in the process.
-    1. The steps, the goals and the deliverables.
-    2. Make sure the client understands the goals.
+    1. Make sure that everyone knows the project goals.
+    2. Include the client in the process.
+        1. The steps, the goals and the deliverables.
+        2. Make sure the client understands the goals.
 3. Tools
-  1. Sketching without commiting to the design, then choose a heavier line weight for cmmiting.
-  2. Paper is super helpful!
-  3. Graphic software
-    1. Photoshop, Fireworks.
-    2. Sketch
-  3. Interaction
-    1. Prototyping sofatware.
-    2. [framerjs.com](http://framerjs.com)
+    1. Sketching without commiting to the design, then choose a heavier line weight for cmmiting.
+    2. Paper is super helpful!
+    3. Graphic software
+        1. Photoshop, Fireworks.
+        2. Sketch
+    3. Interaction
+        1. Prototyping sofatware.
+        2. [framerjs.com](http://framerjs.com)
+
 
 Iterating, remove major changes.
 
@@ -153,6 +155,7 @@ Creating a great resources for frontend
 Start using this as a way to understand the layout of the components, find patterns to reuse for the front-end.
 
 ## Day 2
+
 ### Drapper Drupal 
 John Ferris & Garrett Dawson
 
