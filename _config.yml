@@ -128,8 +128,8 @@ markdown: kramdown
 excerpt_separator: '<!-- excerpt -->'
 
 flickr:
-  api_key: f6812b39c9d09148b5dc5db289974a74
-  cache_dir:       ./_cache/flickr
+  api_key:          f28d1f3539abb2b37282b0db0750c036
   shared_secret:    2f589fbc0551ca8b
+  cache_dir:       ./_cache/flickr
   access_token:     72157635181598548-dbec60675bc0065a
   access_secret:    be5e74672cae9239
