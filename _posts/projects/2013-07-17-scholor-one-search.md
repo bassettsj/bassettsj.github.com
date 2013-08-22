@@ -7,6 +7,7 @@ tags:
   - Reskinning
 category: projects
 tagline: "Re-skinning Northeastern University Libraries' Primo UI"
+flickrset: 72157635157905435
 ---
 
 
