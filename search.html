@@ -1,0 +1,22 @@
+---
+layout: page
+title: Search
+header: Posts By Tag
+group: navigation
+---
+{% include JB/setup %}
+
+<gcse:search></gcse:search>
+
+<script>
+    (function() {
+      var cx = '000320137073245507146:xuqvq1za1ik';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+          '//www.google.com/cse/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+</script>

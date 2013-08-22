@@ -999,5 +999,5 @@ a.thumbnail{background-color:#dfdfdf;}a.thumbnail:hover{background-color:#bbbbbb
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 .galleria{
-  min-height: 40em;
+  min-height: 30em;
 }

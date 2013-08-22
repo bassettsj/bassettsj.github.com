@@ -8,32 +8,34 @@
   </h1>
 
 </div>
-{% if page.flickrset %}
-  <div class="galleria" id="galleria-flickr">
-  </div><!-- /#galleria-flickr.galleria -->
-  <script src="{{site.baseurl}}assets/js/galleria/galleria-1.2.9.min.js"></script>
-  <script src="{{site.baseurl}}assets/js/galleria/plugins/flickr/galleria.flickr.min.js"></script>
-  <script>
-    $(function() {
-      Galleria.loadTheme('{{site.baseurl}}assets/js/galleria/themes/classic/galleria.classic.min.js');
-      //run the plugin itself
-      Galleria.run('#galleria-flickr', {
-      flickr: 'set:{{page.flickrset}}',
-      flickrOptions: {
-          sort: 'date-posted-asc'
-        }
-      });
-
-    });
-  </script>
-{% endif %}
-{% if page.images != empty %}
-  {% for img in page.images %}
-    <img src="{{img.src}}" alt="{{img.alt}}" class="{{img.class}}">
-  {% endfor %}
-{% endif %}
 <div class="row">
   <div class="span8">
+    {% if page.flickrset %}
+      <div class="galleria" id="galleria-flickr">
+      </div><!-- /#galleria-flickr.galleria -->
+      <script src="{{site.baseurl}}assets/js/galleria/galleria-1.2.9.min.js"></script>
+      <script src="{{site.baseurl}}assets/js/galleria/plugins/flickr/galleria.flickr.min.js"></script>
+      <script>
+        $(function() {
+          Galleria.loadTheme('{{site.baseurl}}assets/js/galleria/themes/classic/galleria.classic.min.js');
+          //run the plugin itself
+          Galleria.run('#galleria-flickr', {
+          flickr: 'set:{{page.flickrset}}',
+          flickrOptions: {
+              sort: 'date-posted-asc',
+              size: 'big',
+              description: true
+            }
+          });
+
+        });
+      </script>
+    {% endif %}
+    {% if page.images != empty %}
+      {% for img in page.images %}
+        <img src="{{img.src}}" alt="{{img.alt}}" class="{{img.class}}">
+      {% endfor %}
+    {% endif %}
     {{ content }}
     <hr>
     <div class="pagination">
