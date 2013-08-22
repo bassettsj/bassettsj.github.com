@@ -2,7 +2,7 @@
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","package.json", "Gruntfile.js","node_modules"]
 
 pygments: true
 
@@ -125,6 +125,11 @@ JB :
   # where [HELPER] is the name of the helper you are overriding.
 
 markdown: kramdown
-
-
 excerpt_separator: '<!-- excerpt -->'
+
+flickr:
+  api_key: f6812b39c9d09148b5dc5db289974a74
+  cache_dir:       ./_cache/flickr
+  shared_secret:    2f589fbc0551ca8b
+  access_token:     72157635181598548-dbec60675bc0065a
+  access_secret:    be5e74672cae9239
