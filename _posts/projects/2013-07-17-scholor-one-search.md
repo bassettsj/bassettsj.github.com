@@ -28,7 +28,7 @@ The default front-end, the html, javascript and CSS delivered to the browser, gr
 With the relative short deadline before release, it would have been nearly impossible drastically change the user-experience without the help of open-source projects. We implemented from the Front-End framework from Twitter called [Bootstrap](http://twitter.github.io/bootstrap/). The project was customized through using the project's preferred CSS preprocessor [LESS](http://lesscss.org/). Without the aid of a CSS Preprocessor the stylesheets would have been unmaintainable and the complex CSS selectors would have been nearly impossible. [Recess](http://twitter.github.io/recess/) was used to help enhance LESS by compiling and ordering the CSS with best practices automatically, can be used as a fantastic CSS linting tool as well.
 
 
-{% highlight less %}
+{% highlight css %}
 // LESS before being compiled to CSS
 
 .navbar-toggle{
@@ -44,7 +44,7 @@ With the relative short deadline before release, it would have been nearly impos
   }
 }
 {% endhighlight %}
-
+#### Compiled to
 
 {% highlight css %}
 /**  Becomes **/
