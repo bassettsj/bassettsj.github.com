@@ -7,7 +7,8 @@ tags:
   - Content First
   - Using Isotope.js
 category: projects
-tagline: "Re-skinning Northeastern University Libraries' Primo UI"
+tagline: "DMC"
+picasaAlbum: "steven.j.bassett/DMCProject"
 ---
 
 
