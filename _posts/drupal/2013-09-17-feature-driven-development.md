@@ -12,6 +12,11 @@ tagline: "How to manage configuration in Drupal Projects"
 
 <iframe src="http://slid.es/bassettsj/feature-based-development/embed" width="770" height="561" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+## KIT Specification
+
+The [KIT Feature Specification](https://drupal.org/project/kit) outlines best practices for creating features to allow them to be interoperable between projects. Read the [full specification](http://drupalcode.org/project/kit.git/blob_plain/refs/heads/master:/kitf.txt) for more details.
+
+
 ## Reading list
 
 *[Drupal Configuration Management with Features](http://www.bluespark.com/blog/drupal-configuration-management-features)*
@@ -32,3 +37,6 @@ tagline: "How to manage configuration in Drupal Projects"
 * Text Filters
 * CKEditor Settings
 * Rules and Rules Sets
+
+
+
