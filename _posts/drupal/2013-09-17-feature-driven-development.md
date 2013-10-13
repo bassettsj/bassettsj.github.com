@@ -10,7 +10,7 @@ tagline: "How to manage configuration in Drupal Projects"
 ---
 
 
-<iframe src="http://slid.es/bassettsj/feature-based-development/embed" width="770" height="561" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="http://slid.es/bassettsj/feature-based-development/embed" width="770" style="max-width: 100%;" height="561" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## KIT Specification
 
