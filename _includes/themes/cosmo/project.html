@@ -10,6 +10,10 @@
 </div>
 <div class="row">
   <div class="span8">
+
+    {% if page.coverimage %}
+      <img src="{{page.coverimage.src}}" alt="{{page.coverimage.alt}}">
+    {% endif%}
     {% if page.flickrset %}
       <div class="galleria" id="galleria-flickr">
       </div><!-- /#galleria-flickr.galleria -->

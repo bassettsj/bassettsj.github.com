@@ -1,0 +1,22 @@
+---
+layout: page
+title: Projects
+header: Posts By Tag
+group: navigation
+---
+{% include JB/setup %}
+
+
+{% for post in site.posts %}
+  {% if post.categories contains "projects" %}
+    <ul>
+      <li>
+        <a href="{{post.url}}">
+          <h3>{{post.title}}</h3>
+        </a>
+      </li>
+    </ul>
+
+
+  {% endif %}
+{% endfor %}
