@@ -1,13 +1,17 @@
 // Include all partials you want compiled to i.css. You don't need to include the _ (underscore). Hooray.
-
-@import "compass/reset";
-
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700|Vollkorn:400italic,400);
 
 @import "variables";
 @import "queries";
+@import "mixins";
 @import "normalize";
 
+// Grid
+@import "susy";
 @import "grid";
+
 @import "type";
+
+@import "components/navs";
 @import "styles";
 

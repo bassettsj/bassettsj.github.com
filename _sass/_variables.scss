@@ -1,39 +1,68 @@
-/* ==========================================================================
-   VARIABLES
+// ==========================================================================
+// VARIABLES
 
-   - Breakpoints
-      - Desktop
-      - Tablet
-   - Type Scale
-   ========================================================================== */
-   
+// - Breakpoints
+//    - Desktop
+//    - Tablet
+// - Type Scale
+// - Colors
+// ==========================================================================
 
-/* Breakpoints
-   ========================================================================== */
 
-/**
- *
- * There are two breakpoints located in /_sass/_queries.scss
- * One for tablets, and one for desktops. NKD is mobile first. 
- * This sets the range for those breakpoints. 
- * Queries are meant to be extended as needed.
- *
- */
 
-/* Desktop */
+// Grid Variables
+//   ==========================================================================
+
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+
+// Breakpoints
+//   ==========================================================================
+
+
+// Desktop
 $desktop-min-width: 1024px;
 
-/* Tablets */
+// Tablets
 $tablet-max-width: 1024px;
 $tablet-min-width: 480px;
 
 
-/* Type Scale - I always need a type-scale
-   ========================================================================== */
+// Type Scale - I always need a type-scale
+//   ==========================================================================
+$base-font-size: 18px;
 
-$font-size-1:64px;
-$font-size-2:48px;
-$font-size-3:32px;
-$font-size-4:20px; // The new black
-$font-size-5:16px;
-$font-size-6:12px; // Should only be used for text you want no one to read.
+$font-size-1: 4em;
+$font-size-2: 3em;
+$font-size-3: 2em;
+$font-size-4: 1.25em; // The new black
+$font-size-5: 1em;
+$font-size-6: 0.75em; // Should only be used for text you want no one to read.
+
+
+
+$sans-serif-font: 'Lato', sans-serif;
+$serif-font: 'Vollkorn', serif;
+
+
+// Color Pallet to use.
+//   ==========================================================================
+
+$lightTeal: rgba(162, 215, 228, 1.0);
+
+
+// Pallet from DESIGNJUNKEE
+// @link http://www.colourlovers.com/palette/1473/Ocean_Five
+
+$caribic-teal: rgba(0, 160, 176, 1.0);
+
+$caribic-brown: rgba(106, 74, 60, 1.0);
+
+$caribic-red: rgba(204, 51, 63, 1.0);
+
+$caribic-sub: rgba(235, 104, 65, 1.0);
+
+$caribic-daylight: rgba(237, 201, 81, 1.0);

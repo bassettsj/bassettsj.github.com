@@ -1,10 +1,19 @@
-/* ==========================================================================
-   GRID
-   ========================================================================== */
-
-/*
-  I use different grid systems depending on my needs, so nkd doesn't assume
-  anything here.
-*/
-   
-
+.container{
+  @include container;
+  header,
+  footer{
+    clear: both;
+  }
+  header nav{
+    @include span-columns(12,12);
+  }
+  .content{
+    @include span-columns(12,12);
+  }
+  .posts-main{
+    @include span-columns(8,12);
+  }
+  aside{
+    @include span-columns(4 omega,12);
+  }
+}

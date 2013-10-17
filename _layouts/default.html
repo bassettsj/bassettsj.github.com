@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,43 +16,35 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ site.assetPath }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ site.assetPath }}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="{{ site.assetPath }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="{{ site.assetPath }}/css/i.css" rel="stylesheet" type="text/css" media="all">
+
+
+
   </head>
 
   <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand pull-right" href="{{ HOME_PATH }}">{{site.title }}</i></a>
+    <div class="container">
+      <header>
+        <nav>
           <ul class="nav">
+            <li><a href="{{site.baseurl}}" class="title">{{site.title }}</a></li>
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
           </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-
-      <div class="content">
+        </nav>
+      </header>
+      <div class=" content">
         {{ content }}
       </div>
-
       <footer>
         <p>&copy; {{ site.author.name }} 2013
         </p>
       </footer>
 
-    </div> <!-- /container -->
-
-    <script src="{{ site.assetPath }}/bootstrap/js/bootstrap.min.js"></script>
+    </div><!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" async></script>
     <script src="{{ site.assetPath }}/js/app.js"></script>
 
     {% include JB/analytics %}

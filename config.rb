@@ -22,3 +22,6 @@ javascripts_dir = "assets/js"
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+# Required additions to Compass
+require "susy"
