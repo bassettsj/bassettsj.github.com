@@ -17,3 +17,28 @@ a{
 }
 
 
+
+
+blockquote{
+  margin: 0 auto;
+  padding-left: 2em;
+  border-left: 0.5em solid $blockquote-border-color;
+  font-style: italic;
+}
+
+
+.posts{
+  article{
+    margin-bottom: 3em;
+  }
+  header{
+    &:first-child{
+      h2{
+        margin-top: 0;
+      }
+    }
+    a{
+      color: $text-color;
+    }
+  }
+}

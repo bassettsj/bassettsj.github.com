@@ -80,9 +80,14 @@ p {
 
 .page-title{
   @extend .title;
+  margin: 0 auto 2em auto;
   text-align: center;
   color: $text-color;
   font-family: $serif-font;
+  border-bottom: 0.125em $text-color dashed;
+  h1{
+    margin: 0.5em
+  }
 }
 
 
