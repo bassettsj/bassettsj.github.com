@@ -1,9 +1,17 @@
+*, *:after, *:before {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
 .container{
-  @include container;
+  @include container($total-columns, $break);
+  //@include susy-grid-background();
   header,
   footer{
     clear: both;
   }
+  .site-header,
   header nav{
     @include span-columns(12,12);
   }
@@ -11,9 +19,13 @@
     @include span-columns(12,12);
   }
   .posts-main{
-    @include span-columns(8,12);
+    @include breakpoint(medium) {
+      @include span-columns(8,12);
+    }
   }
   aside{
-    @include span-columns(4 omega,12);
+    @include breakpoint(medium) {
+      @include span-columns(4 omega,12);
+    }
   }
 }

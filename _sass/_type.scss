@@ -25,34 +25,34 @@
 h1,
 .h1 {
   font-size: $font-size-1;
-  color: $caribic-red;
 }
 h2,
 .h2 {
   font-size: $font-size-2;
-  color: $lightTeal;
+
 }
 h3,
 .h3 {
   font-size: $font-size-3;
-  color: $lightTeal;
+
 }
 h4,
 .h4 {
   font-size: $font-size-4;
-  color: $lightTeal;
 }
 h5,
 .h5 {
   font-size: $font-size-5;
-  color: $lightTeal;
 }
 h6,
 .h6 {
   font-size: $font-size-6;
-  color: $lightTeal;
 }
 
+
+body{
+  font-family: $serif-font;
+}
 
 /* Copy
    ========================================================================== */
@@ -77,6 +77,13 @@ p {
    ========================================================================== */
 
 .title      { letter-spacing:0.1em; text-transform:uppercase;}
+
+.page-title{
+  @extend .title;
+  text-align: center;
+  color: $text-color;
+  font-family: $serif-font;
+}
 
 
 

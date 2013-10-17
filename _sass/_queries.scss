@@ -10,12 +10,12 @@
  * @include breakpoint(tablet) {
  *    .someclass {color:red;}
  * }
- *    
- * or 
- * 
+ *
+ * or
+ *
  * .someclass {
  *    @include breakpoint(desktop) {
- *      color:blue;     
+ *      color:blue;
  *    }
  * }
  *
@@ -24,13 +24,12 @@
  */
 
 @mixin breakpoint($viewport-width) {
-  @if $viewport-width == tablet {
-    @media screen 
-       and (min-width:$tablet-min-width) 
-       and (max-width:$tablet-max-width)   { @content; }
+  @if $viewport-width == medium {
+    @media screen
+       and (min-width:$medium-min-width) { @content; }
   }
-  @else if $viewport-width == desktop {
-    @media screen 
-       and (min-width:$desktop-min-width ) { @content; }
+  @else if $viewport-width == large {
+    @media screen
+       and (min-width:$large-min-width ) { @content; }
   }
 }

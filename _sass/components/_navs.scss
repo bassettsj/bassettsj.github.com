@@ -1,18 +1,74 @@
 .nav{
-  float: left;
   padding: 0;
   margin: 0.7em 0;
   list-style: none;
-  display: inline-block;
+  display: block;
+  font-family: $serif-font;
+  font-size: $font-size-4;
+  text-align: center;
   > li{
     display: inline-block;
-    float: left;
     margin: 0.25em;
     > a{
       display: block;
-      padding: 0.5em 0.2em;
+      padding: $base-padding;
       text-decoration: none;
+      color: $nav-link-color;
+      @include transition();
+      @include border-radius();
+      border: transparent solid 1px;
+      &:hover,
+      &:focus{
+        color: $nav-link-hover-color;
+        text-decoration: none;
+        border-color: $nav-link-hover-color;
+      }
     }
   }
 
+}
+.site-title{
+  font-family: $sans-serif-font;
+  display: block;
+  text-align: center;
+  font-size: $font-size-2;
+  line-height: 1.35em;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding: $base-padding;
+  color: $nav-link-color;
+  &:hover,
+  &:focus{
+    text-decoration: none;
+    color: $nav-link-color;
+  }
+  @include breakpoint(large){
+    &:hover,
+    &:focus{
+      b, span{
+        @include single-transition(all 300ms);
+        letter-spacing:0.1em;
+      }
+      span{
+        @include single-transition(all 300ms);
+        opacity: 1;
+      }
+      b{
+        font-size:inherit;
+      }
+    }
+    b, span{
+      @include single-transition(all 300ms);
+      letter-spacing: -0.5em;
+      display: inline-block
+    }
+    span{
+      opacity: 0;
+    }
+  }
+
+}
+
+.site-header{
+  border-bottom: 0.1em solid $site-header-border-color;
 }
