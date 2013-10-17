@@ -1,6 +1,64 @@
----
-theme :
-  name : cosmo
----
-{% include JB/setup %}
-{% include themes/cosmo/default.html %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}・{{site.title}}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ site.assetPath }}/images/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ site.assetPath }}/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.assetPath }}/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.assetPath }}/images/apple-touch-icon-114x114.png">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ site.assetPath }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.assetPath }}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="{{ site.assetPath }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand pull-right" href="{{ HOME_PATH }}">{{site.title }}</i></a>
+          <ul class="nav">
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <footer>
+        <p>&copy; {{ site.author.name }} 2013
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="{{ site.assetPath }}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ site.assetPath }}/js/app.js"></script>
+
+    {% include JB/analytics %}
+
+
+  </body>
+</html>

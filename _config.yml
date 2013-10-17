@@ -28,6 +28,8 @@ author :
 #
 production_url : http://bassettsj.me
 
+assetPath: /assets
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
