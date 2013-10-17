@@ -29,7 +29,9 @@ blockquote{
 
 .posts{
   article{
+    @include span-columns(9,9);
     margin-bottom: 3em;
+    border-bottom: 0.0625em solid $lightest-gray;
   }
   header{
     &:first-child{
@@ -39,6 +41,32 @@ blockquote{
     }
     a{
       color: $text-color;
+      font-style: italic;
+    }
+  }
+  footer{
+    @include span-columns(9,9);
+    font-family: $sans-serif-font;
+    div{
+      @include breakpoint(medium) {
+        @include span-columns(3,9);
+          &:last-child{
+            @include omega;
+          }
+
+        }
+    }
+
+  }
+}
+
+
+.tag-box{
+  padding: 0 0 0 0;
+  li{
+    display: inline;
+    a{
+      padding: $base-padding;
     }
   }
 }

@@ -14,7 +14,7 @@
 //   ==========================================================================
 
 $total-columns  : 12;             // a 12-column grid
-$column-width   : 4em;            // each column is 4em wide
+$column-width   : 5em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
@@ -26,7 +26,7 @@ $break: 12;
 
 $large-min-width: 60em;
 
-$medium-min-width: 50em;
+$medium-min-width: 40em;
 
 
 // Type Scale - I always need a type-scale
@@ -72,7 +72,9 @@ $light-yellow: rgb(254, 251, 241);
 $blue-chalk: rgb(170,186,216);
 $nice-teal: rgb(192, 211, 210);
 
-$body-bg: rgb(245,245,245);//$blue-chalk;//$nice-teal; //$blue-chalk;  //$caribic-brown;
+$lightest-gray: #dbdbdb;
+
+$body-bg: rgb(248,248,248);//$blue-chalk;//$nice-teal; //$blue-chalk;  //$caribic-brown;
 
 
 // Links

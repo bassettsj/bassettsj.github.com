@@ -4,6 +4,7 @@
 @-ms-viewport{width:device-width}
 @-o-viewport{width:device-width}
 @viewport{width:device-width}
+
 .container{
   @include container($total-columns, $break);
   //@include susy-grid-background();
@@ -20,12 +21,12 @@
   }
   .posts-main{
     @include breakpoint(medium) {
-      @include span-columns(8,12);
+      @include span-columns(12,12);
     }
   }
   aside{
     @include breakpoint(medium) {
-      @include span-columns(4 omega,12);
+      @include span-columns(12 omega,12);
     }
   }
 }

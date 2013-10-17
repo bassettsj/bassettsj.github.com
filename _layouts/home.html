@@ -2,26 +2,22 @@
 layout: default
 ---
 <article role="main">
-
-    <header class="page-title home">
-      <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
-    </header>
-  <div class="posts-main">
     {% if content %}
-    <section class="content">
       {{ content }}
-    </section>
     {% endif %}
     <section class="posts">
+      <header class="page-title home">
+        <h1>Recent Posts</h1>
+      </header>
         {% for post in site.posts limit: 10 %}
           <article>
             <header>
-              <h2>
+              <h3>
                 <a href="{{ post.url }}">{{ post.title }}</a>
-              </h2>
+              </h3>
             </header>
             <div>
-              {{ post.excerpt | truncatewords: 100 }}
+              {{ post.excerpt | truncatewords: 200 }}
             </div>
             <footer>
               <div class="time">
@@ -31,7 +27,7 @@ layout: default
               <div class="tags">
                 {% unless post.tags == empty %}
                   <h5>Tags</h5>
-                  <ul class="tag_box inline">
+                  <ul class="tag-box inline">
                     {% assign tags_list = post.tags %}
                     {% include JB/tags_list %}
                   </ul>
@@ -40,7 +36,7 @@ layout: default
               {% unless post.categories == empty %}
                 <div class="categories">
                   <h5>Categories</h5>
-                  <ul class="tag_box inline">
+                  <ul class="tag-box inline">
                     {% assign categories_list = post.categories %}
                     {% include JB/categories_list %}
                   </ul>
@@ -53,10 +49,8 @@ layout: default
       </section>
       <footer>
         <hr>
-        <a href="{{site.baseurl}}archive.html" class="btn btn-block btn-large">View More Posts in the Archive</a>
+        <a href="{{site.baseurl}}archive.html">View More Posts in the Archive</a>
       </footer>
-  </div>
-  {% include components/profile.html %}
 </article>
 
 

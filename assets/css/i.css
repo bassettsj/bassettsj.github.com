@@ -446,11 +446,11 @@ table {
   width: device-width;
 }
 
-/* line 7, ../../_sass/_grid.scss */
+/* line 8, ../../_sass/_grid.scss */
 .container {
   *zoom: 1;
-  max-width: 59em;
-  _width: 59em;
+  max-width: 71em;
+  _width: 71em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
@@ -462,45 +462,45 @@ table {
   display: table;
   clear: both;
 }
-@media (min-width: 59em) {
-  /* line 7, ../../_sass/_grid.scss */
+@media (min-width: 71em) {
+  /* line 8, ../../_sass/_grid.scss */
   .container {
-    max-width: 59em;
+    max-width: 71em;
   }
 }
-/* line 11, ../../_sass/_grid.scss */
+/* line 12, ../../_sass/_grid.scss */
 .container header,
 .container footer {
   clear: both;
 }
-/* line 15, ../../_sass/_grid.scss */
+/* line 16, ../../_sass/_grid.scss */
 .container .site-header,
 .container header nav {
   width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.40845%;
   display: inline;
 }
-/* line 18, ../../_sass/_grid.scss */
+/* line 19, ../../_sass/_grid.scss */
 .container .content {
   width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.40845%;
   display: inline;
 }
-@media screen and (min-width: 50em) {
-  /* line 21, ../../_sass/_grid.scss */
+@media screen and (min-width: 40em) {
+  /* line 22, ../../_sass/_grid.scss */
   .container .posts-main {
-    width: 66.10169%;
+    width: 100%;
     float: left;
-    margin-right: 1.69492%;
+    margin-right: 1.40845%;
     display: inline;
   }
 }
-@media screen and (min-width: 50em) {
-  /* line 26, ../../_sass/_grid.scss */
+@media screen and (min-width: 40em) {
+  /* line 27, ../../_sass/_grid.scss */
   .container aside {
-    width: 32.20339%;
+    width: 100%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
@@ -750,7 +750,7 @@ p {
 
 /* line 1, ../../_sass/_styles.scss */
 body {
-  background-color: whitesmoke;
+  background-color: #f8f8f8;
 }
 
 /* line 8, ../../_sass/_styles.scss */
@@ -778,13 +778,56 @@ blockquote {
 
 /* line 31, ../../_sass/_styles.scss */
 .posts article {
+  width: 100%;
+  float: left;
+  margin-right: 1.88679%;
+  display: inline;
   margin-bottom: 3em;
+  border-bottom: 0.0625em solid #dbdbdb;
 }
-/* line 36, ../../_sass/_styles.scss */
+/* line 38, ../../_sass/_styles.scss */
 .posts header:first-child h2 {
   margin-top: 0;
 }
-/* line 40, ../../_sass/_styles.scss */
+/* line 42, ../../_sass/_styles.scss */
 .posts header a {
   color: #2a2a2a;
+  font-style: italic;
+}
+/* line 47, ../../_sass/_styles.scss */
+.posts footer {
+  width: 100%;
+  float: left;
+  margin-right: 1.88679%;
+  display: inline;
+  font-family: "Lato", sans-serif;
+}
+@media screen and (min-width: 40em) {
+  /* line 50, ../../_sass/_styles.scss */
+  .posts footer div {
+    width: 32.07547%;
+    float: left;
+    margin-right: 1.88679%;
+    display: inline;
+  }
+  /* line 53, ../../_sass/_styles.scss */
+  .posts footer div:last-child {
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+  }
+}
+
+/* line 64, ../../_sass/_styles.scss */
+.tag-box {
+  padding: 0 0 0 0;
+}
+/* line 66, ../../_sass/_styles.scss */
+.tag-box li {
+  display: inline;
+}
+/* line 68, ../../_sass/_styles.scss */
+.tag-box li a {
+  padding: 0.3em 0.2em;
 }
