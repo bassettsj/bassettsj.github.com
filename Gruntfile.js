@@ -3,23 +3,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     //load the package.json for files
     pkg: grunt.file.readJSON('package.json'),
-    // recess: {
-    //   dist:{
-    //     options: {
-    //         compile: true
-    //     },
-    //     files: {
-    //          'css/global.css'  : ['_less/global.less']
-    //     },
-    //   },
-    // },
-    // watch: {
-    //   less: {
-    //     files: "_less/**.less",
-    //     tasks: "recess:dist",
-    //   }
 
-    // },
     jekyll:{
       serve:{
         options: {
@@ -30,14 +14,6 @@ module.exports = function (grunt) {
         },
       },
     },
-    // copy: {
-    //   fontAwesome: {
-    //     src: '_font_awesome/font/*',
-    //     dest: 'font/',
-    //     expand: true,
-    //     flatten: true,
-    //   }
-    // }
 
 
   });
