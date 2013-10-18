@@ -97,12 +97,18 @@
     a{
       display: inline-block;
       padding: 1.5em;
-      font-size: $font-size-3;
-      font-weight: 700;
+      font-size: $font-size-4;
+      font-weight: 800;
       font-family: $sans-serif-font;
-      color: $blue-chalk;
-      border: 1px solid $blue-chalk;
+      color: $caribic-teal;
+      border: 0.2em solid $caribic-teal;
       border-radius: 50em;
+      &:hover,
+      &:focus{
+        color: lighten($caribic-teal, 10%);
+        border: 0.2em solid lighten($caribic-teal, 10%);
+        text-decoration: none;
+      }
     }
   }
 }

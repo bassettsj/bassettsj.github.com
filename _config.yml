@@ -2,7 +2,7 @@
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","package.json", "Gruntfile.js","node_modules"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","package.json", "Gruntfile.js","node_modules", "config.rb"]
 
 pygments: true
 
@@ -27,7 +27,7 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 
-
+production_url: http://bassettsj.me
 assetPath: /assets
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
@@ -72,9 +72,9 @@ JB :
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
   #
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
+  archive_path: /archive/
+  categories_path : /search/
+  tags_path : /search/
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.

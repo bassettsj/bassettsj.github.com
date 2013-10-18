@@ -36,7 +36,9 @@ module.exports = function (grunt) {
           sassDir: '_sass',
           cssDir: 'assets/css',
           config: 'config.rb',
-          environment: 'production'
+          environment: 'production',
+          outputStyle: 'compressed',
+          force: true
         }
       }
     }
