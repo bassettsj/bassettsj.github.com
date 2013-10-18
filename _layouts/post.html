@@ -1,41 +1,37 @@
 ---
 layout: default
 ---
-<div class="page-header">
-  <h1>
-    {{ page.title }}
-    {% if page.tagline %}
-    </br>
-    <small> {{ page.tagline }} </small>
-    {% endif %}
-  </h1>
+<article class="post">
+<header class="page-title">
+    <h1>{{ page.title }}</h1>
+      {% if page.tagline %}
+      <p class="intro"> {{ page.tagline }} </p>
+      {% endif %}
 
-</div>
-
-<div class="row">
-  <div class="span8">
+  </header>
+  <div class="post-content">
     {{ content }}
-    <hr>
-    <div class="pagination">
-      <ul>
+  </div>
+  <footer>
+    <div>
+      <ul class="pagination">
       {% if page.previous %}
-        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr;</a></li>
       {% else %}
-        <li class="prev disabled"><a>&larr; Previous</a></li>
+        <li class="prev disabled"><a>&larr;</a></li>
       {% endif %}
         <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
       {% if page.next %}
-        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">&rarr;</a></li>
       {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li class="next disabled"><a>&rarr;</a>
       {% endif %}
       </ul>
     </div>
-    <hr>
-    {% include JB/comments %}
-  </div>
+      {% include JB/comments %}
+  </footer>
 
-  <div class="span4">
+  <aside>
     <h4>Published</h4>
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
 
@@ -46,6 +42,5 @@ layout: default
     {% include JB/tags_list %}
     </ul>
   {% endunless %}
-  </div>
-</div>
-
+  </aside>
+</article>

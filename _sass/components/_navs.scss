@@ -27,6 +27,12 @@
   }
 
 }
+
+.tag-box{
+  @extend .nav;
+  text-align: left;
+}
+
 .site-title{
   font-family: $sans-serif-font;
   display: block;
@@ -75,5 +81,29 @@
 .site-header{
   border-bottom: 0.1em solid $site-header-border-color;
 }
+.posts-footer a{
+  font-size: $font-size-3;
+  display: block;
+  padding: $large-padding;
+  text-align: center;
+}
 
+.pagination{
+  list-style: none;
+  padding: 0 0 0 0;
+  text-align: center;
+  li{
+    display: inline-block;
+    a{
+      display: inline-block;
+      padding: 1.5em;
+      font-size: $font-size-3;
+      font-weight: 700;
+      font-family: $sans-serif-font;
+      color: $blue-chalk;
+      border: 1px solid $blue-chalk;
+      border-radius: 50em;
+    }
+  }
+}
 

@@ -57,12 +57,14 @@ body{
 /* Copy
    ========================================================================== */
 
-.intro {  font-size: $font-size-3;}
-p {
-  font-size: $font-size-4;
+.intro {  font-size: $font-size-4;}
+p,
+time,
+ul,
+ol {
+  font-size: $font-size-5;
   @extend .serif;
 }
-
 
 
 /* Casing

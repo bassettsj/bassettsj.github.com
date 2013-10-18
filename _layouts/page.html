@@ -2,8 +2,11 @@
 layout: default
 ---
 <article>
-  <header class="title">
-    <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+  <header class="page-title">
+    <h1>{{ page.title }}</h1>
+    {% if page.tagline %}
+    <p class="intro"{{ page.tagline }}</p>
+    {% endif %}
   </header>
   <div class="page-content">
   {{ content }}

@@ -1,3 +1,9 @@
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body{
   background-color: $body-bg;
   .container{
@@ -15,9 +21,7 @@ a{
     text-decoration: underline;
   }
 }
-ol, ul{
-  font-size: 1em;
-}
+
 
 
 
@@ -58,17 +62,18 @@ blockquote{
 
         }
     }
+    h5{
+      margin-bottom: 0.5em;
+    }
 
   }
 }
 
 
-.tag-box{
-  padding: 0 0 0 0;
-  li{
-    display: inline;
-    a{
-      padding: $base-padding;
-    }
+.post{
+  footer,
+  aside{
+    margin-top: 2em;
+    border-top: 0.125em $text-color dashed;
   }
 }
