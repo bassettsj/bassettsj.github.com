@@ -1314,3 +1314,9 @@ input[type="button"]:focus {
   margin-top: 1em;
   border-top: 0.065em solid #2a2a2a;
 }
+
+/* line 135, ../../_sass/_styles.scss */
+.hightlight {
+  border-radius: 0.25em;
+  padding: 1em;
+}
