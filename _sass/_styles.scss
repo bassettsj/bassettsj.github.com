@@ -30,8 +30,51 @@ blockquote{
   padding-left: 2em;
   border-left: 0.5em solid $blockquote-border-color;
   font-style: italic;
+  font-size: $font-size-4;
 }
 
+form{
+  font-family: $sans-serif-font;
+}
+
+.form-wrapper{
+  max-width: 35em;
+  margin: 1em auto;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5em;
+  font-size: $font-size-3;
+  line-height: inherit;
+  color: $legend-color;
+  border: 0;
+  border-bottom: 1px solid $text-color;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.25em;
+  font-weight: 100;
+}
+
+input,
+textarea{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding: $medium-padding;
+  border-radius: 0.25em;
+  border: 0.06em solid lighten($text-color, 10%);
+}
+
+input[type="submit"],
+input[type="button"]{
+  background-color: transparent;
+  @include button();
+}
 
 .posts{
   article{
@@ -76,4 +119,14 @@ blockquote{
     margin-top: 2em;
     border-top: 0.125em $text-color dashed;
   }
+}
+
+.site-footer *{
+  font-family: $sans-serif-font;
+  text-align: center;
+}
+
+.site-footer{
+  margin-top: 1em;
+  border-top: 0.065em solid $text-color;
 }

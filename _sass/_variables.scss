@@ -14,7 +14,7 @@
 //   ==========================================================================
 
 $total-columns  : 12;             // a 12-column grid
-$column-width   : 5em;            // each column is 4em wide
+$column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
@@ -34,16 +34,19 @@ $medium-min-width: 40em;
 $base-font-size: 18px;
 
 $font-size-1: 3em;
-$font-size-2: 2.75em;
+$font-size-2: 2.5em;
 $font-size-3: 2em;
-$font-size-4: 1.25em; // The new black
+$font-size-4: 1.5em; // The new black
 $font-size-5: 1em;
-$font-size-6: 0.75em; // Should only be used for text you want no one to read.
+$font-size-6: 1em; // Should only be used for text you want no one to read.
 
 
 
-$sans-serif-font: 'Lato', sans-serif;
-$serif-font: 'Vollkorn', serif;
+$sans-serif-font: 'Lato', 'Helvetica Nue', sans-serif;
+$serif-font: 'Vollkorn', 'Baskerville', serif;
+
+$header-font-weight: 200;
+$header-font-family: $sans-serif-font;
 
 
 // Color Pallet to use.
@@ -77,6 +80,8 @@ $lightest-gray: #dbdbdb;
 $body-bg: rgb(248,248,248);//$blue-chalk;//$nice-teal; //$blue-chalk;  //$caribic-brown;
 
 
+$legend-color: rgb(60, 60, 60);
+
 // Links
 $link-color: $caribic-sun;
 $link-hover-color: darken( $link-color, 10%);
@@ -87,6 +92,7 @@ $blockquote-border-color: $caribic-teal;
 
 // Component Sizing
 $base-padding: 0.3em 0.2em;
+$medium-padding: 0.5em 0.4em;
 $large-padding: 1em 1em;
 
 

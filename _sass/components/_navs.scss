@@ -3,12 +3,10 @@
   margin: 0.7em 0;
   list-style: none;
   display: block;
-  font-family: $serif-font;
-  font-size: $font-size-4;
   text-align: center;
   > li{
     display: inline-block;
-    margin: 0.25em;
+    margin: 0.25em 0.25em 0.25em 0;
     > a{
       display: block;
       padding: $base-padding;
@@ -95,20 +93,7 @@
   li{
     display: inline-block;
     a{
-      display: inline-block;
-      padding: 1.5em;
-      font-size: $font-size-4;
-      font-weight: 800;
-      font-family: $sans-serif-font;
-      color: $caribic-teal;
-      border: 0.2em solid $caribic-teal;
-      border-radius: 50em;
-      &:hover,
-      &:focus{
-        color: lighten($caribic-teal, 10%);
-        border: 0.2em solid lighten($caribic-teal, 10%);
-        text-decoration: none;
-      }
+     @include button();
     }
   }
 }

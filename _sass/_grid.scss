@@ -6,27 +6,31 @@
 @viewport{width:device-width}
 
 .container{
-  @include container($total-columns, $break);
-  //@include susy-grid-background();
-  header,
-  footer{
-    clear: both;
-  }
-  .site-header,
-  header nav{
-    @include span-columns(12,12);
-  }
-  .content{
-    @include span-columns(12,12);
-  }
-  .posts-main{
-    @include breakpoint(medium) {
-      @include span-columns(12,12);
-    }
-  }
-  aside{
-    @include breakpoint(medium) {
-      @include span-columns(12 omega,12);
-    }
-  }
+   @include container($total-columns, $break);
+
+//   //@include susy-grid-background();
+//   header,
+//   footer{
+//     clear: both;
+//   }
+//   .site-header,
+//   header nav{
+//     @include span-columns(12,12);
+//   }
+//   .content{
+//     @include span-columns(12,12);
+//   }
+//   .posts-main{
+//     @include breakpoint(medium) {
+//       @include span-columns(12,12);
+//     }
+//   }
+//   aside{
+//     @include breakpoint(medium) {
+//       @include span-columns(12 omega,12);
+//     }
+//   }
 }
+
+
+
