@@ -22,7 +22,7 @@
  * It's rather lovely.
  *
  */
-/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -946,7 +946,7 @@ ol {
 /* Tracking
    ========================================================================== */
 /* line 95, ../../_sass/_type.scss */
-.title, .page-title {
+.title, .page-title, .posts header {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1258,14 +1258,13 @@ input[type="button"]:focus {
   margin-bottom: 3em;
   border-bottom: 0.0625em solid #dbdbdb;
 }
-/* line 87, ../../_sass/_styles.scss */
+/* line 88, ../../_sass/_styles.scss */
 .posts header:first-child h2 {
   margin-top: 0;
 }
-/* line 91, ../../_sass/_styles.scss */
+/* line 92, ../../_sass/_styles.scss */
 .posts header a {
   color: #2a2a2a;
-  font-style: italic;
 }
 /* line 96, ../../_sass/_styles.scss */
 .posts footer {

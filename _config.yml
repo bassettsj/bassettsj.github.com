@@ -127,4 +127,4 @@ JB :
   # where [HELPER] is the name of the helper you are overriding.
 
 markdown: kramdown
-excerpt_separator: '<!-- excerpt -->'
+exceprt: "/n/n/n"

@@ -83,6 +83,7 @@ input[type="button"]{
     border-bottom: 0.0625em solid $lightest-gray;
   }
   header{
+    @extend .title;
     &:first-child{
       h2{
         margin-top: 0;
@@ -90,7 +91,6 @@ input[type="button"]{
     }
     a{
       color: $text-color;
-      font-style: italic;
     }
   }
   footer{

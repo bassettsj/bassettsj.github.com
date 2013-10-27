@@ -2,10 +2,10 @@
 layout: post
 category : drush
 tags : [drupal, drush, git, mamp, developer tools]
+title: Drush Resources
+tagline: Site Deployment and Development: Drush, MAMP and Git
 ---
-{% include JB/setup %}
-
-#Site Deployment and Development: Drush, MAMP and Git#
+Setting up a local drupal development environment on your Mac and how to use Drush to manage and sync sites.
 
 ##Articles##
 * [Using drush to synchronize and deploy sites](https://drupal.org/node/670460)
