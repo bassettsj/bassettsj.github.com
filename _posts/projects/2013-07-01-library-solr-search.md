@@ -18,7 +18,7 @@ coverimage:
 ---
 Solr is a lucene based search technology that provides full-text searching at incredible speeds. After seeing that our production Drupal site was experiencing problems with the [Search by Page](http://drupal.org/project/search_by_page) minor update and seeing some pretty significant performance issues with a database based search, I purposed and started prototyping a solr based site search tool. 
 
-The upgrade featured spellchecking, facet based browsing and flexible result display with the views module. The search site upgrade was going to be deployed using [features](http://drupal.org/project/features); the code block below shows the features breakout of configuration for the different environments the site would be moved to.
+The upgrade featured spell checking, facet based browsing and flexible result display with the views module. The search site upgrade was going to be deployed using [features](http://drupal.org/project/features); the code block below shows the features breakout of configuration for the different environments the site would be moved to.
 
     _features 
       _search
