@@ -8,7 +8,15 @@ layout: default
       <p class="intro"> {{ page.tagline }} </p>
       {% endif %}
       {% if page.coverimage %}
-      <img src="{{page.coverimage.src}}" alt="{{page.coverimage.alt}}">
+      <figure>
+        <img src="{{page.coverimage.src}}" alt="{{page.coverimage.alt}}">
+      {% if page.coverimage.caption %}
+      <figcaption>
+        <p>{{page.coverimage.caption}}</p>
+      </figcaption>
+      {% endif%}
+
+      </figure>
       {% endif%}
   </header>
   <div class="post-content">
