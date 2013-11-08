@@ -33,7 +33,7 @@ tagline: Love Higher Ed!
 
 ### Yale
 
-Provides three basethemes based on Omega base theme, includes a yale 978 grid. HTML5 Starterkit, Omega tools
+Provides three base themes based on Omega base theme, includes a yale 978 grid. HTML5 Starterkit, Omega tools
 Delta & Content Modules for alternatve homepages layouts. 
 Clean design, with plenty of flexibility including accent colors and their own custom typeface.
 
@@ -51,7 +51,7 @@ The launch of Drupal 7 was a perfect opportunity to begin the process of revampi
 * Omega base theme: 3 flexible and mobile ready Yale Templates using Omega as the base theme.
 * Heavier use of Features module: to provide many of the common Content Types and Views – News listing, Rotating images, Calendar, Video listing, Photo Galleries – eliminating the need to manually build.
 * D7 Profile/People listing: Faculty and Staff listings are now easier to create using the People Feature that uses CAS and prepopulates user data from LDAP when adding users.
-* Improved file handling: Multiple files can be uploaded at one time, and better private file handling allows you to restrict downloading/viewing to a specific subset of users.
+* Improved file handling: Multiple files can be uploaded at one time, and better private file handling allows you to restrict downloading / viewing to a specific subset of users.
 * Restricted access: Can create private files, or restrict access to a Content Type and/or a specific node.
 * Yale-specific customizations, integrations and custom modules
 * CAS/LDAP
@@ -80,12 +80,12 @@ Oren Robinson, Web Application Developer, Harvard
 
 ![Open Scholar](http://openscholar.harvard.edu/profiles/openscholar/themes/custom/openscholar_theme/images/logo.png)
 
-Decentrailized IT, Expensive, no consistency across sites, bad experiences, varying technologies, inconsistent support. 
+Decentralized IT, Expensive, no consistency across sites, bad experiences, varying technologies, inconsistent support. 
 
 Web Publishing
 
-Simplified service catalog with serl0service and high touch options,
-Clean, consistent designs, scalable, extensable.
+Simplified service catalog.
+Clean, consistent designs, scalable, extensible.
 
 Based on [OpenScholar](http://openscholar.harvard.edu/)
 
@@ -99,5 +99,5 @@ Project management.
 
 Classroom and online training; customized trainining is available.
 
-Support is avalable, platform sites.
+Support is available, platform sites.
 

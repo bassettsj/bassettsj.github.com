@@ -1,0 +1,35 @@
+/* ==========================================================================
+   QUERIES
+
+   - Tablets
+   - Desktop
+   ========================================================================== */
+
+/**
+ * You can use this query inside or outside of a class like so
+ * @include breakpoint(tablet) {
+ *    .someclass {color:red;}
+ * }
+ *
+ * or
+ *
+ * .someclass {
+ *    @include breakpoint(desktop) {
+ *      color:blue;
+ *    }
+ * }
+ *
+ * It's rather lovely.
+ *
+ */
+
+@mixin breakpoint($viewport-width) {
+  @if $viewport-width == medium {
+    @media screen
+       and (min-width:$medium-min-width) { @content; }
+  }
+  @else if $viewport-width == large {
+    @media screen
+       and (min-width:$large-min-width ) { @content; }
+  }
+}

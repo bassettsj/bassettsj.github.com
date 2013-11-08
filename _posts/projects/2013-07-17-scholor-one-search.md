@@ -7,7 +7,10 @@ tags:
   - Reskinning
 category: projects
 tagline: "Re-skinning Northeastern University Libraries' Primo UI"
-flickrset: 72157635157905435
+flickrset: 72157635186173471
+coverimage:
+  src: "/assets/img/projects/scholar-onesearch/sos-coverimage%402x.png"
+  alt: "The minuteman screen shots of the homepage, responsive layout on small screens, the history gallery and tournament schedule"
 ---
 
 
@@ -43,8 +46,10 @@ With the relative short deadline before release, it would have been nearly impos
     background-color: @navbar-toggle-bg-hover;
   }
 }
+{% endhighlight %}
+#### Compiled to
 
-
+{% highlight css %}
 /**  Becomes **/
 
 

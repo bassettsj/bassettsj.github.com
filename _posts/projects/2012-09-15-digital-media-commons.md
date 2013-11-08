@@ -7,11 +7,8 @@ tags:
   - Content First
   - Using Isotope.js
 category: projects
-tagline: "Re-skinning Northeastern University Libraries' Primo UI"
-images: 
-  - src: /images/nyc-camp-2013/logo-mongodb.png
-    alt: mongo db image
-  - src: /images/nyc-camp-2013/vagrant.png  
+tagline: "DMC"
+picasaAlbum: "steven.j.bassett/DMCProject"
 ---
 
 

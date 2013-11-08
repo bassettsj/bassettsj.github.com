@@ -1,5 +1,55 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/cosmo/home.html %}
+<article role="main">
+    {% if content %}
+      {{ content }}
+    {% endif %}
+    <section class="posts">
+      <header class="page-title home">
+        <h1>Recent Posts</h1>
+      </header>
+        {% for post in site.posts limit: 10 %}
+          <article>
+            <header>
+              <h3>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </h3>
+            </header>
+            <div>
+              {{ post.excerpt | truncatewords: 200 }}
+            </div>
+            <footer>
+              <div class="time">
+                <h5>Published</h5>
+                <time>{{ post.date | date_to_long_string }}</time>
+              </div>
+              <div class="tags">
+                {% unless post.tags == empty %}
+                  <h5>Tags</h5>
+                  <ul class="tag-box inline">
+                    {% assign tags_list = post.tags %}
+                    {% include JB/tags_list %}
+                  </ul>
+                {% endunless %}
+              </div>
+              {% unless post.categories == empty %}
+                <div class="categories">
+                  <h5>Categories</h5>
+                  <ul class="tag-box inline">
+                    {% assign categories_list = post.categories %}
+                    {% include JB/categories_list %}
+                  </ul>
+              </div>
+              {% endunless %}
+            </footer>
+          </article>
+          {% endfor %}
+
+      </section>
+      <footer class="posts-footer">
+        <a href="{{site.baseurl}}archive">View More Posts in the Archive</a>
+      </footer>
+</article>
+
+

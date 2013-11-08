@@ -2,7 +2,7 @@
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:year/:month/:day/:title
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","package.json", "Gruntfile.js","node_modules"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","package.json", "Gruntfile.js","node_modules", "config.rb"]
 
 pygments: true
 
@@ -26,7 +26,9 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://bassettsj.github.io
+
+production_url: http://bassettsj.me
+assetPath: /assets
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -70,9 +72,9 @@ JB :
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
   #
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
+  archive_path: /archive/
+  categories_path : /search/
+  tags_path : /search/
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -125,11 +127,4 @@ JB :
   # where [HELPER] is the name of the helper you are overriding.
 
 markdown: kramdown
-excerpt_separator: '<!-- excerpt -->'
-
-flickr:
-  api_key:          f28d1f3539abb2b37282b0db0750c036
-  shared_secret:    2f589fbc0551ca8b
-  cache_dir:       ./_cache/flickr
-  access_token:     72157635181598548-dbec60675bc0065a
-  access_secret:    be5e74672cae9239
+exceprt: "/n/n/n"

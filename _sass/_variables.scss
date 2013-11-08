@@ -1,0 +1,109 @@
+// ==========================================================================
+// VARIABLES
+
+// - Breakpoints
+//    - Desktop
+//    - Tablet
+// - Type Scale
+// - Colors
+// ==========================================================================
+
+
+
+// Grid Variables
+//   ==========================================================================
+
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+$break: 12;
+
+
+// Breakpoints
+//   ==========================================================================
+
+$large-min-width: 60em;
+
+$medium-min-width: 40em;
+
+
+// Type Scale - I always need a type-scale
+//   ==========================================================================
+$base-font-size: 18px;
+
+$font-size-1: 3em;
+$font-size-2: 2.5em;
+$font-size-3: 2em;
+$font-size-4: 1.5em; // The new black
+$font-size-5: 1em;
+$font-size-6: 1em; // Should only be used for text you want no one to read.
+
+
+
+$sans-serif-font: 'Lato', 'Helvetica Nue', sans-serif;
+$serif-font: 'Vollkorn', 'Baskerville', serif;
+
+$header-font-weight: 200;
+$header-font-family: $sans-serif-font;
+
+
+// Color Pallet to use.
+//   ==========================================================================
+
+$text-color: rgba(42,42,42, 1.0);
+
+$lightTeal: rgba(162, 215, 228, 1.0);
+
+
+// Pallet from DESIGNJUNKEE
+// @link http://www.colourlovers.com/palette/1473/Ocean_Five
+
+$caribic-teal: rgba(0, 160, 176, 1.0);
+
+$caribic-brown: rgba(106, 74, 60, 1.0);
+
+$caribic-red: rgba(204, 51, 63, 1.0);
+
+$caribic-sun: rgba(235, 104, 65, 1.0);
+
+$caribic-daylight: rgba(237, 201, 81, 1.0);
+
+$light-yellow: rgb(254, 251, 241);
+
+$blue-chalk: rgb(170,186,216);
+$nice-teal: rgb(192, 211, 210);
+
+$lightest-gray: #dbdbdb;
+
+$body-bg: rgb(248,248,248);//$blue-chalk;//$nice-teal; //$blue-chalk;  //$caribic-brown;
+
+
+$legend-color: rgb(60, 60, 60);
+
+// Links
+$link-color: $caribic-sun;
+$link-hover-color: darken( $link-color, 10%);
+
+
+// Blockquote
+$blockquote-border-color: $caribic-teal;
+
+// Component Sizing
+$base-padding: 0.3em 0.2em;
+$medium-padding: 0.5em 0.4em;
+$large-padding: 1em 1em;
+
+
+// Navs
+$nav-link-color: $text-color;
+$nav-link-hover-color: $caribic-sun;
+
+
+
+// Site Header
+$site-header-border-color: $text-color;
+$default-transition-duration: 300ms;
+
+

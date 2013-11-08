@@ -10,6 +10,10 @@
 </div>
 <div class="row">
   <div class="span8">
+
+    {% if page.coverimage %}
+      <img src="{{page.coverimage.src}}" alt="{{page.coverimage.alt}}">
+    {% endif%}
     {% if page.flickrset %}
       <div class="galleria" id="galleria-flickr">
       </div><!-- /#galleria-flickr.galleria -->
@@ -25,6 +29,26 @@
               sort: 'date-posted-asc',
               size: 'big',
               description: true
+            }
+          });
+
+        });
+      </script>
+    {% endif %}
+    {% if page.picasaAlbum %}
+      <div class="galleria" id="galleria-picasa">
+      </div><!-- /#galleria-picasa.galleria -->
+      <script src="{{site.baseurl}}assets/js/galleria/galleria-1.2.9.min.js"></script>
+      <script src="{{site.baseurl}}assets/js/galleria/plugins/picasa/galleria.picasa.min.js"></script>
+      <script>
+        $(function() {
+          Galleria.loadTheme('{{site.baseurl}}assets/js/galleria/themes/classic/galleria.classic.min.js');
+          //run the plugin itself
+          Galleria.run('#galleria-picasa', {
+          picasa:'useralbum:{{ page.picasaAlbum }}',
+          picasaOptions: {
+              sort: 'date-posted-asc',
+              size: 'big',
             }
           });
 
@@ -63,7 +87,7 @@
 
   {% unless page.tags == empty %}
     <h4>Tags</h4>
-    <ul class="tag_box">
+    <ul class="tag-box">
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
     </ul>

@@ -16,3 +16,4 @@ Thumbs.db
 node_modules
 resume_steven
 _cache/flickr/*
+.sass-cache

@@ -1,6 +1,22 @@
----
-theme :
-  name : cosmo
----
-{% include JB/setup %}
-{% include themes/cosmo/default.html %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include _head.html%}
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <nav>
+          <a href="{{site.baseurl}}" class="site-title">
+            <b>S</b><span>teven Bassett</span>
+          </a>
+          {% include primary-nav.html %}
+        </nav>
+      </header>
+      <div class=" content">
+        {{ content }}
+      </div>
+      {% include _footer.html %}
+
+    </div><!-- /container -->
+    {% include _js.html %}
+  </body>
+</html>
