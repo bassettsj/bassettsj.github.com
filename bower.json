@@ -1,0 +1,27 @@
+{
+  "name": "bassettsj.github.com",
+  "version": "0.2.13",
+  "homepage": "bassettsj.me",
+  "authors": [
+    "Steven Bassett <steven.j.bassett@gmail.com>"
+  ],
+  "description": "My personal blog about Code, Design, Urban Plannin, and other nerdy things",
+  "main": "_config.yml",
+  "keywords": [
+    "Jekyll",
+    "blog",
+    "fitText"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/_bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "requirejs": "~2.1.9"
+  }
+}
