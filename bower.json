@@ -22,6 +22,7 @@
     "tests"
   ],
   "devDependencies": {
-    "requirejs": "~2.1.9"
+    "requirejs": "~2.1.9",
+    "FitText.js": "*"
   }
 }
