@@ -10,7 +10,12 @@ layout: default
         <h1>Recent Posts</h1>
       </header>
         {% for post in site.posts limit: 10 %}
-          <article>
+          <article class="site-post">
+            {% if post.coverimage %}
+            <figure class="site-post-cover-img">
+              <img src="{{ post.coverimage.src }}" class="" alt="{{  post.coverimage.alt }}">
+            </figure>
+            {% endif %}
             <header>
               <h3>
                 <a href="{{ post.url }}">{{ post.title }}</a>

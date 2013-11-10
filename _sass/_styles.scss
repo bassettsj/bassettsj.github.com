@@ -136,3 +136,13 @@ input[type="button"]{
   border-radius: 0.25em;
   padding: 1em;
 }
+
+.site-post-cover-img{
+  max-width: 35em;
+  margin: 1em auto;
+  img{
+     border-radius: 0.5em;
+     border: 0.25em solid $text-color;
+  }
+
+}
