@@ -1,9 +1,11 @@
 ---
-layout: page
+layout: profile
 title: Info
 group: navigation
 ---
 ### About me
+![Profile image of Steven](/assets/img/about/profile.png){: .img-rounded .img-left}
+
 When I am not working and learning about the web you can find me drinking a beer, going on a run or practicing yoga. I am a Colorado native living in Boston, MASS since 2011. I am passionate about creating *meaningful* web experiences with a focus on open-source technology and web design. I have ambitions to live in the San Francisco in the upcoming years. 
 
   <div class="form-wrapper">
