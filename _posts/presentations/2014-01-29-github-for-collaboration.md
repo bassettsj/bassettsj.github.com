@@ -12,4 +12,4 @@ tags:
 Created a [short presentation](http://bassettsj.me/github-allstaff-presentation) using Reveal.js on how our library is using Github for projects.
 
 
-<iframe src="http://bassettsj.me/github-allstaff-presentation" width="100%" height="auto"></iframe>
+<iframe src="http://bassettsj.me/github-allstaff-presentation" width="100%" height="500"></iframe>
