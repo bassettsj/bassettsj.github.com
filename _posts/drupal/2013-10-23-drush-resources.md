@@ -6,9 +6,9 @@ title: Drush Resources
 tagline: Site Deployment and Development: Drush, MAMP and Git
 ---
 
-Setting up a local drupal development environment on your Mac and how to use Drush to manage and sync sites.
+Setting up a local Drupal development environment on your Mac and how to use Drush to manage and sync sites.
 
-##Articles##
+## Articles 
 * [Using drush to synchronize and deploy sites](https://drupal.org/node/670460)
 * [A Drupal Development Environment on OS X with MAMP Pro, Eclipse, xDebug, and Drush](http://brianfisher.name/content/drupal-development-environment-os-x-mamp-pro-eclipse-xdebug-and-drush)
 * [getting drush to work on a MAMP setup](https://drupal.org/node/601604)
