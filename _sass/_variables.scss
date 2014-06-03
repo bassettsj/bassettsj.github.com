@@ -12,13 +12,11 @@
 
 // Grid Variables
 //   ==========================================================================
+$susy: (
+  columns: 12,  // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+);
 
-$total-columns  : 12;             // a 12-column grid
-$column-width   : 4em;            // each column is 4em wide
-$gutter-width   : 1em;            // 1em gutters between columns
-$grid-padding   : $gutter-width;  // grid-padding equal to gutters
-
-$break: 12;
 
 
 // Breakpoints
@@ -31,7 +29,9 @@ $medium-min-width: 40em;
 
 // Type Scale - I always need a type-scale
 //   ==========================================================================
-$base-font-size: 18px;
+$base-font-size: 14px;
+$base-font-size-md: 16px;
+$base-font-size-lg: 18px;
 
 $font-size-1: 3em;
 $font-size-2: 2.5em;
@@ -105,5 +105,3 @@ $nav-link-hover-color: $caribic-sun;
 // Site Header
 $site-header-border-color: $text-color;
 $default-transition-duration: 300ms;
-
-

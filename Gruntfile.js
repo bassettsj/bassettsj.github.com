@@ -5,55 +5,61 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jekyll:{
+      options: {
+        bundleExec: true
+      },
       serve:{
         options: {
-          config: ['_config.yml'],
-          server: true,
-          baseurl: "/",
-          watch: true,
+          config: ['_config.yml','_config_dev.yml'],
+          serve: true,
+          watch: true
         },
       },
     },
     watch:{
       sass:{
         files: ['_sass/**/*.scss'],
-        tasks: ['compass:devel'],
+        tasks: ['sass:scss', 'autoprefixer', 'cssmin'],
         options: {
               livereload: true,
             },
       },
     },
-    compass:{
-      devel:{
+    sass: {
+      scss: {
+        files: {
+          'assets/css/i.css':'_sass/i.scss'
+        },
         options: {
-          sassDir: '_sass',
-          cssDir: 'assets/css',
-          config: 'config.rb'
+          bundleExec: true,
+          sourcemap: true,
+          loadPath: ['./assets/bower_components']
         }
-      },
-      prod:{
-        options: {
-          sassDir: '_sass',
-          cssDir: 'assets/css',
-          config: 'config.rb',
-          environment: 'production',
-          outputStyle: 'compressed',
-          force: true
-        }
+      }
+    },
+    autoprefixer: {
+      styles: {
+        src: ['assets/css/i.css']
+      }
+    },
+    cssmin:{
+      styles: {
+        cwd: 'assets/css/',
+        src: ['**/*.css', '!**/*.min.css'],
+        dest:  'assets/css/',
+        ext: '.min.css',
+        flatten: true,
+        expand: true
       }
     }
 
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  require('load-grunt-tasks')(grunt);
 
 
-  //grunt.registerTask('default',  ['copy:fontAwesome','recess', 'jekyll:serve' ]);
-  grunt.registerTask('default', ['jekyll:serve']);
+  grunt.registerTask('default',  ['sass', 'autoprefixer', 'cssmin' , 'jekyll:serve' ]);
+  grunt.registerTask('serve', ['jekyll:serve', 'watch']);
 
 };

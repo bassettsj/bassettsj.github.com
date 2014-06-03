@@ -11,6 +11,15 @@ body{
   line-height: 1.5;
 }
 
+body{
+  font-size: $base-font-size;
+  @include breakpoint('medium'){
+    font-size: $base-font-size-md;
+  }
+  @include breakpoint('large'){
+    font-size: $base-font-size-lg;
+  }
+}
 
 
 .serif      {
@@ -132,7 +141,3 @@ ol {
 .lh-2       { line-height:2; }
 .lh-title   { line-height:1.3; }
 .lh-copy    { line-height:1.5; }
-
-
-
-

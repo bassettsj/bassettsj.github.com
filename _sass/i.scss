@@ -2,14 +2,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400|Vollkorn:400italic,400);
 
 
-@import "compass/css3";
 @import "variables";
 @import "queries";
 @import "mixins";
 @import "normalize";
 
 // Grid
-@import "susy";
+@import 'susy/sass/susy';
 @import "grid";
 
 @import "syntax";
@@ -18,4 +17,3 @@
 
 @import "components/navs";
 @import "styles";
-

@@ -6,7 +6,7 @@
     "Steven Bassett <steven.j.bassett@gmail.com>"
   ],
   "description": "My personal blog about Code, Design, Urban Plannin, and other nerdy things",
-  "main": "_config.yml",
+  "main": "index.html",
   "keywords": [
     "Jekyll",
     "blog",
@@ -19,10 +19,12 @@
     "bower_components",
     "app/_bower_components",
     "test",
-    "tests"
+    "tests",
+    "assets/bower_components"
   ],
   "devDependencies": {
     "requirejs": "~2.1.9",
-    "FitText.js": "*"
+    "FitText.js": "*",
+    "susy": "~2.1.2"
   }
 }

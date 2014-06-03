@@ -17,3 +17,6 @@ node_modules
 resume_steven
 _cache/flickr/*
 .sass-cache
+
+
+assets/bower_components/susy/
