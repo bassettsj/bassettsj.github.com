@@ -6,7 +6,7 @@
 
 .container{
   @include container(60em);
-  padding: 0 2em;
+  padding: 0 1.5em;
   @media (min-width: 60em){
     padding: 0 0;
   }

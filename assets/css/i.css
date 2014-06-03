@@ -362,7 +362,7 @@ table {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 2em; }
+  padding: 0 1.5em; }
   .container:after {
     content: " ";
     display: block;

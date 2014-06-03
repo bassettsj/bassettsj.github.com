@@ -29,3 +29,9 @@ How can we eleminate steps in the user journey in buying a t-shirt. If we can ad
 - Themeing
 - Twig, HTML5, Modernizr
 - Deployment: Configuration management
+
+## Browser eyeballing != javascript testing
+
+Jasmine, qunit, blah, blah
+
+Use grunt for CI stuff 
