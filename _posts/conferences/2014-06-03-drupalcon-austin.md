@@ -34,4 +34,28 @@ How can we eleminate steps in the user journey in buying a t-shirt. If we can ad
 
 Jasmine, qunit, blah, blah
 
-Use grunt for CI stuff 
+Use grunt for CI stuff
+
+
+### Build a Drupal Free Theme with Drupal 8 's Rest API's and JS
+
+Themeing for Drupal sucks...
+
+[Slides](http://rcaracaus.github.io/dc-austin-dft/)
+
+
+- What if we could have semantic hmtl? or have scalable CSS?
+
+> RAW DATA PLEASE!?
+
+Web services and REST.
+
+D8 provides:
+
+- HAL
+- HTTP Basic Authentication
+- Serialization
+
+[POSTman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en)
+
+## Cacheing Deep Dive.
