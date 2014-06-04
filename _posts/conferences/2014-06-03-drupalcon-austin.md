@@ -58,4 +58,23 @@ D8 provides:
 
 [POSTman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en)
 
-## Cacheing Deep Dive.
+## OO Render
+
+The theme system in Drupal sucks, again...
+
+
+The render system is complicated, and it is because it is just an array based system. Drillability is something we cannot do with Drupal 8.
+
+`drupal_render().` = we create a big array of stuff, eat it and return a string of HTML.
+
+It is called a lot, up to 8 recurses and 200 times.
+
+#### What do we need?
+
+I. An abstracted, alterable , consistent me=odel of structured content.
+II. A sensible, accessible API for this model.
+
+
+### Layout design patters.
+
+[@pixel_whip](http://twitter.com/pixel_whip)
