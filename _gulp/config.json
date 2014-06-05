@@ -1,8 +1,9 @@
 {
   "env" : "production",
   "paths" : {
-    "build" : "./assets",
+    "assets" : "./assets",
     "scripts" : "./_src/**/*.coffee",
-    "scss" : [  "./_sass/*.scss", "!./_sass/_*.scss"]
+    "scss" : [  "./_sass/*.scss", "!./_sass/_*.scss"],
+    "jekyll": ["./**/*.{html|md|markdown}"]
   }
 }

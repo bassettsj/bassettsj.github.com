@@ -9,8 +9,7 @@
   "main": "index.html",
   "keywords": [
     "Jekyll",
-    "blog",
-    "fitText"
+    "blog"
   ],
   "license": "MIT",
   "ignore": [
@@ -23,8 +22,6 @@
     "assets/bower_components"
   ],
   "devDependencies": {
-    "requirejs": "~2.1.9",
-    "FitText.js": "*",
     "susy": "~2.1.2"
   }
 }

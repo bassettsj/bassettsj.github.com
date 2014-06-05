@@ -14,5 +14,5 @@ module.exports = ( gulp ) ->
         .pipe(
           if isProd then uglify()
           )
-        .pipe(gulp.dest( config.paths.build + '/js'))
+        .pipe(gulp.dest( config.paths.assets + '/js'))
   )

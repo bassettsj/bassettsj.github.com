@@ -13,6 +13,22 @@ require('./jekyll.coffee')(gulp)
 require('./server.coffee').server(gulp)
 require('./server.coffee').reload(gulp)
 
+gulp.task('watch', [
+  'watchStyles'
+  'watchJekyll'
+  'watchScripts'
+  'watchHtml'
+  'watchAssets'
+  ])
+gulp.task('watchStyles', ->
+  gulp.watch([config.paths.scss], ['styles'])
+)
+gulp.task('watchJekyll', ->
+  gulp.watch([config.paths.jekyll], ['jekyll'])
+)
 
+gulp.task('watchScripts', ->
+  gulp.watch([config.paths.scripts], ['scripts'])
+)
 
-gulp.task('default',['styles', 'scripts', 'jekyll', 'server', 'watchJekyll'] )
+gulp.task('default',['styles', 'scripts', 'jekyll', 'server', 'watch'] )
