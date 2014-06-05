@@ -1,3 +1,8 @@
 {
-  "env" : "production"
+  "env" : "production",
+  "paths" : {
+    "build" : "./assets",
+    "scripts" : "./_src/**/*.coffee",
+    "scss" : [  "./_sass/*.scss", "!./_sass/_*.scss"]
+  }
 }

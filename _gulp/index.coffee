@@ -1,57 +1,18 @@
 gulp = require('gulp')
-_ = require('underscore')
-coffee = require('gulp-coffee')
-uglify = require('gulp-uglify')
-concat = require('gulp-concat')
-sass = require('gulp-ruby-sass')
-prefix = require('gulp-autoprefixer')
-cssmin = require('gulp-cssmin')
 
-fs = require('fs')
-
+cp = require('child_process')
+gutil = require('gulp-util')
 pkg  = require('./../package.json')
-
 config = require('./config.json')
+connect = require('gulp-connect')
+
+
+require('./scripts.coffee')(gulp)
+require('./styles.coffee')(gulp)
+require('./jekyll.coffee')(gulp)
+require('./server.coffee').server(gulp)
+require('./server.coffee').reload(gulp)
 
 
 
-
-
-paths ={
-  scripts: './_src/**/*.coffee'
-  scss: [
-    './_sass/*.scss'
-    '!./_sass/_*.scss'
-  ]
-}
-
-isProd = ( config.env == 'production' )
-
-gulp.task(
-  'scripts', ->
-    gulp.src(paths.scripts)
-      .pipe(coffee())
-      .pipe(concat( pkg.name + '.pkg.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('build/js'))
-
-
-
-)
-
-
-
-gulp.task(
-  'styles', ->
-    gulp.src(paths.scss)
-      .pipe(sass({
-        loadPath: ['./assets/bower_components']
-        bundleExec: true
-        sourcemap: true
-      }))
-      .pipe(prefix())
-      .pipe(if cssmin())
-      .pipe(gulp.dest('./assets/css/'))
-)
-
-gulp.task('default',['styles', 'scripts'] )
+gulp.task('default',['styles', 'scripts', 'jekyll', 'server', 'watchJekyll'] )
