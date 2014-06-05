@@ -1,5 +1,6 @@
 'use strict';
 module.exports = function (grunt) {
+  require('time-grunt')(grunt);
   grunt.initConfig({
     //load the package.json for files
     pkg: grunt.file.readJSON('package.json'),
@@ -59,7 +60,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
 
-  grunt.registerTask('default',  ['sass', 'autoprefixer', 'cssmin' , 'jekyll:serve' ]);
+  grunt.registerTask('default',  ['sass', 'autoprefixer', 'cssmin' ]);
   grunt.registerTask('serve', ['jekyll:serve', 'watch']);
 
 };

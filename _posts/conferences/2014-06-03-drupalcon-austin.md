@@ -78,3 +78,8 @@ II. A sensible, accessible API for this model.
 ### Layout design patters.
 
 [@pixel_whip](http://twitter.com/pixel_whip)
+
+Common solutions
+
+
+### Themeing with Twig
