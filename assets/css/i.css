@@ -750,6 +750,12 @@ ol {
 .lh-copy {
   line-height: 1.5; }
 
+code,
+pre {
+  background-color: #ffffff;
+  color: #333;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+
 .nav, .tag-box {
   padding: 0;
   margin: 0.7em 0;

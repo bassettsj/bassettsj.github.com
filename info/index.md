@@ -6,7 +6,7 @@ group: navigation
 ### About me
 ![Profile image of Steven](/assets/img/about/profile.png){: .img-rounded .img-left}
 
-When I am not working and learning about the web you can find me drinking a beer, going on a run or practicing yoga. I am a Colorado native living in Boston, MASS since 2011. I am passionate about creating *meaningful* web experiences with a focus on open-source technology and web design. I have ambitions to live in the San Francisco in the upcoming years. 
+When I am not working and learning about the web you can find me drinking a beer, going on a run or practicing yoga. I am a Colorado native living in San Francisco, California. I am an experienced fullstack developer with a passion for javascript and the flexibility it can bring to projects. 
 
   <div class="form-wrapper">
     <form action="http://getsimpleform.com/messages?form_api_token=4fa7ddc0ffabd797002a05f4ef9bf5c6" method="post" class="block-form">
@@ -21,5 +21,3 @@ When I am not working and learning about the web you can find me drinking a beer
       <input type='submit' value='Submit' class="btn"  />
     </form>
   </div>
-
-

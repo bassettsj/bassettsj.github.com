@@ -3,7 +3,7 @@
   "paths" : {
     "assets" : "./assets",
     "scripts" : "./_src/**/*.coffee",
-    "scss" : [  "./_sass/*.scss", "!./_sass/_*.scss"],
-    "jekyll": ["./**/*.{html|md|markdown}"]
+    "scss" : [  "./_sass/**/*.scss"],
+    "jekyll": [ "./_posts/**/*.md"]
   }
 }

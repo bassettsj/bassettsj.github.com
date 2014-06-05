@@ -7,7 +7,7 @@ module.exports = (gulp) ->
     , ->
       jekyll = cp.spawn('jekyll'
         , [
-          'build --config _config.yml,_config_dev.yml'
+          'build'
         ]
       )
 
@@ -15,7 +15,7 @@ module.exports = (gulp) ->
         console.log( 'jekyll: ' + data )
       )
       jekyll.stderr.on('data', (data)->
-        error = new gutil.PluginError('jekyll', data )
+        error = new gutil.PluginError('jekyll', 'Jekyll errored with : ' + data )
       )
 
 

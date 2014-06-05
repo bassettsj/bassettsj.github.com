@@ -9,17 +9,10 @@ exports.server = (gulp) ->
   )
 
 exports.reload = (gulp) ->
-  gulp.task('reloadHtml', ->
-    gulp.src('_site/**/*.html')
-      .pipe(connect.reload())
-  )
-  gulp.task('watchHtml', ->
-    gulp.watch(['_site/**/*.html'], ['reloadHtml'])
-  )
   gulp.task('watchAssets', ->
-    gulp.watch(['_site/assets/**/*'], ['reloadAssets'])
+    gulp.watch(['_site/assets/{js,css}/**/*.{js,css}'], ['reloadAssets'])
   )
   gulp.task('reloadAssets', ->
-    gulp.src('_site/assets/**/*')
+    gulp.src(['_site/assets/{js,css}/**/*.{js,css}'])
       .pipe(connect.reload())
     )
