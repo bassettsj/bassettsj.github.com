@@ -19,4 +19,4 @@ _cache/flickr/*
 .sass-cache
 
 
-assets/bower_components/susy/
+bower_components

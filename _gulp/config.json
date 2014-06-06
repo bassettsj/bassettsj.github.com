@@ -2,7 +2,7 @@
   "env" : "production",
   "paths" : {
     "assets" : "./assets",
-    "scripts" : "./_src/**/*.coffee",
+    "scriptMain" : "./_src/index.coffee",
     "scss" : [  "./_sass/**/*.scss"],
     "jekyll": [ "./_posts/**/*.md"]
   }

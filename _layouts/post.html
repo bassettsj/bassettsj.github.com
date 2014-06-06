@@ -18,13 +18,13 @@ layout: default
       {% if page.previous %}
         <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr;</a></li>
       {% else %}
-        <li class="prev disabled"><a>&larr;</a></li>
+        <li class="prev"><a href="#" disabled="true">&larr;</a></li>
       {% endif %}
         <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
       {% if page.next %}
         <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">&rarr;</a></li>
       {% else %}
-        <li class="next disabled"><a>&rarr;</a>
+        <li class="next"><a href="#" disabled="true">&rarr;</a>
       {% endif %}
       </ul>
     </div>

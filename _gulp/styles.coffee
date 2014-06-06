@@ -10,7 +10,7 @@ module.exports = (gulp)->
     'styles', ->
       gulp.src(config.paths.scss)
         .pipe(sass({
-          loadPath: ["#{config.paths.assets}/bower_components"]
+          loadPath: ["./bower_components"]
           bundleExec: true
           sourcemap: true
         }))
