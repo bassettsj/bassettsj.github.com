@@ -77,8 +77,29 @@ gulp.task('styles', ->
 ```
 #### Moving each task into small modules
 
-So just like [`load-grunt-config`](https://github.com/firstandthird/load-grunt-config)
+So just like [`load-grunt-config`](https://github.com/firstandthird/load-grunt-config), it is nice to have smaller pieces of code to work with, so splitting the tasks into modules would be fairly easy. The `scripts.coffee` module would go into `./_src/scripts.coffee`, then we could just pass the gulp object to the function.
 
+```coffeescript
+# @file _src/scripts.coffee
+coffee = require('gulp-coffee')
+uglify = require('gulp-uglify')
+concat = require('gulp-concat')
+pkg = require('../package.json')
+config = require('./config.json')
+isProd = ( config.env == 'production' )
+
+module.exports = ( gulp ) -> #Pass in gulp here
+  gulp.task(
+    'scripts', ->
+      gulp.src(config.paths.scripts)
+        .pipe(coffee())
+        .pipe(concat( pkg.name + '.pkg.js'))
+        .pipe( if isProd then uglify() )
+        .pipe(gulp.dest( config.paths.assets + '/js'))
+  )
+```
+
+Then it is really easy to include the individual tasks, `require('./scripts.coffee')(gulp)`, storing the config in JSON is super easy, although I guess I could use the package.json config key in the spec.
 
 #### Writing my own Jekyll plugin with a few lines
 
@@ -106,3 +127,18 @@ module.exports = (gulp) ->
     )
   )
 ```
+
+#### Watch is built in!
+
+Nifty, the watch task is just built into gulp in a nice way. It is just a method you use. Then it becomes really easy to write watch tasks here.
+
+```coffeescript
+gulp.task('watchStyles', ->
+  gulp.watch(config.paths.scss, ['styles'])
+)
+```
+
+
+### So what to do now?
+
+I would like to get more projects using Gulp to try it out a bit more. It is hard though since I don't want to redo them just for the sake of prefering the tool. I will have to wait and see.
