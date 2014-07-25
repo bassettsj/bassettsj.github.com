@@ -705,6 +705,9 @@ a {
     color: #e14618;
     text-decoration: underline; }
 
+.post-content p > img {
+  margin: 0 auto; }
+
 blockquote {
   margin: 0 auto;
   padding-left: 2em;
