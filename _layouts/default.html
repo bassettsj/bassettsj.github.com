@@ -2,8 +2,9 @@
 <html lang="en">
   {% include _head.html%}
   <body>
+    <a href="#main-content" class="sr-only-focusable">Skip to main content</a>
     <div class="container">
-      <header class="site-header">
+      <header class="site-header" role="banner">
         <nav>
           <a href="/" class="site-title">
             <b>S</b><span>teven Bassett</span>
@@ -11,7 +12,7 @@
           {% include primary-nav.html %}
         </nav>
       </header>
-      <div class=" content">
+      <main class="content" role="main" id="main-content">
         {{ content }}
       </div>
       {% include _footer.html %}
