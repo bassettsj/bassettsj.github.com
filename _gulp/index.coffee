@@ -11,13 +11,12 @@ require('./scripts.coffee')(gulp)
 require('./styles.coffee')(gulp)
 require('./jekyll.coffee')(gulp)
 require('./server.coffee').server(gulp)
-require('./server.coffee').reload(gulp)
+
 
 gulp.task('watch', [
   'watchStyles'
   'watchJekyll'
   'watchScripts'
-  'watchAssets'
   ])
 gulp.task('watchStyles', ->
   gulp.watch(config.paths.scss, ['styles'])

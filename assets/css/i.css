@@ -813,6 +813,8 @@ input[type="button"] {
   max-width: 35em;
   margin: 1em auto; }
   .site-post-cover-img img {
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 0.5em;
     border: 0.25em solid #2a2a2a; }
 
