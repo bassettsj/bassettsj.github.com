@@ -52,23 +52,24 @@ $header-font-family: $sans-serif-font;
 // Color Pallet to use.
 //   ==========================================================================
 
-$text-color: rgba(42,42,42, 1.0);
+$text-color: rgb(42,42,42);
 
-$lightTeal: rgba(162, 215, 228, 1.0);
+$lightTeal: rgb(162, 215, 228);
 
 
 // Pallet from DESIGNJUNKEE
 // @link http://www.colourlovers.com/palette/1473/Ocean_Five
 
-$caribic-teal: rgba(0, 160, 176, 1.0);
+$caribic-teal: rgb(0, 160, 176);
 
-$caribic-brown: rgba(106, 74, 60, 1.0);
+$caribic-brown: rgb(106, 74, 60);
 
-$caribic-red: rgba(204, 51, 63, 1.0);
+$caribic-red: rgb(204, 51, 63);
 
-$caribic-sun: rgba(235, 104, 65, 1.0);
+$caribic-sun: #c9461f;//rgb(235, 104, 65);
 
-$caribic-daylight: rgba(237, 201, 81, 1.0);
+
+$caribic-daylight: rgb(237, 201, 81);
 
 $light-yellow: rgb(254, 251, 241);
 

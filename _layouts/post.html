@@ -7,7 +7,11 @@ layout: default
       {% if page.tagline %}
       <p class="intro"> {{ page.tagline }} </p>
       {% endif %}
-
+      {% if page.coverimage %}
+      <figure class="site-post-cover-img">
+        <img src="{{ page.coverimage.src }}" alt="{{  page.coverimage.alt }}">
+      </figure>
+      {% endif %}
   </header>
   <div class="post-content">
     {{ content }}
