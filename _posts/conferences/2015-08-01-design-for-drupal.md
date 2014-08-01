@@ -146,3 +146,21 @@ Vague feedback doesn't help.
 - Categorized 
 - Prioritized
 - Formatted
+
+### Timely
+When should I offer my feedback? Don't let it prevent you from providing it, just check with the PM to see if it is possible
+
+#### Communiticating Clearing
+- Show empathy
+- Point out things you like and don't.
+- Establish a common vocabulary.
+- Consider other methods
+	- typed
+	- spoken
+	- visually
+- Skitch or annotated screenshots are great.
+- Photos of sketchs.
+- Reread & REvise
+- Des this meet the great feedback criterea?
+- Ask questions.
+
