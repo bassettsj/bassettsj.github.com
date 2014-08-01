@@ -15,7 +15,7 @@ The University Libraries team has investigated already available systems, and de
 
 ### Sarnia
 
-Looking for advice, I posted a discussion, [“Using Drupal as a Client to External Content from a Fedora Item Repository”](http://groups.drupal.org/node/276033) in the Libraries group on Durpal.org. [krlucas](http://groups.drupal.org/user/19593) suggested the Sarnia module to create entities based on the data available in the Solr index. I have tried many times to get a working test implementation, but continue to have issues using it. It seems like a great project, but debugging someone else’s code in a complicated mature project was not an easy task. 
+Looking for advice, I posted a discussion, [“Using Drupal as a Client to External Content from a Fedora Item Repository”](http://groups.drupal.org/node/276033) in the Libraries group on Durpal.org. [krlucas](http://groups.drupal.org/user/19593) suggested the Sarnia module to create entities based on the data available in the Solr index. I have tried many times to get a working test implementation, but continue to have issues using it. It seems like a great project, but debugging someone else’s code in a complicated mature project was not an easy task.
 
 ## Now what?
 
