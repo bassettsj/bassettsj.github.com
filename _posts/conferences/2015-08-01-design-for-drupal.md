@@ -11,7 +11,7 @@ Design for Drupal, Boston is an annual web design camp covering all aspects of d
 
 
 
-### Rethinking UX Research: Best Practices for Successfully Evaluating and Improving Your Web Sites
+### [Rethinking UX Research: Best Practices for Successfully Evaluating and Improving Your Web Sites](http://boston2014.design4drupal.org/session/rethinking-ux-research-best-practices-successfully-evaluating-and-improving-your-web-sites)
 
 by Christine Perfetti
 
@@ -72,7 +72,7 @@ by Christine Perfetti
 	- Think about the interaction flows.
 - Getting stakeholder buy in can't be done with evangelzing, but rather by getting them involved early.
 
-###  Why Did They Say That? Understanding Clients -- From a Client
+###  [Why Did They Say That? Understanding Clients -- From a Client](http://boston2014.design4drupal.org/session/why-did-they-say-understanding-clients-client-0)
 
 [Christina Inge](https://twitter.com/christinainge)
 
@@ -112,9 +112,7 @@ Feedback is really import. When you don't get feedback, realize that they are of
 - Customers appriciate
 - Nudge
 
-### Giving Great Feedback
-
-Vague feedback doesn't help. 
+### [Giving Great Feedback](http://boston2014.design4drupal.org/session/why-did-they-say-understanding-clients-client-0)
 
 #### Be specific
 
