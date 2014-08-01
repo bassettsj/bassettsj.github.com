@@ -39,5 +39,37 @@ by Christine Perfetti
 - Not only business goals, but also improve design.
 - A usability test involves putting your users in front of your product and obsering  the results.
 - Usability tests can be done anywhere.
+- Running a test session
+	- Greet the user
+	- Explain to tuse how the test will work
+	- Give the users tasks to complete
+	- General Q/A
+	- Debreief with observers
+- What should we look for?
+	- back button
+	- pogosticking
+		- pick a link, didn't get what you want, so you go back and try again
+		- users are going back and forth between pages to try to find the information they want.
+	- search
+		- "...but I use search on Amazon.com", if they know exactly what they want then search is okay.
+	- FAQs
+- 5 second test
+	- Show a user a page for 5 seconds and ask:
+	- What can you tell what the primary purpose of the page is?
+- Build empathy
+- Start with the problem, not the solution.
+- Ethnography
+	- its really lean and cheap
+	- Tips
+		- you are the apprentice
+		- focus on the person
+		- forcus on the present and past
+		- avoid leading questions
+		- ask open-ended questions
+- Design charetts for research using internal stakeholders.
+	- Early stage sketching and telling us what they know about their users.
+- Prototype with Paper
+	- Think about the interaction flows.
+- Getting stakeholder buy in can't be done with evangelzing, but rather by getting them involved early.
+
 - 
- 
