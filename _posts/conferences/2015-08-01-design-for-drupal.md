@@ -135,3 +135,14 @@ Vague feedback doesn't help.
  - How will this suggestion benefit a user?
  - How does this help accomplish goals?
 
+##### Less Goal-Oriented
+> My favorite websites have large photo carousels...
+
+#### More Goal-Oriented 
+> Users need to feel comfortable to use our services, adding photos of our staff might help us achieve this goal.
+
+### Organized
+- Consolidate
+- Categorized 
+- Prioritized
+- Formatted
