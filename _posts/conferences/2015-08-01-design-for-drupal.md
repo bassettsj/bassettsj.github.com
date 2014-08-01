@@ -112,3 +112,26 @@ Feedback is really import. When you don't get feedback, realize that they are of
 - Customers appriciate
 - Nudge
 
+### Giving Great Feedback
+
+Vague feedback doesn't help. 
+
+#### Be specific
+
+- Is the working vague or open-ended?
+- Would someone else understand?
+- Am I identify a problem?
+- Could this be an actionable to-do item?
+
+#### Less Specific vs more specific
+
+ > I don't like it. Make it pop!
+
+ > Theis design might not appeal to our younger audeince. I think the colors don't look friendly enough.
+ 
+ #### Goal-Oriented
+ 
+ - Why do I want to add this?
+ - How will this suggestion benefit a user?
+ - How does this help accomplish goals?
+
