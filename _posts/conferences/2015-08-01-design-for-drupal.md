@@ -86,4 +86,29 @@ Clarity - language differences from thinking style. They might need it explained
 - Understnding of web design process
 - Overly high expectations
 - Consesus-internal changes
-- 
+
+Feedback is really import. When you don't get feedback, realize that they are often very busy, fires break out. Budget change and stakeholders go away. 
+
+- Know your stakeholers
+- Ask and Listen
+- Whose viewpoints are most critical?
+- What are their needs?
+
+#### Address different needs
+- Business needs vs design needs
+- Marketing needs:
+	- get customers (more important than esthetics)
+	- gain consensus
+	- use different tools
+		- CRMs
+		- E-mail
+		- Messurement
+	- Get leads
+
+#### Be Proactive
+- Manage expectations, but also educate
+- Blog expectations but also eucate
+- Blog, socials media, email education
+- Customers appriciate
+- Nudge
+
