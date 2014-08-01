@@ -5,7 +5,7 @@ group: navigation
 
 ---
 
-### About me
+## About me
 
 <img src="/assets/img/about/profile.png" alt="Profile image of Steven" class=" img-left img-rounded">
 
