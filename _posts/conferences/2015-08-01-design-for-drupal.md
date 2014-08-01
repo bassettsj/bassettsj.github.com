@@ -72,4 +72,18 @@ by Christine Perfetti
 	- Think about the interaction flows.
 - Getting stakeholder buy in can't be done with evangelzing, but rather by getting them involved early.
 
+###  Why Did They Say That? Understanding Clients -- From a Client
+
+[Christina Inge](https://twitter.com/christinainge)
+
+Questions developers and designers have clarity, directions, changes in direction, timelines and feedback.
+
+Why does this happen? Internal to the client usually and has nothing to do with you. Part of it is a different perspective, a different langulage or frame of reference, project imbalances on either side and different thinking styles.
+
+Clarity - language differences from thinking style. They might need it explained in different ways. Visual vs verbal thinkers, communicators. Sometimes they need to talk through thanks a lot.
+
+- Directions project management skills
+- Understnding of web design process
+- Overly high expectations
+- Consesus-internal changes
 - 
