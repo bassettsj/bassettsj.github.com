@@ -611,6 +611,12 @@ ol {
   overflow: visible;
   clip: auto; }
 
+blockquote {
+  margin: 0 auto;
+  padding-left: 2em;
+  border-left: 0.5em solid #008997;
+  font-style: italic; }
+
 .nav, .tag-box {
   padding: 0;
   margin: 0.7em 0;
@@ -725,13 +731,6 @@ a {
 
 .post-content p > img {
   margin: 0 auto; }
-
-blockquote {
-  margin: 0 auto;
-  padding-left: 2em;
-  border-left: 0.5em solid #008997;
-  font-style: italic;
-  font-size: 1.5em; }
 
 form {
   font-family: "Lato", "Helvetica Nue", sans-serif; }

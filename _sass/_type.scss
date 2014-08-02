@@ -200,3 +200,12 @@ ol {
     clip: auto;
   }
 }
+
+
+
+blockquote{
+  margin: 0 auto;
+  padding-left: 2em;
+  border-left: 0.5em solid $blockquote-border-color;
+  font-style: italic;
+}
