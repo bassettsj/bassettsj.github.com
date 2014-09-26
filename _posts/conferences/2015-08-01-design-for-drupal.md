@@ -204,3 +204,36 @@ So how do we implement it?
 - Content types
 - View modes
 - Views
+
+## My Brain is Full: keeping up with Front-end innovation
+
+How did we get here?
+
+IE8/7/6 56%  of market share
+
+Blueprint CSS
+
+960gs
+
+Web Typography 
+
+## The Anti-Handoff
+
+Erin Hollowway [@justlastweekend](https://twitter.com/justlastweekend)
+
+We have to think about alot more, we don't know our media. We can't increase ideation time.
+
+Handsoffs suck, they just do.  
+
+- Dissolve ambiguity
+	- Figure out who is on your team.
+	- Get involved & organized
+		- Create a project plan, do this together.
+	- Define Touchpoints
+		- WEhn to invite people to party, when not to.
+- Utilize your Design Tool
+ 	- Asset Exports with Generator
+	- Layer Comps 
+	-  Grids
+- Wireframing
+	- mapping the content 
