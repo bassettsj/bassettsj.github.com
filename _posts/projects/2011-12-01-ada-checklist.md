@@ -1,7 +1,7 @@
 ---
 title: ADA Checklist
 layout: project
-tags: 
+tags:
   - first project
   - Responsive Web Design
 category: projects

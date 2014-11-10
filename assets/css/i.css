@@ -371,6 +371,11 @@ table {
     .container {
       padding: 0 0; } }
 
+.project-tile {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%; }
+
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)

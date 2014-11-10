@@ -1,55 +1,16 @@
-cp = require('child_process')
+exec = require('child_process').exec
 gutil = require('gulp-util')
 
 module.exports = (gulp) ->
-  gulp.task(
-    'jekyll'
-    , ->
-      jekyll = cp.spawn('jekyll'
-        , [
-          'build'
-        ]
-      )
-
-      jekyll.stdout.on('data', (data)->
-        console.log( 'jekyll: ' + data )
-      )
-      jekyll.stderr.on('data', (data)->
-        error = new gutil.PluginError('jekyll', 'Jekyll errored with : ' + data )
-      )
-
-
-      jekyll.on('close', (code) ->
-        if ( code isnt 0  )
-
-          error = new gutil.PluginError('jekyll'
-          , 'exited with code ' + code
-          )
-      )
+  gulp.task('jekyll', (cb)->
+    exec('jekyll build', (err) ->
+      if err then cb(err)
+      cb()
+    )
   )
-  gulp.task(
-    'jekyll-serve'
-    , ->
-      jekyll = cp.spawn('jekyll'
-        , [
-          'serve'
-          '--watch'
-        ]
-      )
-
-      jekyll.stdout.on('data', (data)->
-        console.log( 'jekyll: ' + data )
-      )
-      jekyll.stderr.on('data', (data)->
-        error = new gutil.PluginError('jekyll', 'Jekyll errored with : ' + data )
-      )
-
-
-      jekyll.on('close', (code) ->
-        if ( code isnt 0  )
-
-          error = new gutil.PluginError('jekyll'
-          , 'exited with code ' + code
-          )
-      )
+  gulp.task('jekyll-serve', (cb) ->
+    exec('jekyll serve --watch', (err) ->
+      if err then cb(err)
+      cb()
+    )
   )

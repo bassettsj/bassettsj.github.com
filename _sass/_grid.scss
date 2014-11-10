@@ -11,3 +11,9 @@
     padding: 0 0;
   }
 }
+
+
+
+.project-tile {
+  @include span( 6 of 12 );
+}

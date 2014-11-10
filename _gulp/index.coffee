@@ -26,4 +26,4 @@ gulp.task('watchScripts', ->
   gulp.watch( '_src/**/*.{js,coffee}', ['scripts'])
 )
 
-gulp.task('default',['styles', 'scripts', 'jekyll'] )
+gulp.task('default',['styles', 'scripts', 'jekyll'])
