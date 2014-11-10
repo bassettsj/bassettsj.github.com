@@ -2,7 +2,7 @@
 layout: post
 title: Design for Drupal 2015 - Boston
 tagline: Front-end and designers unite.
-date: 2015-08-01
+date: 2014-08-01
 categories:
   - conferences
   - drupal
@@ -215,7 +215,7 @@ Blueprint CSS
 
 960gs
 
-Web Typography 
+Web Typography
 
 ## The Anti-Handoff
 
@@ -233,7 +233,7 @@ Handsoffs suck, they just do.
 		- WEhn to invite people to party, when not to.
 - Utilize your Design Tool
  	- Asset Exports with Generator
-	- Layer Comps 
+	- Layer Comps
 	-  Grids
 - Wireframing
-	- mapping the content 
+	- mapping the content
