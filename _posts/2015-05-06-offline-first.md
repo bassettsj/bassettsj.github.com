@@ -23,11 +23,32 @@ People who build the web are overly optimistic about their creations, little tho
 
 -- [_Say Hello To Offline First_](http://hood.ie/blog/say-hello-to-offline-first.html)
 
+## Business Cost
+
+> "Amazingly, despite the varied power and bandwidth of mobile devices, users expect them to be faster than desktops. Forty-percent of visitors abandon a website that takes more than 3-seconds to load"
+
+If your site doesn't load in less than three seconds on WiFi, the number of visitors who leave on a low-bandwidth celluar connection is far greater than half. A business can't continue to grow with those numbers.
+
 ## Offline First
 
+We need to adopt a new approach to application design that is embraces the fact that users frequently face low to no connection enviornmnets. This design will be inheriently more flexible and fault tollerant. We can achieve these goals due to new web standards that are being quickly developed to solve these issues. 
 
+### ServiceWorker API
 
+Allows applications to have control over the caching of static assets, which are particularly important in single page applications.
 
+### Client Sidestorage
 
+Allows browsers to store data within the browser itself. This is important for handling the content fetched from the API. Projects like [LocalForage](https://github.com/mozilla/localForage) by Mozilla, wrap around LocalStorage, IndexedDB and WebSQL.
 
+### User Experience Questions
+
+- Does the app even need to inform the human of the current connection state? Is this information even relevant to the human? If so, how can this best be done?
+- Can I give the users more trust in the app, leaving them safe in the knowledge that it won’t forget the last state it was in, and that it won’t lose any data, regardless of what the connectivity situation is?
+- How can I communicate to the human that creating data within the app is still possible offline, and that it will be posted/dispatched/properly dealt with in the future?
+- How can my interface convey changes that occur in the users’ current view when they reconnect and the server pushes new and changed data? What to do with deleted items, things that can’t be organised in lists, objects that aren’t in themselves immutable (like emails)?
+- How can I make the inevitable resolution of conflicts by the human as painless and intuitive as possible?
+- Can the app make any preemptive decisions on the part of the human and pre-load any low-overhead data they might need later?
+- What metrics (possibly behavioural) are there to base these decisions on?
+- How can I word all of these scenarios in a way that doesn’t worry the users, that embraces offline as an unproblematic reality?
 
