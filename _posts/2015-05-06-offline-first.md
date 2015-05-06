@@ -17,4 +17,13 @@ As I commute to and from the office in Mountain View from San Francisco, the cen
 
 - [_Say Hello To Offline First_](http://hood.ie/blog/say-hello-to-offline-first.html)
 
+People who build the web are overly optimistic about their creations, little thought is paid for handling the less than perfect conditions our users face. We we think about the animations in our web application as it navigates, but don't think about if it would work for low-end smartphones being sold all over the world. The same is true for how we handle network connectivity. We spend only enough time to build a error page when a network request fails. This error page will probably prevent the user from doing anything else. It time we rethink this approach.
+
+## Offline First
+
+
+
+
+
+
 
