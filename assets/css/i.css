@@ -371,10 +371,18 @@ table {
     .container {
       padding: 0 0; } }
 
-.project-tile {
-  width: 49.15254%;
-  float: left;
-  margin-right: 1.69492%; }
+@media screen and (min-width: 750px) {
+  .project-tile {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%; }
+    .project-tile:nth-of-type(even) {
+      float: right;
+      margin-right: 0; } }
+.project-tile .card {
+  padding: 5px;
+  background-color: #FFFFF;
+  border: #333333; }
 
 /**
  * prism.js default theme for JavaScript, CSS and HTML

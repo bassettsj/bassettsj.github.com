@@ -10,22 +10,24 @@ group: navigation
 {% for post in site.posts %}
   {% if post.categories contains "projects" %}
     <article class="project-tile">
-      <h3>
-        <a href="{{post.url}}">{{post.title}}</a>
-      </h3>
-      {% if post.coverimage %}
-      <figure>
-        <img src="{{post.coverimage.src}}" alt="{{post.coverimage.alt}}">
-      {% if post.coverimage.caption %}
-      <figcaption>
-        <p>{{post.coverimage.caption}}</p>
-      </figcaption>
-      {% endif%}
-      </figure>
-      {% endif %}
-      {% if post.tagline %}
-        <p class="byline">{{ post.tagline }}</p>
-      {% endif %}
+      <div class="card">
+        <h3>
+          <a href="{{post.url}}">{{post.title}}</a>
+        </h3>
+        {% if post.coverimage %}
+        <figure>
+          <img src="{{post.coverimage.src}}" alt="{{post.coverimage.alt}}">
+        {% if post.coverimage.caption %}
+        <figcaption>
+          <p>{{post.coverimage.caption}}</p>
+        </figcaption>
+        {% endif%}
+        </figure>
+        {% endif %}
+        {% if post.tagline %}
+          <p class="byline">{{ post.tagline }}</p>
+        {% endif %}
+      </div>
     </article>
 
   {% endif %}

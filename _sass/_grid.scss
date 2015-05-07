@@ -15,5 +15,16 @@
 
 
 .project-tile {
-  @include span( 6 of 12 );
+  @media screen and (min-width: 750px) {
+    @include span( 6 of 12 );
+    &:nth-of-type(even) {
+      @include omega;
+    }
+  }
+  .card {
+    padding: 5px;
+    background-color: #FFFFF;
+    border: #333333;
+
+  }
 }
