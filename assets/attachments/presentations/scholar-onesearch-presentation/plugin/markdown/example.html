@@ -1,42 +1,11 @@
-<!doctype html>
-<html lang="en">
-
-	<head>
-		<meta charset="utf-8">
-
-		<title>reveal.js - Markdown Demo</title>
-
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/default.css" id="theme">
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<div class="slides">
-
-                <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
-                <section data-markdown="example.md" data-separator="^\n\n\n" data-vertical="^\n\n"></section>
-
-                <!-- Slides are separated by three dashes (quick 'n dirty regular expression) -->
-                <section data-markdown data-separator="---">
-                    <script type="text/template">
-                        ## Demo 1
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>reveal.js - Markdown Demo</title><link rel="stylesheet" href="../../css/reveal.css"><link rel="stylesheet" href="../../css/theme/default.css" id="theme"></head><body><div class="reveal"><div class="slides"><section data-markdown="example.md" data-separator="^\n\n\n" data-vertical="^\n\n"></section><section data-markdown data-separator="---"><script type="text/template">## Demo 1
                         Slide 1
                         ---
                         ## Demo 1
                         Slide 2
                         ---
                         ## Demo 1
-                        Slide 3
-                    </script>
-                </section>
-
-                <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
-                <section data-markdown data-separator="^\n---\n$" data-vertical="^\n--\n$">
-                    <script type="text/template">
-                        ## Demo 2
+                        Slide 3</script></section><section data-markdown data-separator="^\n---\n$" data-vertical="^\n--\n$"><script type="text/template">## Demo 2
                         Slide 1.1
 
                         --
@@ -47,14 +16,7 @@
                         ---
 
                         ## Demo 2
-                        Slide 2
-                    </script>
-                </section>
-
-                <!-- No "extra" slides, since there are no separators defined (so they'll become horizontal rulers) -->
-                <section data-markdown>
-                    <script type="text/template">
-                        A
+                        Slide 2</script></section><section data-markdown><script type="text/template">A
 
                         ---
 
@@ -62,19 +24,7 @@
 
                         ---
 
-                        C
-                    </script>
-                </section>
-
-            </div>
-		</div>
-
-		<script src="../../lib/js/head.min.js"></script>
-		<script src="../../js/reveal.js"></script>
-
-		<script>
-
-			Reveal.initialize({
+                        C</script></section></div></div><script src="../../lib/js/head.min.js"></script><script src="../../js/reveal.js"></script><script>Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
@@ -90,9 +40,4 @@
                     { src: 'markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '../notes/notes.js' }
 				]
-			});
-
-		</script>
-
-	</body>
-</html>
+			});</script></body></html>

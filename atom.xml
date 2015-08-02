@@ -1,28 +1,2716 @@
----
-layout: nil
-title : Atom Feed
----
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>{{ site.title }}</title>
- <link href="{{ site.production_url }}/atom.xml" rel="self"/>
- <link href="{{ site.production_url }}"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.production_url }}</id>
+ <title>Steven Bassett</title>
+ <link href="http://bassettsj.me/atom.xml" rel="self"/>
+ <link href="http://bassettsj.me"/>
+ <updated>2015-08-02T14:17:04-07:00</updated>
+ <id>http://bassettsj.me</id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name>Steven Bassett</name>
+   <email>steven.j.bassett@gmail.com</email>
  </author>
 
- {% for post in site.posts %}
+ 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.production_url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.production_url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <title>Forward JS 2</title>
+   <link href="http://bassettsj.me/conferences/js/2015/02/04/forward-js-2"/>
+   <updated>2015-02-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/conferences/js/2015/02/04/forward-js-2</id>
+   <content type="html">&lt;h3&gt;State of the Community&lt;/h3&gt;
+
+&lt;p&gt;The community was born in the sprit of open-source. The spirit of generosity, collaboration, building better communities is inseparably intertwined with building a better self. Be a mentor, communicate compassionately. Community is a group responsibility. Let&amp;#39;s own it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Open source was built on the premise of collaboration.” The spirit of generosity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Art - R&amp;amp;D of humanity&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/superSGP&quot;&gt;@superSGP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As we build an interconnected world, we are building a relationship with physical objects.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&amp;quot;Art is R&amp;amp;D for humanity.&amp;quot; &lt;a href=&quot;http://t.co/7Z3VWOMYMR&quot;&gt;http://t.co/7Z3VWOMYMR&lt;/a&gt; &lt;a href=&quot;https://twitter.com/superSGP&quot;&gt;@superSGP&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/forwardjs?src=hash&quot;&gt;#forwardjs&lt;/a&gt;&lt;/p&gt;&amp;mdash; Karen Rustad (@whoisaldeka) &lt;a href=&quot;https://twitter.com/whoisaldeka/status/563027676978761728&quot;&gt;February 4, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Technophobia&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;What if objects were...loyal?&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;GPU and Web UI Performance&lt;/h3&gt;
+
+&lt;p&gt;Diego Ferreiro Val
+&lt;a href=&quot;https://twitter.com/diervo&quot;&gt;@diervo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Creating complex UI components such has always been a challenge on the web. You have to do mathematical calculations, trigger beautiful transitions, and manipulate the DOM (with its costly paints and reflows) in an orchestrated and performant fashion.&lt;/p&gt;
+
+&lt;p&gt;We will discuss the state of the art on web performance, with practical examples, we will learn techniques used for improving the performance of browser repaints and reflows, and showcase the latest tools for diagnosing bottlenecks and jank in the browser rendering engine.&lt;/p&gt;
+
+&lt;p&gt;Diego Ferreiro is a Principal UI and Web Performance engineer at Salesforce. He was previously at Yahoo!, working in the Search Platform Team migrating the architecture to use NodeJS and Mojito. Diego spend his days worrying about web performance, 60fps animations, and making the UI faster.&lt;/p&gt;
+
+&lt;p&gt;Browser Rendering 101&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DOM tree &amp;amp; CSS tree: constructed&lt;/li&gt;
+&lt;li&gt;Recalculate Style: attaches the style rules&lt;/li&gt;
+&lt;li&gt;Layout: calculate the changes, eg move 40px right, 3px down, add 40px of margin bottom.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Every time we touch the DOM, these events happen, we try to reduce the time these steps take.&lt;/p&gt;
+
+&lt;p&gt;The magic is in the GPU&lt;/p&gt;
+
+&lt;p&gt;Use operations that are cheap to compute.&lt;/p&gt;
+
+&lt;p&gt;ScrollerJS&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only touch the DOM when absolutely necessary&lt;/li&gt;
+&lt;li&gt;reuse the same surfaces on the DOM&lt;/li&gt;
+&lt;li&gt;isolate GPU layers to contraints&lt;/li&gt;
+&lt;li&gt;defer execution as much as possible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Use the power of the GPU wisely. Always try to find the right balance between perfomance and usability...&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Measuring performance&lt;/p&gt;
+
+&lt;p&gt;TODO: get the example.&lt;/p&gt;
+
+&lt;p&gt;Instrument your own framework!&lt;/p&gt;
+
+&lt;p&gt;#PerfMatters&lt;/p&gt;
+
+&lt;h3&gt;What the... JavaScript?&lt;/h3&gt;
+
+&lt;p&gt;Kyle Simpson - &lt;a href=&quot;https://twitter.com/getify&quot;&gt;@getify&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You&amp;#39;ve heard years of complaints about JavaScript and how many WTFs it has. It&amp;#39;s certainly popular to be in the &amp;quot;I use JS but it&amp;#39;s a crazy language&amp;quot; camp. But is it really riddled with bad design? There are definitely some legitimate WTFs, but they&amp;#39;re most likely not the things you think. We&amp;#39;re going to meander through of bunch of the weird corners of the language -- not the usual suspects -- and then look FORWARD to the new WTFs that ES6 (or ES2015 or whatever) has in store for us. If you&amp;#39;re looking for the &amp;quot;bad parts&amp;quot; to avoid, ditch everything you&amp;#39;ve heard before and &amp;quot;let&amp;quot; these dance in your nightmares.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;quot;Hell is not understanding my own code.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youdontknowjs.com&quot;&gt;Books: You don&amp;#39;t know JS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/getify/what-the-javascript&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Web Component Markup&lt;/h3&gt;
+
+&lt;p&gt;Estelle Weyl (&lt;a href=&quot;https://twitter.com/estellevw&quot;&gt;@estellew&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://estelle.github.io/components/#slide1&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;No More Tools&lt;/h3&gt;
+
+&lt;p&gt;Karolina Szczur (&lt;a href=&quot;https://twitter.com/fox&quot;&gt;@fox&lt;/a&gt;)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;As creatives we constantly search for ways to optimise and streamline workflows. Currently we’re being bombarded with more tools than ever. But how do we know that we reached a tipping point, when the apparatus we pick introduces more complexity and wastes way more time that it was supposed to save? As craftspeople, how do we maintain simplicity and learn to rely on bare-bones solutions? And more importantly—how do we empower others and collaborate? We’ll have a look at up-to-date front-end tooling and analyse alternative approaches to compiling, building and automation processes as well as the human side of teamwork.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- perfmap
+stress-css
+
+
+uncss
+helium-css --&gt;
+
+&lt;h3&gt;Developing High Performance Websites and Modern Apps with JavaScript and HTML5&lt;/h3&gt;
+
+&lt;p&gt;Doris Chen (&lt;a href=&quot;https://twitter.com/doristchen&quot;&gt;@doristchen&lt;/a&gt;)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Creating high performance sites and apps is crucial for every developer. In this session, we will explore the best practices and performance tricks, to make your apps running faster and fluid. A casual game will be illustrated step by step to show how to optimize the game by applying all the optimization strategy. Come learn the tips, tricks, and tools for maximizing the performance of your sites and apps with JavaScript and HTML5.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Lova &amp;amp; Node&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/superSGP&quot;&gt;@superSGP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Creating relatability
+Process&lt;/p&gt;
+
+&lt;h3&gt;Other talks&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mgonto.github.io/how-to-create-good-documentation-talk/&quot;&gt;How To Create Good Documentation?&lt;/a&gt;&lt;/p&gt;
+</content>
  </entry>
- {% endfor %}
+ 
+ <entry>
+   <title>Design for Drupal 2015 - Boston</title>
+   <link href="http://bassettsj.me/conferences/drupal/design/2014/08/01/design-for-drupal"/>
+   <updated>2014-08-01T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/conferences/drupal/design/2014/08/01/design-for-drupal</id>
+   <content type="html">&lt;p&gt;Design for Drupal, Boston is an annual web design camp covering all aspects of design, UX, &amp;amp; theming for Drupal websites.&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://boston2014.design4drupal.org/session/rethinking-ux-research-best-practices-successfully-evaluating-and-improving-your-web-sites&quot;&gt;Rethinking UX Research: Best Practices for Successfully Evaluating and Improving Your Web Sites&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;by Christine Perfetti&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;How do you really know what your users want? How do you ensure your designs work for your prospects and customers? How can you be confident that your design changes improve your site?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What prevents you team from running UX research studies
+
+&lt;ul&gt;
+&lt;li&gt;too scientific&lt;/li&gt;
+&lt;li&gt;slows the team down&lt;/li&gt;
+&lt;li&gt;unsure about the results&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Involve stakeholders at the beginning
+
+&lt;ul&gt;
+&lt;li&gt;Understand business problems and what your stakeholders need in order to use the data to inform desicisons.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;It&amp;#39;s about &lt;em&gt;quality&lt;/em&gt;, not quantity.
+
+&lt;ul&gt;
+&lt;li&gt;start small, pick your stakeholder.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Types of Studies
+
+&lt;ul&gt;
+&lt;li&gt;Review the web analytics.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Data sources
+
+&lt;ul&gt;
+&lt;li&gt;visitor traffic and server logs&lt;/li&gt;
+&lt;li&gt;conversion funnels&lt;/li&gt;
+&lt;li&gt;search engine logs&lt;/li&gt;
+&lt;li&gt;if they can&amp;#39;t find what they want, they go to search.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;800,000 of Microsoft&amp;#39;s page have never been loaded from the server.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Not only business goals, but also improve design.&lt;/li&gt;
+&lt;li&gt;A usability test involves putting your users in front of your product and obsering  the results.&lt;/li&gt;
+&lt;li&gt;Usability tests can be done anywhere.&lt;/li&gt;
+&lt;li&gt;Running a test session
+
+&lt;ul&gt;
+&lt;li&gt;Greet the user&lt;/li&gt;
+&lt;li&gt;Explain to tuse how the test will work&lt;/li&gt;
+&lt;li&gt;Give the users tasks to complete&lt;/li&gt;
+&lt;li&gt;General Q/A&lt;/li&gt;
+&lt;li&gt;Debreief with observers&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What should we look for?
+
+&lt;ul&gt;
+&lt;li&gt;back button&lt;/li&gt;
+&lt;li&gt;pogosticking&lt;/li&gt;
+&lt;li&gt;pick a link, didn&amp;#39;t get what you want, so you go back and try again&lt;/li&gt;
+&lt;li&gt;users are going back and forth between pages to try to find the information they want.&lt;/li&gt;
+&lt;li&gt;search&lt;/li&gt;
+&lt;li&gt;&amp;quot;...but I use search on Amazon.com&amp;quot;, if they know exactly what they want then search is okay.&lt;/li&gt;
+&lt;li&gt;FAQs&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;5 second test
+
+&lt;ul&gt;
+&lt;li&gt;Show a user a page for 5 seconds and ask:&lt;/li&gt;
+&lt;li&gt;What can you tell what the primary purpose of the page is?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Build empathy&lt;/li&gt;
+&lt;li&gt;Start with the problem, not the solution.&lt;/li&gt;
+&lt;li&gt;Ethnography
+
+&lt;ul&gt;
+&lt;li&gt;its really lean and cheap&lt;/li&gt;
+&lt;li&gt;Tips&lt;/li&gt;
+&lt;li&gt;you are the apprentice&lt;/li&gt;
+&lt;li&gt;focus on the person&lt;/li&gt;
+&lt;li&gt;forcus on the present and past&lt;/li&gt;
+&lt;li&gt;avoid leading questions&lt;/li&gt;
+&lt;li&gt;ask open-ended questions&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Design charetts for research using internal stakeholders.
+
+&lt;ul&gt;
+&lt;li&gt;Early stage sketching and telling us what they know about their users.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Prototype with Paper
+
+&lt;ul&gt;
+&lt;li&gt;Think about the interaction flows.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Getting stakeholder buy in can&amp;#39;t be done with evangelzing, but rather by getting them involved early.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://boston2014.design4drupal.org/session/why-did-they-say-understanding-clients-client-0&quot;&gt;Why Did They Say That? Understanding Clients -- From a Client&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/christinainge&quot;&gt;Christina Inge&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Questions developers and designers have clarity, directions, changes in direction, timelines and feedback.&lt;/p&gt;
+
+&lt;p&gt;Why does this happen? Internal to the client usually and has nothing to do with you. Part of it is a different perspective, a different langulage or frame of reference, project imbalances on either side and different thinking styles.&lt;/p&gt;
+
+&lt;p&gt;Clarity - language differences from thinking style. They might need it explained in different ways. Visual vs verbal thinkers, communicators. Sometimes they need to talk through thanks a lot.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Directions project management skills&lt;/li&gt;
+&lt;li&gt;Understnding of web design process&lt;/li&gt;
+&lt;li&gt;Overly high expectations&lt;/li&gt;
+&lt;li&gt;Consesus-internal changes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Feedback is really import. When you don&amp;#39;t get feedback, realize that they are often very busy, fires break out. Budget change and stakeholders go away.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Know your stakeholers&lt;/li&gt;
+&lt;li&gt;Ask and Listen&lt;/li&gt;
+&lt;li&gt;Whose viewpoints are most critical?&lt;/li&gt;
+&lt;li&gt;What are their needs?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Address different needs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Business needs vs design needs&lt;/li&gt;
+&lt;li&gt;Marketing needs:
+
+&lt;ul&gt;
+&lt;li&gt;get customers (more important than esthetics)&lt;/li&gt;
+&lt;li&gt;gain consensus&lt;/li&gt;
+&lt;li&gt;use different tools&lt;/li&gt;
+&lt;li&gt;CRMs&lt;/li&gt;
+&lt;li&gt;E-mail&lt;/li&gt;
+&lt;li&gt;Messurement&lt;/li&gt;
+&lt;li&gt;Get leads&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Be Proactive&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Manage expectations, but also educate&lt;/li&gt;
+&lt;li&gt;Blog expectations but also eucate&lt;/li&gt;
+&lt;li&gt;Blog, socials media, email education&lt;/li&gt;
+&lt;li&gt;Customers appriciate&lt;/li&gt;
+&lt;li&gt;Nudge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://boston2014.design4drupal.org/session/why-did-they-say-understanding-clients-client-0&quot;&gt;Giving Great Feedback&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3&gt;Be specific&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Is the working vague or open-ended?&lt;/li&gt;
+&lt;li&gt;Would someone else understand?&lt;/li&gt;
+&lt;li&gt;Am I identify a problem?&lt;/li&gt;
+&lt;li&gt;Could this be an actionable to-do item?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Less Specific vs more specific&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I don&amp;#39;t like it. Make it pop!&lt;/p&gt;
+
+&lt;p&gt;Theis design might not appeal to our younger audeince. I think the colors don&amp;#39;t look friendly enough.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Goal-Oriented&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Why do I want to add this?&lt;/li&gt;
+&lt;li&gt;How will this suggestion benefit a user?&lt;/li&gt;
+&lt;li&gt;How does this help accomplish goals?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Less Goal-Oriented&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;My favorite websites have large photo carousels...&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;More Goal-Oriented&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Users need to feel comfortable to use our services, adding photos of our staff might help us achieve this goal.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Organized&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Consolidate&lt;/li&gt;
+&lt;li&gt;Categorized&lt;/li&gt;
+&lt;li&gt;Prioritized&lt;/li&gt;
+&lt;li&gt;Formatted&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Timely&lt;/h3&gt;
+
+&lt;p&gt;When should I offer my feedback? Don&amp;#39;t let it prevent you from providing it, just check with the PM to see if it is possible&lt;/p&gt;
+
+&lt;h3&gt;Communiticating Clearing&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Show empathy&lt;/li&gt;
+&lt;li&gt;Point out things you like and don&amp;#39;t.&lt;/li&gt;
+&lt;li&gt;Establish a common vocabulary.&lt;/li&gt;
+&lt;li&gt;Consider other methods
+
+&lt;ul&gt;
+&lt;li&gt;typed&lt;/li&gt;
+&lt;li&gt;spoken&lt;/li&gt;
+&lt;li&gt;visually&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Skitch or annotated screenshots are great.&lt;/li&gt;
+&lt;li&gt;Photos of sketchs.&lt;/li&gt;
+&lt;li&gt;Reread &amp;amp; Revise&lt;/li&gt;
+&lt;li&gt;Des this meet the great feedback criterea?&lt;/li&gt;
+&lt;li&gt;Ask questions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://boston2014.design4drupal.org/session/enhancing-design-adaptive-content&quot;&gt;Enhancing Design with Adaptive Content&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/joelsteidl&quot;&gt;@joelsteidl&lt;/a&gt;
+&lt;a href=&quot;http://twitter.com/hoodedcloak74&quot;&gt;@hoodedcloak74&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adaptive Content is broken down and structured. Displayed in mutiple places. Could be comparable to the card catelog, takes content of media and creates metadata about the item. Allowing you to create a structured representation of the orginal media.&lt;/p&gt;
+
+&lt;p&gt;Why does this concept actually matter?
+- communicating with your users.
+- variety of devices and contexts
+- always a plesant experience&lt;/p&gt;
+
+&lt;p&gt;Unadaptive content
+- WYSIWYG
+  - encourages writting in &amp;quot;blobs&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Design control is the real advantage.&lt;/p&gt;
+
+&lt;p&gt;How to go adaptive
+- What content needs to be displayed?
+- How the content will be entered into the system?
+- Where the content needs to be displayed?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Defining the fields.&lt;/li&gt;
+&lt;li&gt;Defining the view modes.&lt;/li&gt;
+&lt;li&gt;Design&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So how do we implement it?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Content types&lt;/li&gt;
+&lt;li&gt;View modes&lt;/li&gt;
+&lt;li&gt;Views&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;My Brain is Full: keeping up with Front-end innovation&lt;/h2&gt;
+
+&lt;p&gt;How did we get here?&lt;/p&gt;
+
+&lt;p&gt;IE8/7/6 56%  of market share&lt;/p&gt;
+
+&lt;p&gt;Blueprint CSS&lt;/p&gt;
+
+&lt;p&gt;960gs&lt;/p&gt;
+
+&lt;p&gt;Web Typography&lt;/p&gt;
+
+&lt;h2&gt;The Anti-Handoff&lt;/h2&gt;
+
+&lt;p&gt;Erin Hollowway &lt;a href=&quot;https://twitter.com/justlastweekend&quot;&gt;@justlastweekend&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have to think about alot more, we don&amp;#39;t know our media. We can&amp;#39;t increase ideation time.&lt;/p&gt;
+
+&lt;p&gt;Handsoffs suck, they just do.  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dissolve ambiguity
+
+&lt;ul&gt;
+&lt;li&gt;Figure out who is on your team.&lt;/li&gt;
+&lt;li&gt;Get involved &amp;amp; organized
+
+&lt;ul&gt;
+&lt;li&gt;Create a project plan, do this together.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Define Touchpoints
+
+&lt;ul&gt;
+&lt;li&gt;WEhn to invite people to party, when not to.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Utilize your Design Tool
+
+&lt;ul&gt;
+&lt;li&gt;Asset Exports with Generator&lt;/li&gt;
+&lt;li&gt;Layer Comps&lt;/li&gt;
+&lt;li&gt; Grids&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Wireframing
+
+&lt;ul&gt;
+&lt;li&gt;mapping the content&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Forward JS</title>
+   <link href="http://bassettsj.me/conferences/js/2014/07/25/forward-js"/>
+   <updated>2014-07-25T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/conferences/js/2014/07/25/forward-js</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://forwardjs.com/&quot;&gt;Forward JS&lt;/a&gt; was a one day conference in San Francisco. I won the tickets at SF JS. I have been looking forward to
+to this for a while. Let&amp;#39;s talk about frameworks, node and everything in between.&lt;/p&gt;
+
+&lt;h2&gt;Choosing a front-end framework...&lt;/h2&gt;
+
+&lt;p&gt;What the blogs aren&amp;#39;t telling us.&lt;/p&gt;
+
+&lt;p&gt;We make decisions at every scale, from language to framework, to library to a variable name. Most of our decision come from intuition.&lt;/p&gt;
+
+&lt;h2&gt;NodeJS for Everything&lt;/h2&gt;
+
+&lt;p&gt;by &lt;a href=&quot;http://twitter.com/swigby&quot;&gt;@swigby&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let your application crash.&lt;/p&gt;
+
+&lt;p&gt;Debug with &lt;a href=&quot;https://github.com/node-inspector/node-inspector&quot;&gt;node-inspector&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Modlous is using node for everything except for just SSL decription.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Do no use astricks&lt;/em&gt; for your pacakages on NPM. Use proper versioning, as a package contributor.&lt;/p&gt;
+
+&lt;p&gt;Stateless, keep your application as stateless as possible. It allows you to scale. If you need to use state, use redis to keep state.&lt;/p&gt;
+
+&lt;p&gt;Express is a great tool for building APIs. Fast  unopionated, inimalist web framework.&lt;/p&gt;
+
+&lt;p&gt;Hapi is a HTTP Server frameworks from the minds at walmart labs.&lt;/p&gt;
+
+&lt;p&gt;Restify REST framework.&lt;/p&gt;
+
+&lt;p&gt;Horizontal scalablility -&amp;gt; be able to have multiple instances and be able to scale it that way.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t reinvent the wheel, don&amp;#39;t start from scratch. That is why there is NPM.&lt;/p&gt;
+
+&lt;p&gt;Start testing early! Pick a testing frameworks and start writing tests.&lt;/p&gt;
+
+&lt;p&gt;If your not using streams, get familiar.&lt;/p&gt;
+
+&lt;p&gt;KISS stupid.&lt;/p&gt;
+
+&lt;h2&gt;Introduction to Generators in ES6&lt;/h2&gt;
+
+&lt;p&gt;Great for writting co-routines that are synchronous.&lt;/p&gt;
+
+&lt;p&gt;Callback hell can quickly happen in node land. Promises promise some relief to callbacks. You can never return to the original stack.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;var Gen = function *() {
+  var val = field 6;
+  return val + 3;
+};
+
+var gen = gen();
+var val = gen.next().value // val == 6
+val = gen.next().value // val == 9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Coroutines is a stak of code that runs independently of the main thread.&lt;/p&gt;
+
+&lt;p&gt;For realworld applications, try using &lt;a href=&quot;https://www.npmjs.org/package/co&quot;&gt;co&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Koa is a middleware focused framework that allows you to transverse the stack.&lt;/p&gt;
+
+&lt;p&gt;Shen, a toolbox for composing generators.&lt;/p&gt;
+
+&lt;h2&gt;Choose your own Adventure&lt;/h2&gt;
+
+&lt;p&gt;Kyle Simpson &lt;a href=&quot;http://twitter.com/getify&quot;&gt;@getify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/getify/js-adventure&quot;&gt;Slides available&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What if your team could get over using spaces vs. tabs or using semi-colons  vs. not. Configurable 2-way code formatting. Smarter tools make for better developers.&lt;/p&gt;
+
+&lt;p&gt;Sweet.js adds simple macros to the language.&lt;/p&gt;
+
+&lt;p&gt;Build tools that gets around the short falls of javascript.
+&lt;a href=&quot;https://github.com/getify/FoilScript&quot;&gt;FoilScript: a list of tools&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Have javascript your way.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;espima/acorn (parser)&lt;/li&gt;
+&lt;li&gt;escodegen (code generator)&lt;/li&gt;
+&lt;li&gt;escope/eslevels (scope analyzer)&lt;/li&gt;
+&lt;li&gt;istanbul (code coverage)&lt;/li&gt;
+&lt;li&gt;estraverse (analyze AST)&lt;/li&gt;
+&lt;li&gt;eslint (plugable linting tool)&lt;/li&gt;
+&lt;li&gt;plato/jscomplexity.org (complexity)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;State of Mobile HTML5&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Half full or half empty?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tomomi Imura &lt;a href=&quot;http://twitter.com/girlie_mac&quot;&gt;@girlie_mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Open web advocate, mobile geek, worked at Yahoo! Mobile, Palm, Nokia.&lt;/p&gt;
+
+&lt;p&gt;2012 was the first year of mobile chrome. Firefox has been in the game for a long time. Opera was in presto, then webkit and joined the blink engine. iOS&amp;#39; safari is only every year. Microsoft has released IE 10 and finally.&lt;/p&gt;
+
+&lt;p&gt;Disrupt App Store.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I am tired of hearing native&amp;#39;s better.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Distributing outside of app store.&lt;/p&gt;
+
+&lt;p&gt;Coremob Camera&lt;/p&gt;
+
+&lt;p&gt;HTML Media Capture&lt;/p&gt;
+
+&lt;p&gt;FileReader()&lt;/p&gt;
+
+&lt;p&gt;drawImage()&lt;/p&gt;
+
+&lt;p&gt;getImageData()&lt;/p&gt;
+
+&lt;p&gt;upload with XHR2&lt;/p&gt;
+
+&lt;p&gt;Touch Events v.1&lt;/p&gt;
+
+&lt;h2&gt;React and Flux&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;unidirectional data binding to clean up our code.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://facebook.github.io/react/blog/2014/05/06/flux.html&quot;&gt;Flux: An Application Architecture for React&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/fisherwebdev/fluxchat&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Embracing Failure on the Frontend&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Montior change with services.&lt;/li&gt;
+&lt;li&gt;Phantomas&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/chaos-monkey-browser&quot;&gt;chaos-monkey-browser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Monitor key performance metrics over time.&lt;/li&gt;
+&lt;li&gt;Bad performance = failure.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Getting going with gulp</title>
+   <link href="http://bassettsj.me/front-end-ops/2014/06/05/getting-going-with-gulp"/>
+   <updated>2014-06-05T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/front-end-ops/2014/06/05/getting-going-with-gulp</id>
+   <content type="html">&lt;p&gt;Coming off of having a presentation on the subject of front-end operations using grunt, I was feeling like I have a certain amount of expertise with Grunt, and a new appriciation for it, but now I want to try my hand out on the new Gulp build tool for Node.js. Gulp leverages the core power behind Node.js and uses it to enforce developers to not write out verbose configuration files, but rather write their own tasks using the Node APIs.&lt;/p&gt;
+
+&lt;h3&gt;Getting started&lt;/h3&gt;
+
+&lt;h4&gt;Install CLI&lt;/h4&gt;
+
+&lt;p&gt;You need to install gulp globally first so that it can be available on your path, to test try using the &lt;code&gt;--version&lt;/code&gt; to make sure that it is installed correctly.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash language-bash&quot; data-lang=&quot;bash&quot;&gt;$ npm install -g gulp
+...
+$ gulp --version
+[gulp] [14:06:30] CLI version 3.7.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Package.json and packages!&lt;/h4&gt;
+
+&lt;p&gt;If you don&amp;#39;t already have a &lt;code&gt;package.json&lt;/code&gt; in your project, you may want to use &lt;code&gt;npm init&lt;/code&gt; to get the nice little CLI dialog to create it for you. Once the file is available, we will want to install a local gulp package, &lt;code&gt;npm install --save-dev gulp&lt;/code&gt;. Now we can get started.&lt;/p&gt;
+
+&lt;h4&gt;Using coffeesript?&lt;/h4&gt;
+
+&lt;p&gt;I try to use CoffeeScript whenever possible, I find there is less of a change of syntax errors like missing semi-colons or commas. Grunt had built in support for CoffeeScript, but Gulp does not, and I doubt it will. The easiest way I found to allow you to write tasks in coffee-script is by requiring it at the base &lt;code&gt;gulpfile.js&lt;/code&gt;. You will also need to install it with &lt;code&gt;npm install --save-dev coffee-script&lt;/code&gt;. I wanted to seperate out the tasks into a couple of small files as well, in a directory I called &lt;code&gt;_gulp&lt;/code&gt; so jekyll will ignore it by default.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;/**
+* @file gulpfile.js
+*/
+
+require(&amp;#39;coffee-script/register&amp;#39;);
+// then the coffeescript can be compiled on the fly.
+
+// included a new file in _gulp folder
+// added that since the project is a jekyll blog
+require(&amp;#39;./_gulp/index.coffee&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;First task&lt;/h4&gt;
+
+&lt;p&gt;Well let&amp;#39;s compile sass down, there are two good plugin&amp;#39;s out there. The first, &lt;a href=&quot;https://github.com/dlmanning/gulp-sass&quot;&gt;&lt;code&gt;gulp-sass&lt;/code&gt;&lt;/a&gt; uses the &lt;a href=&quot;https://github.com/andrew/node-sass&quot;&gt;&lt;code&gt;node-sass&lt;/code&gt;&lt;/a&gt;, which is wicked fast, but has less features and less stable. I went with the ruby sass plugin, &lt;a href=&quot;https://github.com/sindresorhus/gulp-ruby-sass&quot;&gt;&lt;code&gt;gulp-ruby-sass&lt;/code&gt;&lt;/a&gt;. Then it was pretty easy to get the plugin added to my project. Install the gulp plugin with &lt;code&gt;npm install --save-dev gulp-ruby-sass&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;coffeescript language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;##
+@file ./_gulp/index.coffee
+##
+
+gulp = require(&amp;#39;gulp&amp;#39;) #load gulp
+sass = require(&amp;#39;gulp-ruby-sass&amp;#39;) # load the gulp sass plugin
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now that we have these set up, I added the first task using the &lt;code&gt;gulp.task&lt;/code&gt; method to add the new task to the markup.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;coffeescript language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;#contiued above, register the task
+gulp.task(&amp;#39;styles&amp;#39;, -&amp;gt;
+  gulp.src(&amp;#39;./_scss/**/*.scss&amp;#39;) #the source
+    # pipe is streaming the results to the next task
+    .pipe(sass()) # the sass plugin compiles here
+    .pipe(gulp.dest(&amp;#39;./assets/css/&amp;#39;)) # then the `dest` method outputs the results
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Moving each task into small modules&lt;/h4&gt;
+
+&lt;p&gt;So just like &lt;a href=&quot;https://github.com/firstandthird/load-grunt-config&quot;&gt;&lt;code&gt;load-grunt-config&lt;/code&gt;&lt;/a&gt;, it is nice to have smaller pieces of code to work with, so splitting the tasks into modules would be fairly easy. The &lt;code&gt;scripts.coffee&lt;/code&gt; module would go into &lt;code&gt;./_src/scripts.coffee&lt;/code&gt;, then we could just pass the gulp object to the function.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;coffeescript language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;# @file _src/scripts.coffee
+coffee = require(&amp;#39;gulp-coffee&amp;#39;)
+uglify = require(&amp;#39;gulp-uglify&amp;#39;)
+concat = require(&amp;#39;gulp-concat&amp;#39;)
+pkg = require(&amp;#39;../package.json&amp;#39;)
+config = require(&amp;#39;./config.json&amp;#39;)
+isProd = ( config.env == &amp;#39;production&amp;#39; )
+
+module.exports = ( gulp ) -&amp;gt; #Pass in gulp here
+  gulp.task(
+    &amp;#39;scripts&amp;#39;, -&amp;gt;
+      gulp.src(config.paths.scripts)
+        .pipe(coffee())
+        .pipe(concat( pkg.name + &amp;#39;.pkg.js&amp;#39;))
+        .pipe( if isProd then uglify() )
+        .pipe(gulp.dest( config.paths.assets + &amp;#39;/js&amp;#39;))
+  )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then it is really easy to include the individual tasks, &lt;code&gt;require(&amp;#39;./scripts.coffee&amp;#39;)(gulp)&lt;/code&gt;, storing the config in JSON is super easy, although I guess I could use the package.json config key in the spec.&lt;/p&gt;
+
+&lt;h4&gt;Writing my own Jekyll plugin with a few lines&lt;/h4&gt;
+
+&lt;p&gt;Simple enough to get started. I think you start seeing how easy it would be to write your own plugins to use. The only jekyll plugin for gulp isn&amp;#39;t very stable yet, so I thought I would give writting a custom task that uses the child process module to span a new process and handle the errors and stodout a bit.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;coffeescript language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;# @file _gulp/jekyll.coffee
+cp = require(&amp;#39;child_process&amp;#39;)
+gutil = require(&amp;#39;gulp-util&amp;#39;)
+
+module.exports = (gulp) -&amp;gt;
+  gulp.task( &amp;#39;jekyll&amp;#39;, -&amp;gt;
+    jekyll = cp.spawn(&amp;#39;jekyll&amp;#39;, [&amp;#39;build&amp;#39;])
+    jekyll.stdout.on(&amp;#39;data&amp;#39;, (data)-&amp;gt;
+      console.log( &amp;#39;jekyll: &amp;#39; + data )
+    )
+    jekyll.stderr.on(&amp;#39;data&amp;#39;, (data)-&amp;gt;
+      error = new gutil.PluginError(&amp;#39;jekyll&amp;#39;, &amp;#39;Jekyll errored with : &amp;#39; + data )
+    )
+    jekyll.on(&amp;#39;close&amp;#39;, (code) -&amp;gt;
+      if ( code isnt 0  )
+        error = new gutil.PluginError(&amp;#39;jekyll&amp;#39;
+        , &amp;#39;exited with code &amp;#39; + code
+        )
+    )
+  )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Watch is built in!&lt;/h4&gt;
+
+&lt;p&gt;Nifty, the watch task is just built into gulp in a nice way. It is just a method you use. Then it becomes really easy to write watch tasks here.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;coffeescript language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;gulp.task(&amp;#39;watchStyles&amp;#39;, -&amp;gt;
+  gulp.watch(config.paths.scss, [&amp;#39;styles&amp;#39;])
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;So what to do now?&lt;/h3&gt;
+
+&lt;p&gt;I would like to get more projects using Gulp to try it out a bit more. It is hard though since I don&amp;#39;t want to redo them just for the sake of prefering the tool. I will have to wait and see.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>DrupalCon Austin</title>
+   <link href="http://bassettsj.me/2014/06/03/drupalcon-austin"/>
+   <updated>2014-06-03T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2014/06/03/drupalcon-austin</id>
+   <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Sessions, sprints and a reunion.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Keynote: Dries&lt;/h2&gt;
+
+&lt;p&gt;If we look at the camera&amp;#39;s user journey.&lt;/p&gt;
+
+&lt;p&gt;Every iteration of the camera, reduced the number of steps for the user. With the instamatic, we were able to remove processing, digital to remove needing to store. Every itteration reduced the complexity for the user, but caused the complexity of the device to increase.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Innovation enables experience.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Static Web &amp;gt; Dynamic Web &amp;gt; Assembled Web &amp;gt; ?&lt;/p&gt;
+
+&lt;h4&gt;e-commerce example&lt;/h4&gt;
+
+&lt;p&gt;How can we eleminate steps in the user journey in buying a t-shirt. If we can add an identity service, that takes care of shipping, payment and size information in the process.&lt;/p&gt;
+
+&lt;h4&gt;Drupal 8&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Semantic&lt;/li&gt;
+&lt;li&gt;Entity &amp;amp; Views: complete with RESTapi&lt;/li&gt;
+&lt;li&gt;Themeing&lt;/li&gt;
+&lt;li&gt;Twig, HTML5, Modernizr&lt;/li&gt;
+&lt;li&gt;Deployment: Configuration management&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Browser eyeballing != javascript testing&lt;/h2&gt;
+
+&lt;p&gt;Jasmine, qunit, blah, blah&lt;/p&gt;
+
+&lt;p&gt;Use grunt for CI stuff&lt;/p&gt;
+
+&lt;h3&gt;Build a Drupal Free Theme with Drupal 8 &amp;#39;s Rest API&amp;#39;s and JS&lt;/h3&gt;
+
+&lt;p&gt;Themeing for Drupal sucks...&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rcaracaus.github.io/dc-austin-dft/&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What if we could have semantic hmtl? or have scalable CSS?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;RAW DATA PLEASE!?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Web services and REST.&lt;/p&gt;
+
+&lt;p&gt;D8 provides:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HAL&lt;/li&gt;
+&lt;li&gt;HTTP Basic Authentication&lt;/li&gt;
+&lt;li&gt;Serialization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en&quot;&gt;POSTman&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;OO Render&lt;/h2&gt;
+
+&lt;p&gt;The theme system in Drupal sucks, again...&lt;/p&gt;
+
+&lt;p&gt;The render system is complicated, and it is because it is just an array based system. Drillability is something we cannot do with Drupal 8.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;drupal_render().&lt;/code&gt; = we create a big array of stuff, eat it and return a string of HTML.&lt;/p&gt;
+
+&lt;p&gt;It is called a lot, up to 8 recurses and 200 times.&lt;/p&gt;
+
+&lt;h4&gt;What do we need?&lt;/h4&gt;
+
+&lt;p&gt;I. An abstracted, alterable , consistent me=odel of structured content.
+II. A sensible, accessible API for this model.&lt;/p&gt;
+
+&lt;h3&gt;Layout design patters.&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/pixel_whip&quot;&gt;@pixel_whip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Common solutions&lt;/p&gt;
+
+&lt;h3&gt;Themeing with Twig&lt;/h3&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Getting Started with Grunt</title>
+   <link href="http://bassettsj.me/presentations/2014/06/02/gettings-started-with-grunt"/>
+   <updated>2014-06-02T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/presentations/2014/06/02/gettings-started-with-grunt</id>
+   <content type="html">&lt;p&gt;I was lucky to be given the opportunity to share about using grunt to help automate and improve your frontend operations with drupal.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://bassettsj.me/getting-started-with-grunt/&quot;&gt;Presentation: &amp;quot;Getting Started with Grunt&amp;quot;&lt;/a&gt;&lt;/h3&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Kalatheme</title>
+   <link href="http://bassettsj.me/projects/2014/02/01/kalatheme"/>
+   <updated>2014-02-01T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/projects/2014/02/01/kalatheme</id>
+   <content type="html">&lt;p&gt;Joining the Kalamuna crew, I was very excited to start contributing to some of our open source tools that we used on projects and contributed back to the Drupal community. I started taking Kalatheme to the next level in three key areas, javascript, tooling and accessibilty.&lt;/p&gt;
+
+&lt;p&gt;Working on the &lt;a href=&quot;../../../../2014/02/01/bookshare-cms/&quot;&gt;Bookshare&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;more to come...&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Angular Application for CVT Insurance Enrollement</title>
+   <link href="http://bassettsj.me/projects/2014/02/01/cvt-angular"/>
+   <updated>2014-02-01T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/projects/2014/02/01/cvt-angular</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>Bookshare</title>
+   <link href="http://bassettsj.me/projects/2014/02/01/bookshare"/>
+   <updated>2014-02-01T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/projects/2014/02/01/bookshare</id>
+   <content type="html">&lt;p&gt;Bookshare was one of the more challenging projects I had worked on at that point, but the work was ultimately very rewarding because of the impact we were able to make on helping the organization reach the users that needed their help in accessing materials that helped individuals with print based disabilities.&lt;/p&gt;
+
+&lt;p&gt;I was involved in the discovery and frontend implementation of their new CMS. The project had to be responsive, easy to use and most importantly accessible by any user.&lt;/p&gt;
+
+&lt;p&gt;The biggest take-away from the project was the absolute need for user-testing by individuals with different accesss needs. Making assumptions about what is best practice ultimately proved to often be misguided.&lt;/p&gt;
+
+&lt;p&gt;Going into the project thinking that using the WAI-ARIA specifications to describe the visual interactions of the CMS actually created an awkward experience for what many users of Assistive Technology (AT) were expecting. That ultimately using more traditional and expected patterns were the best solutions.&lt;/p&gt;
+
+&lt;p&gt;The best example might be how we implemented a menu system for the navigation bar for the site. For example a simple list of links around a &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; tag would have been much better than something more complex like the example below. Finding out that we were spending more time trying to use every ARIA role to describe the markup was ultimately, not helpful, but using a more traditional &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; to markup the menu.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;nav role=&amp;quot;navigation&amp;quot;&amp;gt;
+  &amp;lt;a class=&amp;quot;brand&amp;quot;&amp;gt;Bookshare&amp;lt;/a&amp;gt;
+  &amp;lt;h2 class=&amp;quot;sr-only&amp;quot;&amp;gt;Main Menu&amp;lt;/h2&amp;gt;
+  &amp;lt;ul class=&amp;quot;nav&amp;quot; role=&amp;quot;menu&amp;quot;&amp;gt;
+    &amp;lt;li role=&amp;quot;presentation&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;explore&amp;quot; role=&amp;quot;menuitem&amp;quot;&amp;gt;Expoore&amp;lt;/a&amp;gt;
+      &amp;lt;a href=&amp;quot;#exploreDropdown&amp;quot; role=&amp;quot;button&amp;quot; class=&amp;quot;dropdown-toggle&amp;quot;
+        aria-haspopup=&amp;quot;true&amp;quot; aria-expaned=&amp;quot;false&amp;quot; id=&amp;quot;exploreDropdownToggle&amp;quot;&amp;gt;
+        &amp;lt;span class=&amp;quot;caret&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&amp;quot;sr-only&amp;quot;&amp;gt;Expand dropdown menu for Explore&amp;lt;/span&amp;gt;
+      &amp;lt;/a&amp;gt;
+      &amp;lt;ul class=&amp;quot;dropdown-menu&amp;quot; role=&amp;quot;menu&amp;quot; id=&amp;quot;exploreDropdown&amp;quot;
+        aria-describedby=&amp;quot;exploreDropdownToggle&amp;quot;&amp;gt;
+        &amp;lt;li role=&amp;quot;presentation&amp;quot;&amp;gt;
+          &amp;lt;a href=&amp;quot;/explore/books&amp;quot; role=&amp;quot;menuitem&amp;quot;&amp;gt;Books&amp;lt;/a&amp;gt;
+        &amp;lt;/li&amp;gt;
+        &amp;lt;li role=&amp;quot;presentation&amp;quot;&amp;gt;
+          &amp;lt;a href=&amp;quot;/explore/articles&amp;quot; role=&amp;quot;menuitem&amp;quot;&amp;gt;Articles&amp;lt;/a&amp;gt;
+        &amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Simple things like providing guidelines to using a good heading structure was  extremly useful. Simply trying using voiceover to navigate your work was a very helpful, and humbling, experience to quickly fix some of the more obvious issues.&lt;/p&gt;
+
+&lt;p&gt;These lessons were later used to help contribute back to our theme, Kalatheme, to make it more accessible and thus the many sites that use it or will in the future.&lt;/p&gt;
+
+&lt;p&gt;This project was using kalatheme, which uses Bootstrap, so began our assement of the framework&amp;#39;s accessibility. Bootstrap, love it or hate it, has been wildly successful and has become the most popular web UI framework. Working on this project, made me realize that documentation and many of the plugins had a lot of room for improving accessibility. I was able to work on a few commits on the project that were later added in a recent release. It was pretty rewarding to get to work on a project that I have been using for years and see that I have the chops to contribute.&lt;/p&gt;
+
+&lt;p&gt;The project also was using the FitText.js, a jQuery plugin to make larger header text scale up or down to fit the container&amp;#39;s size. It uses Lettering.js to do this by simply wraping each letter in a new span tag so CSS can target each letter specifically. The result though for screenreader users isn&amp;#39;t great. Each span is treated as a seperate word and a pause is given, thus a heading with &amp;quot;Title&amp;quot; would be annouced as &amp;quot;T, I, T, L, E&amp;quot; with a pause for each letter. Not great, I went to open an issue with Dave Rupert, the author, and saw he was already trying to work on it. His solution provided a copied element, that was shoved off screen but still accessible to the screen reader and then the modified original was given a &lt;code&gt;aria-hidden=&amp;quot;true&amp;quot;&lt;/code&gt; attribute. Dave wasn&amp;#39;t super satisfied with the result because it resulted in duplicate content, that &lt;em&gt;could&lt;/em&gt; effect SEO. I was wondering is an &lt;code&gt;aria-label&lt;/code&gt; attribute would achieve the same results and prevent duplicating elements. I created a new pull request and it was accepted, I was pretty psyched on that one. I have looked up to Dave for a while on a great leader in frontend web development. He was a co-host on the shoptalk show  and often speaks at conferences.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/projects/bookshare/lettering-js.png&quot; alt=&quot;Browser window with voiceover on testing the results of using an aria-label attribute to make sure the feedback isn&amp;#39;t choppy.&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;more to come...&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Github for Collaboration</title>
+   <link href="http://bassettsj.me/presentations/2014/01/29/github-for-collaboration"/>
+   <updated>2014-01-29T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/presentations/2014/01/29/github-for-collaboration</id>
+   <content type="html">&lt;p&gt;Created a &lt;a href=&quot;http://bassettsj.me/github-allstaff-presentation&quot;&gt;short presentation&lt;/a&gt; using Reveal.js on how our library is using Github for projects.&lt;/p&gt;
+
+&lt;iframe src=&quot;http://bassettsj.me/github-allstaff-presentation&quot; width=&quot;100%&quot; height=&quot;500&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GreenBiz</title>
+   <link href="http://bassettsj.me/projects/2014/01/01/greenbiz"/>
+   <updated>2014-01-01T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/projects/2014/01/01/greenbiz</id>
+   <content type="html">&lt;p&gt;This project was the largest project taken on by Kalamuna at the time. I was brought onto the project about halfway through the build and was tasked with some complicated tasks of helping harmonize and componentize the sites many features needed. This site acted as a blog, media, event and much more for the organization who&amp;#39;s primary task was to help work with businesses to see the business value in improving their sustainability efforts.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;more to come...&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>SinBerBEST</title>
+   <link href="http://bassettsj.me/projects/2013/11/30/sinberbest"/>
+   <updated>2013-11-30T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/projects/2013/11/30/sinberbest</id>
+   <content type="html">&lt;p&gt;My initial project with Kalamuna we helped build their new site using Panopoly and kalatheme. One of the first tasks was helping build some frontend automation to let the project get moving. More details and screenshots to come.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BAD Camp 2013</title>
+   <link href="http://bassettsj.me/2013/10/25/bad-camp-2013"/>
+   <updated>2013-10-25T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2013/10/25/bad-camp-2013</id>
+   <content type="html">&lt;p&gt;With over 160 sessions, 1600 attendees and one awesome party, BAD camp might be my favorite conference of the year. This year was even better than last and can&amp;#39;t wait to use what I learned in upcoming projects. Here are a few notes I took from the conference I wanted to share.&lt;/p&gt;
+
+&lt;p&gt;BAD Camp Session Notes from:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#php-unit-tests-in-drupal-8&quot;&gt;PHP Unit Tests in Drupal 8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#agile-drupal-development&quot;&gt;Agile Drupal Development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#responsive-grids&quot;&gt;Responsive Grids&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;PHP Unit Tests in Drupal 8&lt;/h3&gt;
+
+&lt;h3&gt;Agile Drupal Development&lt;/h3&gt;
+
+&lt;p&gt;Development Philosophies&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Waterfall&lt;/li&gt;
+&lt;li&gt;Agile&lt;/li&gt;
+&lt;li&gt;Rational Unified Process&lt;/li&gt;
+&lt;li&gt;Microsoft Solutions Framework&lt;/li&gt;
+&lt;li&gt;and many more&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Iron Triangle of Project Management
+(Budget, Time, Scope)&lt;/p&gt;
+
+&lt;p&gt;Agile is a philosophy, a way of thinking.&lt;/p&gt;
+
+&lt;p&gt;Scrum is an example of a methodology under the Agile philosophy.&lt;/p&gt;
+
+&lt;h4&gt;Why be agile?&lt;/h4&gt;
+
+&lt;p&gt;Because research show that you have a greater chance of success with Agile methods.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Easier to adapt to change.&lt;/li&gt;
+&lt;li&gt;Often better than Waterfall at managing risks.&lt;/li&gt;
+&lt;li&gt;Necessitates more involvement from stakeholders&lt;/li&gt;
+&lt;li&gt;Developers feel more ownership&lt;/li&gt;
+&lt;li&gt;Better chance of building something useful&lt;/li&gt;
+&lt;li&gt;Quality driven focus&lt;/li&gt;
+&lt;li&gt;Greater transparency. Visibility.&lt;/li&gt;
+&lt;li&gt;Quicker feedback from end-users.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;A typical agency project life cycle&lt;/h4&gt;
+
+&lt;p&gt;information discovery
+requirements
+design
+development
+content creation&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;pure&lt;/em&gt; agile is probably not the best option.&lt;/p&gt;
+
+&lt;h4&gt;Scrumfall&lt;/h4&gt;
+
+&lt;p&gt;Scrumfall is a hybrid of Waterfall and Scrum methodologies often employed when there need to be certainty around the project scope.&lt;/p&gt;
+
+&lt;h4&gt;Waterfall tasks&lt;/h4&gt;
+
+&lt;p&gt;Documenting&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Project plan&lt;/li&gt;
+&lt;li&gt;Business requirements&lt;/li&gt;
+&lt;li&gt;Schedule&lt;/li&gt;
+&lt;li&gt;Risk analysis&lt;/li&gt;
+&lt;li&gt;Scope definition &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Agile tasks&lt;/h4&gt;
+
+&lt;p&gt;Iterating&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brainstorming&lt;/li&gt;
+&lt;li&gt;High-level requirements (i.e.  vision, mission statement)&lt;/li&gt;
+&lt;li&gt;Elevator pitch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Responsive Grids&lt;/h3&gt;
+
+&lt;p&gt;by Snugug (While wearing an awesome viking hat.)&lt;/p&gt;
+
+&lt;iframe src=&quot;http://snugug.github.io/responsive-grids/&quot; width=&quot;100%&quot; height=&quot;auto&quot; style=&quot;min-height: 500px;&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Drush Resources</title>
+   <link href="http://bassettsj.me/drush/2013/10/23/drush-resources"/>
+   <updated>2013-10-23T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/drush/2013/10/23/drush-resources</id>
+   <content type="html">&lt;p&gt;Setting up a local Drupal development environment on your Mac and how to use Drush to manage and sync sites.&lt;/p&gt;
+
+&lt;h2&gt;Articles&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://drupal.org/node/670460&quot;&gt;Using drush to synchronize and deploy sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://brianfisher.name/content/drupal-development-environment-os-x-mamp-pro-eclipse-xdebug-and-drush&quot;&gt;A Drupal Development Environment on OS X with MAMP Pro, Eclipse, xDebug, and Drush&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://drupal.org/node/601604&quot;&gt;getting drush to work on a MAMP setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://drush.ws/&quot;&gt;Drush Official Site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Setting up the local environment on a Mac.&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download and install &lt;a href=&quot;http://www.mamp.info/en/index.html&quot;&gt;MAMP&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I like to configure my development enviroment to point to the &lt;code&gt;~/Sites/&lt;/code&gt; directory to serve the sites.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Installing git version control
+
+&lt;ul&gt;
+&lt;li&gt;Download and install the latest version of &lt;a href=&quot;http://git-scm.com/&quot;&gt;git&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Follow the instructions.&lt;/li&gt;
+&lt;li&gt;If you’re looking for some enticing reading, check out &lt;a href=&quot;http://git-scm.com/book&quot;&gt;Pro Git&lt;/a&gt; for detailed infomation about git version control.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Installing Drush
+
+&lt;ul&gt;
+&lt;li&gt;Please read the following Administration Guide from Drupal.org for the most up to date information on installing drush:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://drupal.org/node/1791676&quot;&gt;Specific instructions for installing Drush on different platforms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;I found the following lines the easiest to set up drush to work with MAMP, not MAMP Pro, The current version of MAMP may require some troubleshooting to get Drush to
+work correctly. Known issues include:
+
+&lt;ul&gt;
+&lt;li&gt;Default use of php5.3.6 instead of php5.2.17 causes errors upon update, most commonly &amp;quot;Cannot redeclare class&amp;quot; errors. To solve, change the version of PHP in the MAMP preferences panel or add a line in your .bash_profile to tell Drush to use the right version of PHP &lt;code&gt;export DRUSH_PHP=&amp;quot;/Applications/MAMP/bin/php/php5.2.17/bin/php&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Inability to connect to localhost MySQL via socket. Causes errors like &amp;quot;Error: PDO::__construct(): [2002] No such file or directory (trying&lt;br&gt;
+to connect via unix:///var/mysql/mysql.sock)&amp;quot;. To solve, from within Terminal
+run the following commands:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo mkdir /var/mysql&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Please read the following instructions if you have MAMP Pro:
+&amp;gt; ##MAMP Pro
+&amp;gt; &lt;a href=&quot;http://brianfisher.name/content/drupal-development-environment-os-x-mamp-pro-eclipse-xdebug-and-drush&quot;&gt;Original Article&lt;/a&gt;*
+&amp;gt; 
+&amp;gt; These instructions are somewhat specific to MAMP PRO 2.1.1
+&amp;gt; 
+&amp;gt; &lt;a href=&quot;http://www.mamp.info/en/downloads/index.html&quot;&gt;Download&lt;/a&gt;, install, and launch
+&amp;gt; MAMP Pro. Under the PHP tab, select php 5.3.x from version pulldown. Click
+&amp;gt; &amp;quot;Apply&amp;quot;. Click &amp;quot;Start&amp;quot;.
+&amp;gt; 
+&amp;gt; Add the MAMP executables to your path.
+&amp;gt; 
+&amp;gt; 
+&amp;gt; chmod +x /Applications/MAMP/bin/php/php5.3.14/bin/*
+&amp;gt; echo &amp;quot;export PATH=/Applications/MAMP/bin/php/php5.3.14/bin:/Applications/MAMP/Library/bin:\$PATH&amp;quot; &amp;gt;&amp;gt; ~/.profile
+&amp;gt; . ~/.profile
+&amp;gt; 
+&amp;gt; Add a symlink to the MAMP Mysql socket to allow drush to connect.
+&amp;gt; 
+&amp;gt; 
+&amp;gt; sudo mkdir /var/mysql
+&amp;gt; sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock
+&amp;gt; ## Performace
+&amp;gt; 
+&amp;gt; ### MYSQL
+&amp;gt; 
+&amp;gt; You may get &amp;quot;MySql server has gone away&amp;quot; errors. To fix, in MAMP, edit the
+&amp;gt; mysql configuration by going to file-&amp;gt;edit template-&amp;gt;mysql. Change
+&amp;gt; &lt;em&gt;max&lt;/em&gt;allowed&lt;em&gt;packet&lt;/em&gt; to
+&amp;gt; 
+&amp;gt; 
+&amp;gt; max&lt;em&gt;allowed&lt;/em&gt;packet =  16M
+&amp;gt; 
+&amp;gt; ### PHP
+&amp;gt; 
+&amp;gt; Increase both the MAMP PHP memory limit. In MAMP, edit the php configuration
+&amp;gt; 
+&amp;gt; file-&amp;gt;edit template-&amp;gt;php-&amp;gt;php5.3
+&amp;gt; 
+&amp;gt; change &lt;em&gt;memory&lt;/em&gt;limit_ to
+&amp;gt; 
+&amp;gt; 
+&amp;gt; memory&lt;em&gt;limit =  256M
+&amp;gt; 
+&amp;gt; Increase the CLI PHP memory limit. To figure out where your CLI php.ini file
+&amp;gt; is, use
+&amp;gt; 
+&amp;gt; 
+&amp;gt; which php
+&amp;gt; 
+&amp;gt; php -i | grep  php.ini
+&amp;gt; 
+&amp;gt; change _memory&lt;/em&gt;limit_ to
+&amp;gt; 
+&amp;gt; 
+&amp;gt; memory_limit =  -1
+## Cloning production site to your local environment. ##&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Clone the Git repository.
+
+&lt;ul&gt;
+&lt;li&gt;Open Terminal&lt;/li&gt;
+&lt;li&gt;Use git to clone the repository for the project you’re working on from our &lt;a href=&quot;https://bitbucket.org/nu_lts&quot;&gt;Bitbucket Account&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;eg &lt;code&gt;git clone git@bitbucket.org:nu_lts/dmc.git ~/sites/dmc.neu.edu/&lt;/code&gt; &lt;em&gt;clone from remote to this directory&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Note that this will only bring down the code that is being tracked by the git repository. It will not bring down any files or directories not tracked by Git.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Setting Up Site Aliases
+
+&lt;ul&gt;
+&lt;li&gt;Go to your root apache htdocs folder, in my case &lt;code&gt;cd ~/Sites&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Set up a file structure such as:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/Sites/library.neu.edu/&lt;/code&gt; to act as the local root for your Drupal directory.
+
+&lt;ul&gt;
+&lt;li&gt;this would be accessible from &lt;a href=&quot;localhost:8888/library.neu.edu/&quot;&gt;localhost:8888/library.neu.edu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Setting up the Drush Aliases for your projects
+
+&lt;ul&gt;
+&lt;li&gt;Location: I have used the following location by using: &lt;code&gt;cp /path/to/drush/examples/example.aliases.drushrc.php ~/.drush/aliases.drushrc.php&lt;/code&gt; to move the example file with documentation to my home directory that drush will look at to find aliases.
+
+&lt;ul&gt;
+&lt;li&gt; In any path set in $options[&amp;#39;alias-path&amp;#39;] in drushrc.php, or (equivalently) any path passed in via --alias-path=...  on the command line.&lt;/li&gt;
+&lt;li&gt;In one of the default locations:
+
+&lt;ul&gt;
+&lt;li&gt;/etc/drush&lt;/li&gt;
+&lt;li&gt;$HOME/.drush&lt;/li&gt;
+&lt;li&gt;The sites/all/drush folder for the current Drupal site&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Inside the sites folder of any bootstrapped Drupal site, or any local Drupal site indicated by an alias used as a parameter to a command.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Edit the &lt;code&gt;aliases.drushrc.php&lt;/code&gt; file by configuring the production, staging and local environment you would like to work with eg:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$aliases[&amp;#39;dmc.local&amp;#39;] = array(
+&amp;#39;uri&amp;#39; =&amp;gt; &amp;#39;localhost:8888/dmc.neu.edu&amp;#39;,
+&amp;#39;root&amp;#39; =&amp;gt; &amp;#39;/Users/steven/Sites/dmc.neu.edu&amp;#39;, // This doesn&amp;#39;t work with ~/Sites/dev.local
+&amp;#39;db_url&amp;#39; =&amp;gt; &amp;#39;mysql://root:root@localhost:8889/dmc&amp;#39;,
+&amp;#39;path-aliases&amp;#39; =&amp;gt; array(
+  &amp;#39;%files&amp;#39; =&amp;gt; &amp;#39;sites/defualt/files&amp;#39;,
+  &amp;#39;%dump&amp;#39; =&amp;gt; &amp;#39;/Users/steven/tmp/drush/sql-sync-dev-local.sql&amp;#39;, // Arbitrary location for temp files
+  ),
+);
+$aliases[&amp;#39;dmc.prod&amp;#39;] = array(
+&amp;#39;uri&amp;#39; =&amp;gt; &amp;#39;defualt&amp;#39;,
+&amp;#39;root&amp;#39; =&amp;gt; &amp;#39;/var/www/html&amp;#39;,
+&amp;#39;databases&amp;#39; =&amp;gt;
+  array (
+   &amp;#39;default&amp;#39; =&amp;gt;
+   array (
+   &amp;#39;default&amp;#39; =&amp;gt;
+   array (
+   &amp;#39;database&amp;#39; =&amp;gt; &amp;#39;dmc&amp;#39;,
+   &amp;#39;username&amp;#39; =&amp;gt; &amp;#39;dmc1&amp;#39;,
+   &amp;#39;password&amp;#39; =&amp;gt; ‘****’,
+   &amp;#39;host&amp;#39; =&amp;gt; &amp;#39;localhost&amp;#39;,
+   &amp;#39;port&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
+   &amp;#39;driver&amp;#39; =&amp;gt; &amp;#39;mysql&amp;#39;,
+   &amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
+   ),
+   ),
+  ),
+&amp;#39;remote-user&amp;#39; =&amp;gt; &amp;#39;sbassett&amp;#39;,
+&amp;#39;remote-host&amp;#39; =&amp;gt; &amp;#39;155.33.22.226&amp;#39;,
+&amp;#39;path-aliases&amp;#39; =&amp;gt; array(
+  &amp;#39;%drush&amp;#39; =&amp;gt; &amp;#39;/usr/local/share/drush&amp;#39;,
+  &amp;#39;%site&amp;#39; =&amp;gt; &amp;#39;sites/default&amp;#39;,
+  &amp;#39;%files&amp;#39; =&amp;gt; &amp;#39;sites/defualt/files&amp;#39;,
+  &amp;#39;%dump&amp;#39; =&amp;gt; &amp;#39;tmp&amp;#39;, // Arbitrary location for temp files
+  ),
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Finding the site information for the aliases: Tip from &lt;a href=&quot;https://drupal.org/node/670460&quot;&gt;Using drush to synchronize and deploy sites&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Creating the site-alias config array is tedious by hand. If you
+have a working site. Change into the site dir of a working site and run &lt;code&gt;drush site-alias --with-db --show-passwords --with-optional @self&lt;/code&gt;
+I often go &lt;code&gt;drush site-alias --with-db --show-password --with-optional @self &amp;gt;
+/etc/drush/mysqit.alias.drushrc.php&lt;/code&gt;
+and then &lt;strong&gt;importantly&lt;/strong&gt; edit the resulting new files and A: add a &lt;code&gt;&amp;lt;?php&lt;/code&gt;
+tag to the top! B: relabel it from @self to your preferred nickname - which
+must match the filename you used. Those extra connection details are required for remote aliases. If you want, you can also split out the component parts of an alias and use
+inheritance to construct the peer alias. For example:
+    &amp;lt;?php
+    $aliases[&amp;#39;mystagingserver&amp;#39;] = array (
+    &amp;#39;remote-host&amp;#39; =&amp;gt; &amp;#39;mystagingserver.myisp.com&amp;#39;,
+    &amp;#39;remote-user&amp;#39; =&amp;gt; &amp;#39;publisher&amp;#39;,
+    );
+    $aliases[&amp;#39;peer&amp;#39;] = array (
+        &amp;#39;parent&amp;#39; =&amp;gt; &amp;#39;@mystagingserver&amp;#39;,
+        &amp;#39;uri&amp;#39; =&amp;gt; &amp;#39;demosite.staging.remote&amp;#39;,
+        &amp;#39;root&amp;#39; =&amp;gt; &amp;#39;/var/www/vhosts/staging/httpdocs’,
+    );
+    ?&amp;gt;&lt;/p&gt;
+
+&lt;h3&gt;SSH Key Pairs&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Required for Drush to work with remote servers&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4&gt;Check for ssh keys on your computer&lt;/h4&gt;
+
+&lt;p&gt;Go to your .ssh directory: &lt;code&gt;$ cd ~/.ssh&lt;/code&gt;
+Check for keys: 
+    $ ls
+    id&lt;em&gt;rsa      id&lt;/em&gt;rsa.pub
+If there are no keys like that above try creating the keys using the directions from github:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ ssh-keygen -t rsa -C &amp;quot;your_email@youremail.com&amp;quot;
+# Creates a new ssh key using the provided email
+# Generating public/private rsa key pair.
+# Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do not enter a passphrase:
+    Enter passphrase (empty for no passphrase): [Press enter]
+    Enter same passphrase again: [Press enter]&lt;/p&gt;
+
+&lt;p&gt;Should return:
+    Your identification has been saved in /Users/you/.ssh/id&lt;em&gt;rsa.
+    Your public key has been saved in /Users/you/.ssh/id&lt;/em&gt;rsa.pub.
+    The key fingerprint is:
+    01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your&lt;em&gt;email@youremail.com
+Make sure to create the &lt;code&gt;touch ~/.ssh/authorized_keys&lt;/code&gt; file. Try to create the permissions to be like the following for your environment:
+    $ cd ~/.ssh
+    $ ls -al
+    drwx------ 2 user user 4096 Oct 10 12:31 .
+    drwx------ 3 user user 4096 Oct 10 12:51 ..
+    -rw------- 1 user user  808 Oct 10 12:50 authorized&lt;/em&gt;keys
+    -rw------- 1 user user 1675 Oct 10 12:31 identity
+    -rw------- 1 user user 1675 Oct 10 12:16 id&lt;em&gt;rsa
+    -rw-r--r-- 1 user user  398 Oct 10 12:16 id&lt;/em&gt;rsa.pub
+SSH into the remote server:
+    $ ssh user@example.neu.edu
+Create a keypair for the remote server using the same method above.
+&lt;strong&gt;(Don’t forget to check the permissions)&lt;/strong&gt;
+When you have completed the steps on both your local and remote machines, then you can add your key to the remote server. From your &lt;strong&gt;local terminal&lt;/strong&gt;:
+    $ login=username@hostname
+    $ ssh $login &amp;quot;echo &amp;#39;&lt;code&gt;cat ~/.ssh/id_rsa.pub&lt;/code&gt;&amp;#39; &amp;gt;&amp;gt; ~/.ssh/authorized_keys&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;To debug what might be happening you can run:
+    $ ssh -v user@server.edu
+&lt;strong&gt;&lt;em&gt;Need more assistance making a bootstrap way of creating key pairs.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;Using Drush commands on remote servers&lt;/h2&gt;
+
+&lt;p&gt;To use drush commands on a remote server you can simply use the alias for. For example I can look and see the basic site status for the DMC website. 
+    $ drush @dmc.prod status
+     Site URI                      :  defualt&lt;br&gt;
+     Database driver               :  mysql&lt;br&gt;
+     Database hostname             :  localhost&lt;br&gt;
+     Database username             :  dmc1&lt;br&gt;
+     Database name                 :  dmc&lt;br&gt;
+     Database                      :  Connected&lt;br&gt;
+     Drupal bootstrap              :  Successful&lt;br&gt;
+     Drupal user                   :  Anonymous&lt;br&gt;
+     Default theme                 :  dmc&lt;br&gt;
+     Administration theme          :  seven&lt;br&gt;
+     PHP configuration             :  /etc/php.ini&lt;br&gt;
+     Drush version                 :  5.6&lt;br&gt;
+     Drush configuration           :&lt;br&gt;
+     Drupal root                   :  /var/www/html&lt;br&gt;
+     Site path                     :  sites/default&lt;br&gt;
+     File directory path           :  sites/default/files&lt;br&gt;
+     Private file directory path   :  sites/default/files/private 
+     temp                          :  tmp&lt;br&gt;
+     Drupal version                :  7.15                        &lt;/p&gt;
+
+&lt;h2&gt;Using rsync to fetch files from the remote server.&lt;/h2&gt;
+
+&lt;p&gt;Go fetch the files from our production server to local server:
+    drush rsync @dmc.prod:%files/ @dmc.local:%files/&lt;/p&gt;
+
+&lt;h2&gt;Using drush to run a site install&lt;/h2&gt;
+
+&lt;p&gt;Before running the command please make sure to look at &lt;code&gt;drush site-install —help&lt;/code&gt; for instructions.
+To install the local site into mamp you can run the following command:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ drush @dmc.local use
+$ drush si
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If the aliases are configured correctly, you can go the the local url eg localhost:8888/dmc.neu.edu/ and it should install a basic site. Nothing special.&lt;/p&gt;
+
+&lt;h2&gt;Using drush to sync the databases&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Note: you will probably want to clear the cache on both sites before the transfer&lt;/em&gt; &lt;code&gt;$ drush cc all&lt;/code&gt;.
+Use the drush &lt;code&gt;sql-sync&lt;/code&gt; command to send from source to target. For example to create your local enviromnet, you will want to pull down the sql database using: &lt;code&gt;$ drush sql-sync @dmc.prod @dmc.local&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2&gt;Notes for trouble shooting White-Screen-Of-Death (WSOD)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Try turning off clean urls: &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ drush vset --exact clean_url 0
+clean_url was set to 1.                                                                  [success]      
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Clear the cache &lt;code&gt;$ drush cc all&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Look at the settings.php file in the sites/default/ directory&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Look at the .htaccess file&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Refer to the php.ini files to make sure that MAMP is configured to give enough memory for both drush and drupal to run.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Check your mysql and php error logs, with MAMP they are located:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;/Applications/MAMP/logs/&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Scholar OneSearch Presentation</title>
+   <link href="http://bassettsj.me/presentations/2013/10/13/scholar-onesearch-presentation"/>
+   <updated>2013-10-13T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/presentations/2013/10/13/scholar-onesearch-presentation</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;/assets/attachments/presentations/scholar-onesearch-presentation/index.html&quot;&gt;&lt;img src=&quot;/assets/img/presentations/scholar-onesearch-presentation.png&quot; alt=&quot;Scholar One Search&quot;&gt;&lt;/a&gt;
+Re-skinning Northeastern University Libraries’ Primo UI With the launch of Alma on July 1, 2013, Northeastern University Libraries introduced the new Scholar OneSearch, a Primo installation featuring responsive and user-friendly design.&lt;/p&gt;
+
+&lt;p&gt;We’re especially proud of our responsive design, which allows flexibility and functionality beyond the default mobile stylesheet. We’re also happy to have WorldCat NRE requests integrated successfully. Scholar OneSearch also improves upon some of the features in the standard Primo release, including a reorganized page header, collapsible facets in the left-hand “refine my results” sidebar, and integrated feedback into each search result.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/attachments/presentations/scholar-onesearch-presentation/index.html&quot;&gt;Scholar OneSearch Presentation&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Feature Driven Developement with Drupal</title>
+   <link href="http://bassettsj.me/drupal/2013/09/17/feature-driven-development"/>
+   <updated>2013-09-17T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/drupal/2013/09/17/feature-driven-development</id>
+   <content type="html">&lt;iframe src=&quot;http://slid.es/bassettsj/feature-based-development/embed&quot; width=&quot;770&quot; style=&quot;max-width: 100%;&quot; height=&quot;561&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;KIT Specification&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://drupal.org/project/kit&quot;&gt;KIT Feature Specification&lt;/a&gt; outlines best practices for creating features to allow them to be interoperable between projects. Read the &lt;a href=&quot;http://drupalcode.org/project/kit.git/blob_plain/refs/heads/master:/kitf.txt&quot;&gt;full specification&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;h2&gt;Reading list&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://www.bluespark.com/blog/drupal-configuration-management-features&quot;&gt;Drupal Configuration Management with Features&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;Components that &lt;em&gt;should&lt;/em&gt; be in features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Views&lt;/li&gt;
+&lt;li&gt;Context&lt;/li&gt;
+&lt;li&gt;Taxonomies&lt;/li&gt;
+&lt;li&gt;Rules&lt;/li&gt;
+&lt;li&gt;Menu definitions&lt;/li&gt;
+&lt;li&gt;Content type definitions and field defitions&lt;/li&gt;
+&lt;li&gt;Search Servers&lt;/li&gt;
+&lt;li&gt;Search Indexes&lt;/li&gt;
+&lt;li&gt;Configuration for Contributed Modules&lt;/li&gt;
+&lt;li&gt;Image Styles&lt;/li&gt;
+&lt;li&gt;Text Filters&lt;/li&gt;
+&lt;li&gt;CKEditor Settings&lt;/li&gt;
+&lt;li&gt;Rules and Rules Sets&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>DRS</title>
+   <link href="http://bassettsj.me/projects/2013/08/21/drs"/>
+   <updated>2013-08-21T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/projects/2013/08/21/drs</id>
+   <content type="html">&lt;p&gt;The Digital Repository Service is the current project to build a institutional repository for Northeastern University. The repository will act as a source for departments in the institutional organization to store scholarly resources research information.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;What is the &lt;strong&gt;DRS&lt;/strong&gt;?&lt;/h3&gt;
+
+&lt;p&gt;The DRS is simply the web application / project was and is being build to interface with our &lt;a href=&quot;http://something.com&quot;&gt;Fedora Common&amp;#39;s&lt;/a&gt; dura-space architecture. The project is lead by the Dean of Digital Strategies, Patrick Yott. He had the vision to adopt open source technology and invest in building a customized web interface to provide Northeastern with a institutional repository to preserve and share university publications and other scholarly works. &lt;/p&gt;
+
+&lt;p&gt;The project project had functional requirements that made it more unique than other repository implementaitons. The data models of how content objects were organized followed an anolog of how the university is structured. For example, deposited materials are organized in a graph that follows the divisions of the university so that a research publication of the science department would follow:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Northeastern University / College of Arts and Sciences / Biology / Research Publications&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The first implementation of the platform was built using a custom &lt;em&gt;homegrown&lt;/em&gt; PHP written application. The features of this application were limited and the extendability of this implementation were greatly limited by the functional and hacked together pieces of code.&lt;/p&gt;
+
+&lt;h3&gt;Drupal Implementation&lt;/h3&gt;
+
+&lt;p&gt;As I was given the task to look into using the Drupal APIs and contributed modules to implement a new UI I was quickly faced with the reality that this task was going to require using every API with a collection of custom modules to provide the features that were needed in the project. Drupal is a powerful platform that is no longer limited to be used as just a content management system, so although the &lt;/p&gt;
+
+&lt;h3&gt;Silex&lt;/h3&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Scholar OneSearch</title>
+   <link href="http://bassettsj.me/projects/2013/07/17/scholor-one-search"/>
+   <updated>2013-07-17T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/projects/2013/07/17/scholor-one-search</id>
+   <content type="html">&lt;h3&gt;Why such a drastic change in design?&lt;/h3&gt;
+
+&lt;p&gt;With the launch of Alma on July 1, 2013, Northeastern University Libraries introduced the new Scholar OneSearch, a Primo installation featuring responsive and user-friendly design.&lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;re especially proud of our responsive design, which allows flexibility and functionality beyond the default mobile stylesheet.  We&amp;#39;re also happy to have WorldCat NRE requests integrated successfully.  &lt;/p&gt;
+
+&lt;p&gt;Scholar OneSearch also improves upon some of the features in the standard Primo release, including a reorganized page header, collapsing facets in the left-hand “refine” navigation, and integrated feedback into each search result.&lt;/p&gt;
+
+&lt;h3&gt;Constraints of default design&lt;/h3&gt;
+
+&lt;p&gt;The default front-end, the html, javascript and CSS delivered to the browser, greatly limited the amount of customization. In our first early implementation. We only authored a few lines of code to override the default design. Through our user testing we identified that we might need to take a drastic overhaul of the CSS. While starting the design process the decision to include the original CSS at all was heavily weighed in, since the default CSS took a great amount of specificity in the CSS selectors to override. We have implement this first design with the inclusion for the reasoning of avoiding the possible issues of not having any fallback for unforeseen and tested features where there was no CSS and left the user with a non-functioning design.&lt;/p&gt;
+
+&lt;h3&gt;Leveraging Open-Source Technology&lt;/h3&gt;
+
+&lt;p&gt;With the relative short deadline before release, it would have been nearly impossible drastically change the user-experience without the help of open-source projects. We implemented from the Front-End framework from Twitter called &lt;a href=&quot;http://twitter.github.io/bootstrap/&quot;&gt;Bootstrap&lt;/a&gt;. The project was customized through using the project&amp;#39;s preferred CSS preprocessor &lt;a href=&quot;http://lesscss.org/&quot;&gt;LESS&lt;/a&gt;. Without the aid of a CSS Preprocessor the stylesheets would have been unmaintainable and the complex CSS selectors would have been nearly impossible. &lt;a href=&quot;http://twitter.github.io/recess/&quot;&gt;Recess&lt;/a&gt; was used to help enhance LESS by compiling and ordering the CSS with best practices automatically, can be used as a fantastic CSS linting tool as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&#39;css&#39;&gt;// LESS before being compiled to CSS&lt;/p&gt;
+
+&lt;p&gt;.navbar-toggle{
+  background-color: @navbar-toggle-bg;
+  border: @navbar-toggle-color 3px solid;
+  .icon-bar{
+    background-color: @navbar-toggle-color;
+  }
+  border-color: @navbar-toggle-color;
+  &amp;amp;:hover,
+  &amp;amp;:focus{
+    background-color: @navbar-toggle-bg-hover;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;h4&gt;Compiled to&lt;/h4&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;pre&gt;&lt;code class=&#39;css&#39;&gt;/**  Becomes **/&lt;/p&gt;
+
+&lt;p&gt;.navbar-toggle {
+  background-color: #ffffff FF;
+  border: #cc0000 3px solid;
+  border-color: #cc0000;
+}&lt;/p&gt;
+
+&lt;p&gt;.navbar-toggle .icon-bar {
+  background-color: #cc0000;
+}&lt;/p&gt;
+
+&lt;p&gt;.navbar-toggle:hover,
+.navbar-toggle:focus {
+  background-color: #555555;
+}&lt;/p&gt;
+
+&lt;p&gt;.navbar-brand {
+  max-width: 250px;
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;With the use of the &lt;a href=&quot;http://fontawesome.io/&quot;&gt;Font-Awesome&lt;/a&gt; icon font set, we were able to create retina ready icons that are small in size and can be styled with the power of CSS. The project includes LESS stylesheets and powerful mix-ins. Inspiration and color pallets were taken from the popular &lt;a href=&quot;http://designmodo.github.io/Flat-UI/&quot;&gt;Flat-UI&lt;/a&gt; project and were integrated into the Bootstrap framework. &lt;a href=&quot;http://modernizr.com/&quot;&gt;Modernizr&lt;/a&gt; was used for feature detection and filling in gaps in legacy browsers. &lt;/p&gt;
+
+&lt;p&gt;Further modifications were made to the HTML through the use of &lt;a href=&quot;&quot;&gt;jQuery&lt;/a&gt;. The jQuery was already included with Primo. We built our javascript functions in &lt;a href=&quot;http://learn.jquery.com/code-organization/concepts/&quot;&gt;&amp;quot;The Module Pattern&amp;quot;&lt;/a&gt; to help organize the code if it increases in complexity. Although modifying the DOM too heavily with javascript is not a best practice, the restraints of working on someone else&amp;#39;s application gave no other option.&lt;/p&gt;
+
+&lt;h4&gt;Projects Used&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;jQuery&lt;/li&gt;
+&lt;li&gt;twitter/bootstrap&lt;/li&gt;
+&lt;li&gt;twitter/recess&lt;/li&gt;
+&lt;li&gt;Font-Awesome/Font-Awesome&lt;/li&gt;
+&lt;li&gt;design-modo/Flat-UI&lt;/li&gt;
+&lt;li&gt;Grunt.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Working together for a better Primo&lt;/h3&gt;
+
+&lt;p&gt;The Northeastern Libraries wants to continue to make Primo and Scholar OneSearch better through collaboration with others in the Primo user community. This means making the code available for you to use with Primo at your library. Even though we there is more work that needs to be done, we are following the &amp;quot;Release early, and release often&amp;quot; iterative approach. If you are interested in implementing this code, please help contribute back improvements. Even submitting and fixing issues that you have found in a copy of the code would be beneficial to any adopting institutions. You can view and work on the code through our public repository at &lt;a href=&quot;https://github.com/nu-lts/scholar-onesearch&quot;&gt;nu-lts/scholar-onesearch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Ways to contribute&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Adding documentation to the wiki.&lt;/li&gt;
+&lt;li&gt;Filing issues and enhancement request
+
+&lt;ul&gt;
+&lt;li&gt;or even just using that for feedback / suggestions.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fixing and adding new features through a pull-request.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Higher Education Summit - NYC Camp 2013</title>
+   <link href="http://bassettsj.me/conferences/2013/07/15/higher-ed-summit-nyc-camp"/>
+   <updated>2013-07-15T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/conferences/2013/07/15/higher-ed-summit-nyc-camp</id>
+   <content type="html">&lt;h3&gt;Schedule for the the day&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;9:00-10:30 — Opening, Introductions, Identify BoF opportunities&lt;/li&gt;
+&lt;li&gt;10:30-11:00 — Yalesites (Nancy, Yale)&lt;/li&gt;
+&lt;li&gt;11:00-11:15 — Break&lt;/li&gt;
+&lt;li&gt;11:15-11:45 — BoF Tables&lt;/li&gt;
+&lt;li&gt;11:45-12:15 — Harvard Web Publishing and OpenScholar (Ethan, Harvard)&lt;/li&gt;
+&lt;li&gt;12:15-01:30 — Lunch&lt;/li&gt;
+&lt;li&gt;1:30-2:00 — Reconvene, Unconsortium (Zach, Stanford)&lt;/li&gt;
+&lt;li&gt;2:00-2:45 — Lightning Talks, BoF Tables&lt;/li&gt;
+&lt;li&gt;2:45-3:15 — Open Edu (ImageX Media)&lt;/li&gt;
+&lt;li&gt;3:15-3:30 — Break&lt;/li&gt;
+&lt;li&gt;3:30-4:00 — CCNMTL (Jonah, Columbia)&lt;/li&gt;
+&lt;li&gt;4:00-4:30 — Drupal websites and the people who break them (Aaron, Columbia)&lt;/li&gt;
+&lt;li&gt;4:30-5:00 — Reflection, Plus/Delta, takeaways&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Yale&lt;/h3&gt;
+
+&lt;p&gt;Provides three base themes based on Omega base theme, includes a yale 978 grid. HTML5 Starterkit, Omega tools
+Delta &amp;amp; Content Modules for alternatve homepages layouts. 
+Clean design, with plenty of flexibility including accent colors and their own custom typeface.&lt;/p&gt;
+
+&lt;p&gt;They have an institutional github enterprise, NetApp and Jenkins while using Drush.&lt;/p&gt;
+
+&lt;p&gt;Offer support site with forum and lynda.com memebership.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Yale University has recently transformed the YaleSites service by upgrading the platform from Drupal 6 to 7 and providing additional features to make building a site on the University campus easier. While our first implementation of YaleSites was an incredible stretch for the University (it was the first widely available, centrally-supported CMS offering), most of the focus was on adoption and cost savings. We provided some features we thought the user community wanted – Image Galleries, Blogging, Calendar – but quickly realized there were other major issues that needed to be addressed to make it easier for non-technical faculty, students, and staff to build their websites.&lt;/p&gt;
+
+&lt;p&gt;The launch of Drupal 7 was a perfect opportunity to begin the process of revamping the YaleSites offering, utilizing the experience gained with Drupal 6 and improving upon the existing system to provide a platform that addressed the needs of all – even the non-technical site builders. In this session, we will talk about:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;D7 administrative interface: made it easier to manage content and administrative tasks.&lt;/li&gt;
+&lt;li&gt;Omega base theme: 3 flexible and mobile ready Yale Templates using Omega as the base theme.&lt;/li&gt;
+&lt;li&gt;Heavier use of Features module: to provide many of the common Content Types and Views – News listing, Rotating images, Calendar, Video listing, Photo Galleries – eliminating the need to manually build.&lt;/li&gt;
+&lt;li&gt;D7 Profile/People listing: Faculty and Staff listings are now easier to create using the People Feature that uses CAS and prepopulates user data from LDAP when adding users.&lt;/li&gt;
+&lt;li&gt;Improved file handling: Multiple files can be uploaded at one time, and better private file handling allows you to restrict downloading / viewing to a specific subset of users.&lt;/li&gt;
+&lt;li&gt;Restricted access: Can create private files, or restrict access to a Content Type and/or a specific node.&lt;/li&gt;
+&lt;li&gt;Yale-specific customizations, integrations and custom modules&lt;/li&gt;
+&lt;li&gt;CAS/LDAP&lt;/li&gt;
+&lt;li&gt;Bedework calendar&lt;/li&gt;
+&lt;li&gt;Filelocker 2&lt;/li&gt;
+&lt;li&gt;Github Enterprise and Jenkins for code management and deployment&lt;/li&gt;
+&lt;li&gt;Improved infrastructure&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Harvard Web Publishing &amp;amp; OpenScholar&lt;/h3&gt;
+
+&lt;p&gt;The Harvard Web Publishing (HWP) group is a key pillar in Harvard&amp;#39;s strategy around public websites for departments, projects, research centers, and faculty. Formed out of a strategic, collaborative effort between Harvard University Information Technology, the Institute for Quantitative Social Science, and Harvard Public Affairs and Communications, HWP provides a low-cost yet powerful solution for Web publishing needs. Our integrated, self-service platform based on OpenScholar; visual design templates; and content strategy guides help Harvard community members create an effective, attractive website with minimal effort and cost.&lt;/p&gt;
+
+&lt;p&gt;In this talk, we will review the business case and demo the technology.&lt;/p&gt;
+
+&lt;p&gt;Ethan Kiczek, Director, Harvard Web Publishing
+Oren Robinson, Web Application Developer, Harvard &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;http://hwp.harvard.edu&lt;/li&gt;
+&lt;li&gt;http://openscholar.harvard.edu/&lt;/li&gt;
+&lt;li&gt;https://groups.drupal.org/openscholar&lt;/li&gt;
+&lt;li&gt;https://portland2013.drupal.org/session/openscholar-saas-platform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h4&gt;My Notes&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://openscholar.harvard.edu/profiles/openscholar/themes/custom/openscholar_theme/images/logo.png&quot; alt=&quot;Open Scholar&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Decentralized IT, Expensive, no consistency across sites, bad experiences, varying technologies, inconsistent support. &lt;/p&gt;
+
+&lt;p&gt;Web Publishing&lt;/p&gt;
+
+&lt;p&gt;Simplified service catalog.
+Clean, consistent designs, scalable, extensible.&lt;/p&gt;
+
+&lt;p&gt;Based on &lt;a href=&quot;http://openscholar.harvard.edu/&quot;&gt;OpenScholar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Spins up quickly, maintainable by non-technical staff and features are distributed through an analogy of Apps &amp;amp; Widgets.&lt;/p&gt;
+
+&lt;p&gt;Cross-Site search is possible, Custom Domains, continuously enhanced by Harvard development team, IQSS and open source community.&lt;/p&gt;
+
+&lt;p&gt;Provides content strategy, best practices, and site quality monintoring.&lt;/p&gt;
+
+&lt;p&gt;Project management.&lt;/p&gt;
+
+&lt;p&gt;Classroom and online training; customized trainining is available.&lt;/p&gt;
+
+&lt;p&gt;Support is available, platform sites.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>NYC Camp - Drupal Conference</title>
+   <link href="http://bassettsj.me/conferences/2013/07/13/nyc-camp-2013"/>
+   <updated>2013-07-13T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/conferences/2013/07/13/nyc-camp-2013</id>
+   <content type="html">&lt;p&gt;NYC Camp was a phenomenal conference and an excellent opportunity to learn more from the heart of the big apple.&lt;/p&gt;
+
+&lt;h3&gt;Vagrant &amp;amp; Chef, for Drupal Developers&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/conferences/vagrant.png&quot; alt=&quot;Vagrant Logo&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Alex Dergachev found of the Evolving Web&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/dergachev&quot;&gt;@dergachev&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dergachev.github.io/vagrant-chef-guide/vagrant-chef-tutorial/&quot;&gt;Slides available&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;What is Vagrant?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A wrapper on VBoxManage&lt;/li&gt;
+&lt;li&gt;A workflow&lt;/li&gt;
+&lt;li&gt;A way of life ?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Why use a virtualization for development?&lt;/h3&gt;
+
+&lt;p&gt;Snapshotting is awesome, rebuilding and imitating the prod environment.&lt;/p&gt;
+
+&lt;p&gt;Puppet / Chef will make provisioning easiers. Vagrant is a wrapper for vbox manage, which is poorly written. This creates a vm and provide the base instance.&lt;/p&gt;
+
+&lt;h3&gt;Installing Vagrant&lt;/h3&gt;
+
+&lt;p&gt;Run these GUI installers&lt;/p&gt;
+
+&lt;p&gt;Download virtualbox, then the vagrant installer, (no longer a gem)&lt;/p&gt;
+
+&lt;h3&gt;Vagrant Docs&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Beautiful just like this beautifully simple tool.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Base Boxes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Just a VM images with vagrant user &amp;amp; ssh keys&lt;/li&gt;
+&lt;li&gt;Virtualbox guest additions&lt;/li&gt;
+&lt;li&gt;Installed chef, ruby &amp;amp; puppet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vewee can help build a basebox.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Don&amp;#39;t be STUPID, Grasp SOLID&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nikic.github.io/2011/12/27/Dont-be-STUPID-GRASP-SOLID.html&quot;&gt;Blog: Don&amp;#39;t be STUPID, Grasp SOLID!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;What is object oriented programming?&lt;/h3&gt;
+
+&lt;p&gt;You don&amp;#39;t necessairly need classes and objects. We can create OOP projects using  an API, analogy of&lt;/p&gt;
+
+&lt;h3&gt;STUPID&lt;/h3&gt;
+
+&lt;h4&gt;&lt;strong&gt;S&lt;/strong&gt;ingleton&lt;/h4&gt;
+
+&lt;p&gt;Single purpose code.&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;T&lt;/strong&gt;ight Coupling&lt;/h4&gt;
+
+&lt;p&gt;You would have to rebuild the app since the code is specific and not modular.&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;U&lt;/strong&gt;ntestable Code&lt;/h4&gt;
+
+&lt;p&gt;House of cards code, changing the code in one place can cause global issues.&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;P&lt;/strong&gt;remature Optimization&lt;/h4&gt;
+
+&lt;h4&gt;&lt;strong&gt;I&lt;/strong&gt;ndescriptive Naming&lt;/h4&gt;
+
+&lt;p&gt;If the other developers that use your code need to think, you need to rethink your naming.&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;D&lt;/strong&gt;uplication&lt;/h4&gt;
+
+&lt;p&gt;The Rule of Three, if I need to copy and past it twice, then you should refactor.&lt;/p&gt;
+
+&lt;h3&gt;SOLID&lt;/h3&gt;
+
+&lt;h4&gt;&lt;strong&gt;S&lt;/strong&gt;ingle Responsibility&lt;/h4&gt;
+
+&lt;p&gt;Do one thing and do it well. Keep your objects, methods narrow&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;O&lt;/strong&gt;pen/Close Principle&lt;/h4&gt;
+
+&lt;p&gt;Code should be open for extension but closed for modification.&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;L&lt;/strong&gt;iskov substitution principle&lt;/h4&gt;
+
+&lt;p&gt;Parent type is left then we extend the parent type. The children add but never limit.&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;I&lt;/strong&gt;nterface Segregation Principle&lt;/h4&gt;
+
+&lt;h4&gt;&lt;strong&gt;D&lt;/strong&gt;ependency inversion principle&lt;/h4&gt;
+
+&lt;h3&gt;Law of Demeter&lt;/h3&gt;
+
+&lt;p&gt;Principle of Least Knwoldege. Your code should never assume to know more than the first degree.&lt;/p&gt;
+
+&lt;h3&gt;Principle of Least Astonishment&lt;/h3&gt;
+
+&lt;p&gt;Your code should not surprise, it should be obvious and self document. It should be as intuititve as possible.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Getting Acquanted with MongoDB&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/conferences/logo-mongodb.png&quot; alt=&quot;Mongo DB Logo&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jmikola.github.io/slides/mongodb_getting_acquainted&quot;&gt;Slides on Github.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.10gen.com/&quot;&gt;10gen - the MongoDB Company&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;MONGODB: THE GOOD PARTS&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Document model&lt;/li&gt;
+&lt;li&gt;Flexible schemas&lt;/li&gt;
+&lt;li&gt;Scalability and performance&lt;/li&gt;
+&lt;li&gt;Features (aggregation, geo, GridFS)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Server architecture for High Performance Drupal&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/img/conferences/DrupPerf_Phoenix2013.pdf&quot;&gt;Slides Available &lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Exploring the world of Search &amp;amp; The Future of Search and SEO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Knowledge Graph&lt;/li&gt;
+&lt;li&gt;Schema.org Module for Drupal&lt;/li&gt;
+&lt;li&gt;Rich Snippets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Modules to checkout.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://drupal.org/project/microdata&quot;&gt;Microdata&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://drupal.org/project/rich_snippets&quot;&gt;Rich Snippets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Zen and Zen Grids&lt;/h2&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Solr Search Upgrade</title>
+   <link href="http://bassettsj.me/projects/2013/07/01/library-solr-search"/>
+   <updated>2013-07-01T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/projects/2013/07/01/library-solr-search</id>
+   <content type="html">&lt;p&gt;Solr is a lucene based search technology that provides full-text searching at incredible speeds. After seeing that our production Drupal site was experiencing problems with the &lt;a href=&quot;http://drupal.org/project/search_by_page&quot;&gt;Search by Page&lt;/a&gt; minor update and seeing some pretty significant performance issues with a database based search, I purposed and started prototyping a solr based site search tool. &lt;/p&gt;
+
+&lt;p&gt;The upgrade featured spell checking, facet based browsing and flexible result display with the views module. The search site upgrade was going to be deployed using &lt;a href=&quot;http://drupal.org/project/features&quot;&gt;features&lt;/a&gt;; the code block below shows the features breakout of configuration for the different environments the site would be moved to.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;_features 
+  _search
+    search_api_library #Holds components that are are environment agnostic.
+    search_api_production #the other features are specific for environments
+    search_api_staging
+    search_api_development
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Retina Ready</title>
+   <link href="http://bassettsj.me/conferences/2013/06/30/responsive-images"/>
+   <updated>2013-06-30T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/conferences/2013/06/30/responsive-images</id>
+   <content type="html">&lt;p&gt;Created a small presentation inspired and heavily refrenced from &lt;a href=&quot;http://daverupert.com/&quot;&gt;Dave Rupert&amp;#39;s&lt;/a&gt; presentation &lt;a href=&quot;https://speakerdeck.com/davatron5000/mo-pixels-mo-problems&quot;&gt;&amp;quot;Mo‘ Pixels Mo‘ Problems&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&quot;http://slid.es/bassettsj/retina-ready/embed&quot; width=&quot;576&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Design4Drupal - Boston 2013</title>
+   <link href="http://bassettsj.me/conferences/2013/06/26/design-4-drupal-boston"/>
+   <updated>2013-06-26T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/conferences/2013/06/26/design-4-drupal-boston</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/conferences/design-4-drupal.png&quot; alt=&quot;Design for Drupal 2013&quot;&gt;{:class=&amp;quot;img-polaroid&amp;quot;}&lt;/p&gt;
+
+&lt;h2&gt;Day 1&lt;/h2&gt;
+
+&lt;h3&gt;Designing for a Moving Target&lt;/h3&gt;
+
+&lt;h4&gt;RichardBanfield&lt;/h4&gt;
+
+&lt;p&gt;How do we make design future proof?&lt;/p&gt;
+
+&lt;p&gt;Great Product
+Lovely Biz Model
+Awesome UX&lt;/p&gt;
+
+&lt;p&gt;Our brains are designed to focus our attention one thing at a time.&lt;/p&gt;
+
+&lt;p&gt;Focus makes us seem smarter? We cannot see the forest because we see the only the tree. &lt;/p&gt;
+
+&lt;p&gt;&amp;quot;The things I&amp;#39;m going to be working on have not been invited.&amp;quot;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;60% of apples profit come from devices that haven&amp;#39;t been around for even a decade.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Our biology is the answer for these problems.&lt;/p&gt;
+
+&lt;p&gt;Our evolutionary changes have not changed very quickly, fairly static in a human generation. If biology is the answer, then what about our biology do we need to design for. Our brains are the key to understanding how we need to design. Moving is the key for why we have a brain in the first place. Looking at simple organism, sea squart for example will digest it&amp;#39;s brain when it is settled on a reef, no longer needed. Think about how we move. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Until now we have been design around technology.&lt;/p&gt;
+
+&lt;p&gt;Lovely as how beautiful our technology has become, it isn&amp;#39;t natural.&lt;/p&gt;
+
+&lt;p&gt;Desktop request modification of our behavior.&lt;/p&gt;
+
+&lt;p&gt;Mobile is not a technology, mobile is a state.&lt;/p&gt;
+
+&lt;p&gt;More People will experience the web on their phones than on their PC.
+Of course this is not news to anyone.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We are seeing technology being designed for our body, for fitting in Google glass, Siri and other changing technology.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We now design around our body and behavior.&lt;/p&gt;
+
+&lt;p&gt;Get to know their hearts and mind.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When we know about our users, we should look beyond sex, age, nationality to see that people face the challenges low self-esteem, seeks direction, anxious about body image.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Humans are way more complex than their demographics...&lt;/p&gt;
+
+&lt;p&gt;Design for a lazy and irrational brain.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Why do we get headaches? Often because of low glucose, the brain is designed for a world of scarcity. Secondly, we are irrational, the economic choices we make are often irrational my Macbook Pro is an irrational choice.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We are emotional first and logical second.&lt;/p&gt;
+
+&lt;p&gt;Happiness make memories and learning.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The flow that happens when you&amp;#39;re focused can greatly contribute to happiness. How can we really engage our users.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Why do designers need to be brain experts?&lt;/p&gt;
+
+&lt;p&gt;Strong emotional conclusion lead to trust and engagement.&lt;/p&gt;
+
+&lt;p&gt;Humans are unique in their recognition of facial emotions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We need to include this in our designs -&amp;gt; 37Signals&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Design tricks and persuades the mind.&lt;/p&gt;
+
+&lt;p&gt;The right content at the right time can evoke emotion.&lt;/p&gt;
+
+&lt;p&gt;We are not seeing a substitutional effect.&lt;/p&gt;
+
+&lt;p&gt;Triggers, motivations and ease of use.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ease of use we have.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Tech change is inevitable but human remain somewhat the same. Understand the human so tech stops dictating the direction.&lt;/p&gt;
+
+&lt;p&gt;This is not just for scientists, it&amp;#39;s just common sense. The greatest designer is biology.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Design Smarter &lt;em&gt;Not&lt;/em&gt; Harder&lt;/h3&gt;
+
+&lt;p&gt;Ken Woodsworth&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/kenwoodworth/design-smarter-not-harder&quot;&gt;Slides on SpeakerDeck&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now creating a design for each page, then creating a design for each device becomes impossible. &lt;/p&gt;
+
+&lt;p&gt;Designing for interactions is a moving and impossible target.&lt;/p&gt;
+
+&lt;p&gt;Flat vs. Skeuomorphism&lt;/p&gt;
+
+&lt;p&gt;Why are we moving towards flat design? Maybe RWD.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Times change and dropping qualifies is a good way to measure the changes.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Inception Principle&lt;/p&gt;
+
+&lt;h3&gt;Design Process Process&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Establish Goals
+
+&lt;ol&gt;
+&lt;li&gt;Large&lt;/li&gt;
+&lt;li&gt;Many Smaller&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Communication
+
+&lt;ol&gt;
+&lt;li&gt;Make sure that everyone knows the project goals.&lt;/li&gt;
+&lt;li&gt;Include the client in the process.
+
+&lt;ol&gt;
+&lt;li&gt;The steps, the goals and the deliverables.&lt;/li&gt;
+&lt;li&gt;Make sure the client understands the goals.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Tools
+
+&lt;ol&gt;
+&lt;li&gt;Sketching without commiting to the design, then choose a heavier line weight for cmmiting.&lt;/li&gt;
+&lt;li&gt;Paper is super helpful!&lt;/li&gt;
+&lt;li&gt;Graphic software
+
+&lt;ol&gt;
+&lt;li&gt;Photoshop, Fireworks.&lt;/li&gt;
+&lt;li&gt;Sketch&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Interaction
+
+&lt;ol&gt;
+&lt;li&gt;Prototyping sofatware.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://framerjs.com&quot;&gt;framerjs.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Iterating, remove major changes.&lt;/p&gt;
+
+&lt;h4&gt;Design kick off meeting&lt;/h4&gt;
+
+&lt;p&gt;Excellent opporunity to bring people together and educate the client and learn from them.&lt;/p&gt;
+
+&lt;h4&gt;Design Exploration&lt;/h4&gt;
+
+&lt;p&gt;Style tiles or maybe &lt;a href=&quot;http://atendesigngroup.com/blog/mood-boards-evolution&quot;&gt;Mood Boards&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://danielmall.com/articles/rif-element-collages/&quot;&gt;Reading is fundamental&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Content Lists&lt;/p&gt;
+
+&lt;h4&gt;Design Concept&lt;/h4&gt;
+
+&lt;p&gt;Creating one version that allows for iterations.&lt;/p&gt;
+
+&lt;h4&gt;Style Guide / Pattern Library&lt;/h4&gt;
+
+&lt;p&gt;Creating a great resources for frontend&lt;/p&gt;
+
+&lt;h4&gt;More Sketching&lt;/h4&gt;
+
+&lt;p&gt;Start using this as a way to understand the layout of the components, find patterns to reuse for the front-end.&lt;/p&gt;
+
+&lt;h2&gt;Day 2&lt;/h2&gt;
+
+&lt;h3&gt;Drapper Drupal&lt;/h3&gt;
+
+&lt;p&gt;John Ferris &amp;amp; Garrett Dawson&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/killtheliterate/dapper-drupal-custom-tailored-drupal-themes&quot;&gt;Slides on SlideDeck&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Why make your own starter theme?&lt;/h4&gt;
+
+&lt;p&gt;Case studies.&lt;/p&gt;
+
+&lt;p&gt;Front-end Developer&lt;/p&gt;
+
+&lt;p&gt;HTML+CSS+JS + everything drupal specific.&lt;/p&gt;
+
+&lt;p&gt;Typical Approach includes contributed modules, base themes, and starter themes.&lt;/p&gt;
+
+&lt;p&gt;What base theme do you use? We use theme as a guide the building proccess. At a point they no longer fit our workflow, but that also might assume that you end up using a particular nameing convention, CSS preproccessor or structure. Then the code might no longer be readable.&lt;/p&gt;
+
+&lt;p&gt;Contrib is still really rad, but we might end up with &lt;strong&gt;&lt;em&gt;Fron-end tooling&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Make your own tools. There will be less unneeded cruff. &lt;/p&gt;
+
+&lt;p&gt;What about contrib? Well we need to contribute back to &lt;a href=&quot;http://drupal.org&quot;&gt;D.O&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h4&gt;Measuring Up.&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What markup problem?&lt;/li&gt;
+&lt;li&gt;Who maintains the project?&lt;/li&gt;
+&lt;li&gt;What&amp;#39;s in the toolkit?
+
+&lt;ul&gt;
+&lt;li&gt;What are the tools you want to use from toolkit.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What do I want to fiddle with?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Case Studies&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://openframework.stanford.edu/&quot;&gt;OpenFramework by Standford University&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/embed/HaJnhYPLvx0&quot;&gt;James Panton - Death of a Themer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Code Enigma&lt;/p&gt;
+
+&lt;p&gt;Aten Design Group&lt;/p&gt;
+
+&lt;p&gt;Centre + Prototype. Centre is used as the scaffolding. Prototype is used actually to style. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;inc
+
+&lt;ul&gt;
+&lt;li&gt;hook bae themplate called in template.php&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;sass
+
+&lt;ul&gt;
+&lt;li&gt;base, components, layours, etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Js
+
+&lt;ul&gt;
+&lt;li&gt;main.js, modularized Javascripts&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;layouts
+
+&lt;ul&gt;
+&lt;li&gt;templates and templates overrides&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Nothing will be a one-size-fits-all solution&lt;/h4&gt;
+
+&lt;p&gt;Get your measurements.&lt;/p&gt;
+
+&lt;p&gt;Continous imporvement.&lt;/p&gt;
+
+&lt;p&gt;Push your craft forward.&lt;/p&gt;
+
+&lt;h3&gt;Interface Face-to-face&lt;/h3&gt;
+
+&lt;p&gt;Throughout history, sci-fi shows that we are rethinking how humans will interface with technlogy. Google is using even the vission of the future will drive their design process.&lt;/p&gt;
+
+&lt;p&gt;We are starting to see that we are entering interfaces, that disappear. Eg. a prosthetic limb that responds to muscular signals.&lt;/p&gt;
+
+&lt;p&gt;Errors in science fiction. Errors of analogs (looking at something that exists now, and extrapolating it into a future use). Error of utility. Error of scale (looking at scaling a iOS interface to a wall), error of sterility (serving the minimal design of homogeniety), error of integrity (looking at needing so many devices for different functions) and the error of context (looking at cultural context in the future is hard).&lt;/p&gt;
+
+&lt;p&gt;What is an interface? Speaking is an interface.  Pidgin, two linguistically incompatible cultures come into contact. When a pigin stays, it becomes a creole. Old English + Old Norse + Old French = Middle English.&lt;/p&gt;
+
+&lt;p&gt;Human-Machine Creole. Mechanization of humans, and the humanization of machine. This interface is a translations layer.&lt;/p&gt;
+
+&lt;p&gt;The death of skeumorphic. Look at iOS 7 and the change lead by Johnny Ives. Flat vs. Skeumorphic.&lt;/p&gt;
+
+&lt;p&gt;We are learning the creol of how to interact with machines, a child might expect to be able to zoom on a TV such as if it were an iPad.&lt;/p&gt;
+
+&lt;p&gt;Without these sensory outputs the machine couldn&amp;#39;t be empathtic.&lt;/p&gt;
+
+&lt;p&gt;Empathetic Machine must be
+Beautiful.
+Diverse.
+Accessible.
+Adaptive.&lt;/p&gt;
+
+&lt;p&gt;Future of UI Designers
+Screen designers, Aural (auditory), Gestrure, Brain UI&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Code4Lib</title>
+   <link href="http://bassettsj.me/conferences/2013/03/03/code4lib"/>
+   <updated>2013-03-03T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/conferences/2013/03/03/code4lib</id>
+   <content type="html">&lt;h3&gt;Notable presetnations:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1oSyF1eA1RAR-TFjsXAK15Bv31WnR_C0X1kz6bVz7RkU/&quot;&gt;ARCHITECTing ScholarSphere&lt;/a&gt; - Penn State University&amp;#39;s Hydra Repository Project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://code4lib.org/conference/2013/prevost&quot;&gt;De-sucking the Library User Experience&lt;/a&gt; - Jeremy Prevost, Northwestern University&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://code4lib.org/conference/2013/lynema-constabaris&quot;&gt;Google Analytics, Event Tracking and Discovery Tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Drupalize your  data.</title>
+   <link href="http://bassettsj.me/drupal%20products/2013/01/20/using-web-api-in-drupal-entities"/>
+   <updated>2013-01-20T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/drupal%20products/2013/01/20/using-web-api-in-drupal-entities</id>
+   <content type="html">&lt;p&gt;After banging my head against the wall trying to figure out how to create content that works with all the wonderful Drupal API hooks, but doesn’t live within the Drupal database and filesystem. The Digital Repository Service at Northeastern University Libraries is a custom project with three components, an RESTful API that sends information about objects in the repository, an Apache Solr search index that allows for advanced search, and then my challenge, creating a Drupal based module to communicate between the two. The objects will need to be available for other modules and functions in the Drupal system. Sounds like a pretty reasonable goal right, well it has become a challenge. So much of the Drupal API is database driven, so creating a module that will utilize little of the database storage has become a challenge.&lt;/p&gt;
+
+&lt;h3&gt;Why not use Islandora project?&lt;/h3&gt;
+
+&lt;p&gt;The University Libraries team has investigated already available systems, and decided they needed greater flexibility than the &lt;a href=&quot;http://islandora.ca/&quot;&gt;Islandora modules&lt;/a&gt; would provide. The project is already very mature and very complex, so we couldn’t just use a small portion of the project and then extend it from there.&lt;/p&gt;
+
+&lt;h3&gt;Sarnia&lt;/h3&gt;
+
+&lt;p&gt;Looking for advice, I posted a discussion, &lt;a href=&quot;http://groups.drupal.org/node/276033&quot;&gt;“Using Drupal as a Client to External Content from a Fedora Item Repository”&lt;/a&gt; in the Libraries group on Durpal.org. &lt;a href=&quot;http://groups.drupal.org/user/19593&quot;&gt;krlucas&lt;/a&gt; suggested the Sarnia module to create entities based on the data available in the Solr index. I have tried many times to get a working test implementation, but continue to have issues using it. It seems like a great project, but debugging someone else’s code in a complicated mature project was not an easy task.&lt;/p&gt;
+
+&lt;h2&gt;Now what?&lt;/h2&gt;
+
+&lt;p&gt;I  think I am just going to have to do it myself using as few contributed modules as I can. I have already started building the scaffolding of the module, but I have a long road ahead. I would like to share my experience, lessons learned and hopefully the final project, that I might be able to release onto Drupal.org / github.com .&lt;/p&gt;
+
+&lt;p&gt;Wish me luck!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://bassettsj.me/blogging/2013/01/13/hello-world"/>
+   <updated>2013-01-13T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/blogging/2013/01/13/hello-world</id>
+   <content type="html">&lt;p&gt;This is my new site I am going to be building. I decided to migrate away from Tumblr to use a static site generator. It will be perfect for my modest blogging needs. &lt;/p&gt;
+
+&lt;p&gt;Why did I want to create a blog again? Oh yeah, I wanted to start talking to you about  web design, coffee and craft brews. &lt;/p&gt;
+
+&lt;p&gt;I would like to see the history of the site as it evolves. &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Digital Media Commons</title>
+   <link href="http://bassettsj.me/projects/2012/09/15/digital-media-commons"/>
+   <updated>2012-09-15T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/projects/2012/09/15/digital-media-commons</id>
+   <content type="html">&lt;p&gt;Upon starting at Northeastern University, Unversity Libraries. I quickly faced the new challenge to start building a site for the Digital Media Commons. The project was a joint venture between University Libraries and IS, as of this writting ITS. The project was a renovation of the second floor of the library to provide much needed workspace for students and resouces for digital creatives, mostly nice workstations and access to software that is usually cost restrictive. The project was well underway and almost completed by the time I walked on the job.&lt;/p&gt;
+
+&lt;p&gt;The project wasn&amp;#39;t clear from when I stepped on the job. Working with a small team, primarly Thomas Urell and Annie DeVane. We faced a challenge of building the site without a clear idea of the content. Never again!&lt;/p&gt;
+
+&lt;p&gt;With such little time, I really had to rapidly deevev&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Minuteman Classic 2012</title>
+   <link href="http://bassettsj.me/projects/2012/07/04/minutemanclassic"/>
+   <updated>2012-07-04T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/projects/2012/07/04/minutemanclassic</id>
+   <content type="html">&lt;p&gt;The Minuteman Classic is an annual LGBT softball tournament held in Boston, Massachusetts by the local Beantown Softball League. In 2012 a small budget was made available to contract work out for a redesigned website to better accommodate for their needs. The website was going to used for live score updates, event information and register for the event.&lt;/p&gt;
+
+&lt;h4&gt;Old design&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/projects/minuteman/old-minuteman-site.png&quot; alt=&quot;Old minuteman website showing that it is not responsive.&quot;&gt;
+The old design was very basic and didn&amp;#39;t provide good access on smaller screen sizes.&lt;/p&gt;
+
+&lt;h4&gt;Responsive Design&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/projects/minuteman/mobile-screenshot.png&quot; alt=&quot;Screen shot showing the layout on an iphone screen&quot;&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>IHCDstore</title>
+   <link href="http://bassettsj.me/projects/2012/06/01/ihcd-store-project"/>
+   <updated>2012-06-01T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/projects/2012/06/01/ihcd-store-project</id>
+   <content type="html">&lt;p&gt;Researched and developed a plan to move the eCommerce store for the &lt;a href=&quot;http://ihcdesign.org&quot;&gt;Institute of Human Centered Design&lt;/a&gt;. The project had the unique challenges in that the site itself had to be accessible for all users. That contraint lead us in search for an e-commerce platform that was more accessible out of the box. After evaluating a few options we selected the Drupal ubercart distribution to build our application. Working with a small design team of Lise Capet and myself we aimed at building a new site that would be organzied around the principle of collections based on simple iconography.&lt;/p&gt;
+
+&lt;p&gt;Categories included:
+  * Work
+  * Play
+  * Wear
+  * Learn&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Aging Professors are Creating a Faculty Bottleneck. Can we Talk Openly? Not Really!</title>
+   <link href="http://bassettsj.me/2012/05/29/agining-professors+are-creating-a-faculty-bottleneck"/>
+   <updated>2012-05-29T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2012/05/29/agining-professors are-creating-a-faculty-bottleneck</id>
+   <content type="html">&lt;p&gt;&lt;a class=&quot;tumblr_blog&quot; href=&quot;http://blog.newenglandada.org/post/20782937636/aging-professors-are-creating-a-faculty-bottleneck-can-w&quot; target=&quot;_blank&quot;&gt;new-england-ada&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+&lt;p&gt;Recently, the Chronicle of Higher Education published a special report on the &lt;strong&gt;Aging Professoriate: Aging Professors are Creating a Faculty Bottleneck&lt;/strong&gt; indicating that at some universities 1 in 3 professors are now over 60. While the aging professors are creating a faculty bottleneck, aging workers are creating a disability bottleneck across the U.S. This presents an opportunity to retain our most experienced workers.&lt;/p&gt;
+
+&lt;p&gt;As the overall growth of the nation’s labor force is slowing, the labor force growth in the 55 and older population is rising—a demographic group with a gradual loss of function and an incidence of disability higher than that of other working age populations. Can we talk about disability? Not Really! Older workers, even as we are losing functionality, are least likely to self-identify as a person with a disability.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href=&quot;http://blog.newenglandada.org/post/20782937636/aging-professors-are-creating-a-faculty-bottleneck-can-w&quot; target=&quot;_blank&quot;&gt;Read More&lt;/a&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A Lesson Learned in Accessibility</title>
+   <link href="http://bassettsj.me/2012/05/11/a-lesson-learned-in-accessibility"/>
+   <updated>2012-05-11T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2012/05/11/a-lesson-learned-in-accessibility</id>
+   <content type="html">&lt;iframe width=&quot;400&quot; height=&quot;299&quot; src=&quot;http://www.youtube.com/embed/XbvNEzzIsIQ?wmode=transparent&amp;autohide=1&amp;egm=0&amp;hd=1&amp;iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;showsearch=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Even when designing with our best intentions toward accessibility, it often takes someone who really uses accessibility software to test the site and help us get the details right. The problem is compounded when dealing with AJAX style behavior. That is exactly what happened with my jQuery FAQ example. What I thought was nicely accessible turned out to not be. This screencast walks through what I needed to do to fix it. Recorded Jan 22, 2009.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;amp;v=XbvNEzzIsIQ&quot; target=&quot;_blank&quot;&gt;View on YouTube&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The 10 Principles of inclusive web design.</title>
+   <link href="http://bassettsj.me/2012/05/08/ten-principles-of-inclusive-web-design"/>
+   <updated>2012-05-08T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2012/05/08/ten-principles-of-inclusive-web-design</id>
+   <content type="html">&lt;a href=&quot;http://www.netmagazine.com/features/10-principles-inclusive-web-design&quot;&gt;&quot;The 10 Principles of inclusive web design,&quot; .net magazine.&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Excellent article on the value of user based testing with regards to web development and ICT design. I would  highly recommend reading this when you get a chance.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Minuteman Classic</title>
+   <link href="http://bassettsj.me/2012/05/08/minuteman-classic-web-redesign"/>
+   <updated>2012-05-08T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2012/05/08/minuteman-classic-web-redesign</id>
+   <content type="html">&lt;a href=&quot;http://minutemanclassic.com/&quot;&gt;Minuteman Classic&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I have been hard at work developing a new site for Beantown Softball&amp;#8217;s Minuteman Classic.  &lt;/p&gt;
+
+&lt;p&gt;With my free time, I have been able to try to modernize the look and feel of the website. There have been major changes and more exciting ones to come. &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>New England ADA Learning</title>
+   <link href="http://bassettsj.me/projects/2012/05/01/new-england-ada-learning"/>
+   <updated>2012-05-01T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/projects/2012/05/01/new-england-ada-learning</id>
+   <content type="html">&lt;p&gt;The New England ADA Center has worked on creating a new site to fit their mission to provide education and information as a knowledge transmission ceter for the New England Region.&lt;/p&gt;
+
+&lt;p&gt;The project invloved the help of Yale Cohen as an instructional designer and project lead. The content was manualy migrate the content to the new system. Restructure the content in to learning modules. Developed a simple theme for the system.&lt;/p&gt;
+
+&lt;p&gt;Media and media player accessibility was one of the greatest challenges. Using MediaElements.js was my personal preference, but the decision was made to use JWplayer.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Victory! New England ADA Center has a blog.</title>
+   <link href="http://bassettsj.me/2012/04/11/new-england-ada-center-blog"/>
+   <updated>2012-04-11T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2012/04/11/new-england-ada-center-blog</id>
+   <content type="html">&lt;a href=&quot;http://blog.newenglandada.org/&quot;&gt;Victory! New England ADA Center has a blog.&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Feeling good to have a new blog for our organization&amp;#8217;s effort to reach out to the communities we serve.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bridge Water State Lecture</title>
+   <link href="http://bassettsj.me/2012/04/10/bridge-water-state-lecture-on-a11y"/>
+   <updated>2012-04-10T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2012/04/10/bridge-water-state-lecture-on-a11y</id>
+   <content type="html">&lt;a href=&quot;http://db.tt/vG7fQadH&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_m29p0eH9um1qd0d6lo1_500.jpg&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Giving a basic lecture about how technology can enable and disable people with different disabilities. I am giving this lecture at Bridgewater State University in Massachusetts. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The contents of this slide show do not represent the thoughts or opinions of The Institute for Human Centered Design. Please pardon the logo on the bottom right not having alternative text since it is not currently possible in Keynote for OSX.&lt;/em&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Predicted Areas of Population Grown from 2008 to 2035 in Boulder, CO.</title>
+   <link href="http://bassettsj.me/2012/03/04/predicted-areas-of-population-growth-in-boulder-co"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/predicted-areas-of-population-growth-in-boulder-co</id>
+   <content type="html">&lt;h3&gt;Made using Google Fusion Tables.&lt;/h3&gt;
+
+&lt;p&gt;&lt;iframe height=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col6%3E%3E1+from+728308+&amp;amp;h=false&amp;amp;lat=40.01936296621045&amp;amp;lng=-105.25590488378907&amp;amp;z=12&amp;amp;t=1&amp;amp;l=col6%3E%3E1&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Predicted Areas of Grown in Population and Employment in Boulder, CO.</title>
+   <link href="http://bassettsj.me/2012/03/04/predicted-areas-of-growth-boulder-co"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/predicted-areas-of-growth-boulder-co</id>
+   <content type="html">&lt;h3&gt;Made with Google Fusion Tables.&lt;/h3&gt;
+
+&lt;p&gt;&lt;iframe height=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col6+from+727774+&amp;amp;h=false&amp;amp;lat=40.02924389688445&amp;amp;lng=-105.24509021704102&amp;amp;z=12&amp;amp;t=1&amp;amp;l=col6&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My new job at the Institute for Human Centered Design.</title>
+   <link href="http://bassettsj.me/2012/03/04/my-new-job-at-ihcd"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/my-new-job-at-ihcd</id>
+   <content type="html">&lt;p&gt;I have taken a long break from creating any content for my blog, but I would like to renew my effort to write and post content about myself to the blog. I am currently working and living in Boston, Massachusetts. It is quite the change from living in the San Francisco Bay Area this summer. I still miss visiting the Bay Area and can&amp;#8217;t wait to return next week.&lt;/p&gt;
+
+&lt;p&gt;I am very happily employed at &lt;a href=&quot;http://www.humancentereddesign.org&quot; title=&quot;go to IHCD homepage&quot; target=&quot;_blank&quot;&gt; the Institute for Human Centered Design&lt;/a&gt;. I get a lot of questions about what we do as an organization. IHCD was founded shortly after the Americans with Disabilities Act was passed in 1991. We have been disability rights advocate since then. We have focused on the designed environment with the philosophy that good design should address the needs of all the users. We now house the New England ADA Center, Access to Design Professions, a full architectural studio, a store, a library and Fair Housing First project. This is just a small glimpse into the many projects that we are involved in.&lt;/p&gt;
+
+&lt;p&gt;Since starting last September, I have been involved in helping advise and coordinate the IT systems upgrades for the organization. I have also been given the responsibility to  maintain the current website and help plan improvements with the rest of the staff. Over the last couple of months, I have been very busy with the launch of the &lt;a href=&quot;http://www.adachecklist.org&quot; target=&quot;_blank&quot;&gt;ADA Checklist for Readily Achievable Barrier Removal website&lt;/a&gt; and the new learning system for the New England ADA Learning courses, which should be launching soon. I have also been given the opportunity to help coordinate the social media efforts for the New England ADA Center. Follow us  at &lt;a href=&quot;http://www.twitter.com/NewEglandADA&quot; target=&quot;_blank&quot;&gt;@NewEnglandADA&lt;/a&gt;. I am excited about the future projects that are going to be involved in and I will keep this updated.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My Foursquare Checkin History</title>
+   <link href="http://bassettsj.me/2012/03/04/map-of-my-foursquare-checkin-history"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/map-of-my-foursquare-checkin-history</id>
+   <content type="html">&lt;p&gt;&lt;iframe height=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col2%3E%3E0+from+3127854+&amp;amp;h=false&amp;amp;lat=42.31979206789093&amp;amp;lng=-71.07433319091797&amp;amp;z=14&amp;amp;t=1&amp;amp;l=col2%3E%3E0&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Land Use Zoning in Boulder, CO.</title>
+   <link href="http://bassettsj.me/2012/03/04/land-use-zoning-in-boulder-co"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/land-use-zoning-in-boulder-co</id>
+   <content type="html">&lt;h3&gt;Made with Google Fusion Tables&lt;/h3&gt;
+
+&lt;p&gt;&lt;iframe height=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col2%3E%3E1+from+763007+&amp;amp;h=false&amp;amp;lat=40.01992996786167&amp;amp;lng=-105.2630780319214&amp;amp;z=13&amp;amp;t=1&amp;amp;l=col2%3E%3E1&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Harvard Art Museum</title>
+   <link href="http://bassettsj.me/2012/03/04/harvart-art-museum"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/harvart-art-museum</id>
+   <content type="html">&lt;a href=&quot;http://flic.kr/s/aHsjz26WTX&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_m0dhq8r0YT1qd0d6lo1_r1_500.jpg&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;The Harvard Art Museum. Click the Photo to view the Flickr Gallery.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Flood Plains in Boulder, CO.</title>
+   <link href="http://bassettsj.me/2012/03/04/flood-plains-in-boulder-co"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/flood-plains-in-boulder-co</id>
+   <content type="html">&lt;h4&gt;Made using Google Fusion Tables.&lt;/h4&gt;
+
+&lt;p&gt;&lt;iframe height=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col7%3E%3E0+from+728055+&amp;amp;h=false&amp;amp;lat=40.018672621632845&amp;amp;lng=-105.27191616687014&amp;amp;z=14&amp;amp;t=1&amp;amp;l=col7%3E%3E0&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bus Stop Boarding in Boulder, CO</title>
+   <link href="http://bassettsj.me/2012/03/04/bus-stop-boardings-in-boulder-co"/>
+   <updated>2012-03-04T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/04/bus-stop-boardings-in-boulder-co</id>
+   <content type="html">&lt;h3&gt;Made with Google Fusion Tables.&lt;/h3&gt;
+
+&lt;p&gt;&lt;iframe height=&quot;100%&quot; scrolling=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col0+from+755831+&amp;amp;h=false&amp;amp;lat=40.01749225590533&amp;amp;lng=-105.2735852150879&amp;amp;z=13&amp;amp;t=1&amp;amp;l=col0&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>New England ADA Learning - Coming Soon</title>
+   <link href="http://bassettsj.me/2012/03/03/new-england-ada-learning-coming-soon"/>
+   <updated>2012-03-03T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/03/new-england-ada-learning-coming-soon</id>
+   <content type="html">&lt;a href=&quot;http://newenglandadalearning.mrooms.net/&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_m0bvtchEKN1qd0d6lo1_500.png&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;h3&gt;New England ADA Learning - Coming Soon&lt;/h3&gt;
+
+&lt;p&gt;The launch date for the new learning site is quickly approaching.  It has been an excellent opportunity to be able to learn so much about the &lt;a href=&quot;http://moodle.org&quot; title=&quot;Go to Moodle.org&quot; target=&quot;_blank&quot;&gt;Moodle&lt;/a&gt; Learning Management System (LMS). The New England ADA Project is in the process of migrating the current courses to the new LMS from our own hosted sites. I am excited to announce that the project is nearly complete and should be ready in the next month.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>December's Website Project</title>
+   <link href="http://bassettsj.me/2012/03/03/ada-checklist-website-project"/>
+   <updated>2012-03-03T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2012/03/03/ada-checklist-website-project</id>
+   <content type="html">&lt;a href=&quot;http://www.adachecklist.org&quot;&gt;December&#39;s Website Project&lt;/a&gt;&lt;br/&gt;&lt;p&gt;&lt;img alt=&quot;Check inside a checkbox.&quot; height=&quot;45&quot; src=&quot;http://adachecklist.org/img/checkbox.png&quot; width=&quot;60&quot;/&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Check out this site I helped the New England ADA Center publish. It is very simple but wrote the whole thing in a simple text editor. I can&amp;#8217;t wait to continue to grow my web design skills. It was also my first attempt at building a site with media-queries to respond to different screen sizes and for better printing.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Lifehacker: learn the basics of coding</title>
+   <link href="http://bassettsj.me/links/2011/12/12/learn-the-basics-of-coding"/>
+   <updated>2011-12-12T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/links/2011/12/12/learn-the-basics-of-coding</id>
+   <content type="html">&lt;a href=&quot;http://m.lifehacker.com/5867110/learn-the-basics-of-coding&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_lw3hfyjZV71qd0d6lo1_250.jpg&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href=&quot;http://m.lifehacker.com/5867110/learn-the-basics-of-coding&quot; target=&quot;_blank&quot;&gt;Learn the Basics of Coding&lt;/a&gt;&lt;br/&gt;
+
+Adam Pash, &lt;a href=&quot;http://m.lifehacker.com/5867110/learn-the-basics-of-coding&quot; target=&quot;_blank&quot;&gt;lifehacker.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Smart­phone apps, desk­top apps, and web apps are some of the best tools we have to get things done, express our­selves, and yes, some­times have fun. You may have once thought pro­gram­ming was the domain of anti-social neck beards liv­ing in…&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nice resources on learning to code DIY. &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ADA Checklist</title>
+   <link href="http://bassettsj.me/projects/2011/12/01/ada-checklist"/>
+   <updated>2011-12-01T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/projects/2011/12/01/ada-checklist</id>
+   <content type="html">&lt;p&gt;The American&amp;#39;s with Disabilities Act, the ADA, was updated to include new guidelines for helping to create a more inclusive and non-descrimitaory nation. With this updated guidelines and regulations, many people / organizations have had questions about how these changes will effect them and their compliance with the law. The &lt;a href=&quot;http://newenglandada.org&quot;&gt;New England ADA Center&lt;/a&gt; has distilled the changes to a simple to use checklist. The checklist is used to evaluate buildings and facilities to see if they fit the ADA policies.&lt;/p&gt;
+
+&lt;p&gt;My role was to help build the website for the ADA checklist.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Book: Focus Free</title>
+   <link href="http://bassettsj.me/2011/11/30/focus-free"/>
+   <updated>2011-11-30T00:00:00-08:00</updated>
+   <id>http://bassettsj.me/2011/11/30/focus-free</id>
+   <content type="html">&lt;p&gt;Need help finding focus in an environment of constant distractions? Check out this book. Free &lt;a href=&quot;http://t.co/nhthzPZ5&quot; target=&quot;_blank&quot;&gt;http://t.co/nhthzPZ5&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Using Web Cartography in Urban Planning</title>
+   <link href="http://bassettsj.me/2011/06/09/using-web-cartography-in-urban-planning"/>
+   <updated>2011-06-09T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/09/using-web-cartography-in-urban-planning</id>
+   <content type="html">&lt;iframe src=&quot;http://player.vimeo.com/video/24891359?byline=0&amp;amp;portrait=0&amp;amp;color=ffffff&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;p&gt;Using Web Cartography in Urban Planning&lt;/p&gt;
+
+&lt;p&gt;Check out this quick video as an overview of the results from my GIS web application using the Google Maps API family. Bravo Google by the way, it was great being able to learn so much from your detailed documentation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;GIS Page&quot; target=&quot;_blank&quot; href=&quot;http://gis.zilifone.net&quot;&gt;Click here&lt;/a&gt; to play with the Proof of Concept Page.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Portfolio Scanning, Sorting and Posting.</title>
+   <link href="http://bassettsj.me/2011/06/09/portfolio-scanning-and-sorting"/>
+   <updated>2011-06-09T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/09/portfolio-scanning-and-sorting</id>
+   <content type="html">&lt;img src=&quot;/tumblr_files/tumblr_lmjn2yp4jD1qd0d6lo1_500.jpg&quot;/&gt;&lt;br/&gt;&lt;p&gt;&lt;strong&gt;Portfolio Scanning, Sorting and Posting.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Over the next few weeks I will be posting some of my design work from Studio at the University of Colorado at Boulder. It is very exciting to get to go through the work and see the progress I have made over the course of my time at CU Boulder. Please check back soon. Much more to come very soon.&lt;/p&gt;
+
+&lt;p&gt;This was an ink on mylar drawing of a simple farm that would be placed on a site in the Boulder Library Park.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My Chattaqua</title>
+   <link href="http://bassettsj.me/2011/06/09/my-chattaqua"/>
+   <updated>2011-06-09T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/09/my-chattaqua</id>
+   <content type="html">&lt;iframe src=&quot;http://player.vimeo.com/video/24805082?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ff9933&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;p&gt;Chattaqua Park was my place of refuge while I was in school at the University of Colorado at Boulder. It was a few minutes away from campus, but the feeling I got there was worlds apart. In our Sustainable Design siminar, we were asked to create a project about a natural environment that we felt a sense of place with. I chose to create a video on Chattaqua Park.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&quot;iWork: Public Document - My Chattaqua&quot; target=&quot;_blank&quot; href=&quot;http://public.iwork.com/document/?d=My_Chattaqua.pages&amp;amp;a=p44845735&quot;&gt;Click here for my written report produced for the class.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Wayfinding map of the Unversity of Colorado at Boulder</title>
+   <link href="http://bassettsj.me/2011/06/07/wayfinding-cu"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/wayfinding-cu</id>
+   <content type="html">&lt;img src=&quot;/tumblr_files/tumblr_lmg10hNJGW1qd0d6lo1_r1_500.jpg&quot;/&gt;&lt;br/&gt;&lt;p&gt;An example of a project in Social Factors of Environmental Design where we were asked to conduct a survey and experiment on how students found their way around campus. The results were used to display this map. &lt;!-- &lt;a target=&quot;_blank&quot; href=&quot;http://public.iwork.com/document/?a=p44845735&amp;amp;d=Wayfinding_58__How_CU_Students_Map_their_Environment.pages&quot;&gt;Click here for the iWork.com document.&lt;/a&gt; --&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>User Exchange - Exploring How People in Denver, Colorado experience traveling through the City</title>
+   <link href="http://bassettsj.me/2011/06/07/user-exchange-movie"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/user-exchange-movie</id>
+   <content type="html">&lt;iframe width=&quot;400&quot; height=&quot;300&quot; src=&quot;http://www.youtube.com/embed/dNFwNk6Lh6c?wmode=transparent&amp;autohide=1&amp;egm=0&amp;hd=1&amp;iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;showsearch=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;strong&gt;User Exchange: &lt;/strong&gt;&lt;em&gt;Exploring How People in Denver, Colorado experience traveling through the City&lt;/em&gt;&lt;strong&gt;. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Available in 1080p on YouTube&amp;#160;: )&lt;/strong&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ArcGIS Map Examples: Cartography Spring 2011</title>
+   <link href="http://bassettsj.me/2011/06/07/spring-2011-digital-cartography-example"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/spring-2011-digital-cartography-example</id>
+   <content type="html">&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/5809417770/in/set-72157626784591653/&quot;&gt;
+  &lt;img src=&quot;/tumblr_files/tumblr_lmfq7nb5pd1qd0d6lo1_r1_500.jpg&quot; /&gt;
+&lt;/a&gt;
+&lt;br/&gt;
+&lt;a title=&quot;type_bassett&quot; href=&quot;http://www.flickr.com/photos/bassettsj/5808855275/in/set-72157626784591653/&quot; target=&quot;_blank&quot;&gt;
+  &lt;img alt=&quot;type_bassett&quot; src=&quot;http://farm4.static.flickr.com/3224/5808855275_425c8c1d15_m.jpg&quot; /&gt;
+&lt;/a&gt;
+&lt;a title=&quot;bassett_final&quot; href=&quot;http://www.flickr.com/photos/bassettsj/5809418480/in/set-72157626784591653/&quot; target=&quot;_blank&quot;&gt;
+  &lt;img alt=&quot;bassett_final&quot; src=&quot;http://farm3.static.flickr.com/2455/5809418480_0b3143326e_m.jpg&quot; /&gt;
+&lt;/a&gt;
+&lt;a title=&quot;bassett_technical_task&quot; href=&quot;http://www.flickr.com/photos/bassettsj/5809418806/in/set-72157626784591653/&quot; target=&quot;_blank&quot;&gt;
+  &lt;img alt=&quot;bassett_technical_task&quot; src=&quot;http://farm4.static.flickr.com/3046/5809418806_7b51db9703_m.jpg&quot; /&gt;
+&lt;/a&gt;
+&lt;a title=&quot;bassett_chroro&quot; href=&quot;http://www.flickr.com/photos/bassettsj/5809419210/in/set-72157626784591653/&quot; target=&quot;_blank&quot;&gt;
+  &lt;img alt=&quot;bassett_chroro&quot; src=&quot;http://farm6.static.flickr.com/5267/5809419210_863f7131c0_m.jpg&quot; /&gt;
+&lt;/a&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/sets/72157626784591653/&quot; target=&quot;_blank&quot;&gt;ArcGIS Map Examples: Cartography Spring 2011&lt;/a&gt;, a set on Flickr.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Via Flickr:&lt;/em&gt;
+  &lt;br/&gt;In Digital Cartography, we gained some hands-on skills using GIS software (especially ArcGIS) to create cartographic maps.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Social Issues of Smoking</title>
+   <link href="http://bassettsj.me/2011/06/07/social-issues-of-smoking"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/social-issues-of-smoking</id>
+   <content type="html">&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/5808853017/in/set-72157626784577453/&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_lmftd3Tp4G1qd0d6lo1_500.jpg&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;div style=&quot;padding: 0; overflow: hidden; margin: 10px auto 0 auto;&quot;&gt;&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/5809406250/in/set-72157626784577453/&quot; title=&quot;CiggBoxBookFinal_Page_01&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3363/5809406250_8d01437330_m.jpg&quot; alt=&quot;CiggBoxBookFinal_Page_01&quot; style=&quot;width:23.4%; display:inline-block; margin-right:2%; padding:0; border:0; overflow:hidden;&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/5809406568/in/set-72157626784577453/&quot; title=&quot;CiggBoxBookFinal_Page_02&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://farm3.static.flickr.com/2514/5809406568_fcd28161a7_m.jpg&quot; alt=&quot;CiggBoxBookFinal_Page_02&quot; style=&quot;width:23.4%; display:inline-block; margin-right:2%; padding:0; border:0; overflow:hidden;&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/5808844751/in/set-72157626784577453/&quot; title=&quot;CiggBoxBookFinal_Page_03&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://farm3.static.flickr.com/2557/5808844751_33be3a806a_m.jpg&quot; alt=&quot;CiggBoxBookFinal_Page_03&quot; style=&quot;width:23.4%; display:inline-block; margin-right:2%; padding:0; border:0; overflow:hidden;&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/5809407730/in/set-72157626784577453/&quot; title=&quot;CiggBoxBookFinal_Page_04&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://farm4.static.flickr.com/3540/5809407730_c2c35d7147_m.jpg&quot; alt=&quot;CiggBoxBookFinal_Page_04&quot; style=&quot;width:23.4%; display:inline-block; margin-right:2%; padding:0; border:0; overflow:hidden;margin-right:0;&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/sets/72157626784577453/&quot; target=&quot;_blank&quot;&gt;&amp;#8220;Social Issues of Smoking&amp;#8221; Booklet Made for Digital Design: Planning&lt;/a&gt;, a set on Flickr.&lt;/p&gt;&lt;i&gt;Via Flickr:&lt;/i&gt;&lt;br/&gt;
+
+This set contains the photos from a project to create a booklet on an analysis of a social issue that takes place in the public spaces. It explores the issue of smoking on society and the changes in thought towards smoking.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Red Rocks Park Ecological Assessment</title>
+   <link href="http://bassettsj.me/2011/06/07/red-rocks-ecological-assessment"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/red-rocks-ecological-assessment</id>
+   <content type="html">&lt;a href=&quot;http://public.iwork.com/document/?d=Red_Rocks_Park_Ecological_Assessment_(Ecology_and_Design)_Spring_2008.pages&amp;amp;a=p44845735&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_lmg03eB8ns1qd0d6lo1_500.png&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;As a group project, we were asked to make a ecological assessment of a local natural area near Boulder, CO. Here is a posted example of my student work, all the way back from 2008.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Put yourself out there - Going through 23GBs of my undergrad.</title>
+   <link href="http://bassettsj.me/2011/06/07/putting-yourself-out-there"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/putting-yourself-out-there</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://media.tumblr.com/tumblr_lmfqvtgfNT1qcx7jl.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;23 GBs of Photos, documents and movies, scanned images and records of the last 4-years of work in school. I am posting some examples of my student work that might be relevant for a professional profile online.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Creating a web-presence is a important step for recent grads looking for careers. This means making sure what is public is safe and professional. This could mean looking though your FaceBook Privacy Settings a bit. Also this may be trying new networks that you may not have used before now.&lt;/p&gt;
+
+&lt;p&gt;Creating a web-presence is a great tool when networking and looking for a job, but also &lt;em&gt;easier&lt;/em&gt; than ever before.&lt;/p&gt;
+
+&lt;p&gt;After graduating from the University of Colorado, Boulder and moving to the Bay Area, I am using Social Networking to help find connections and a job.&lt;/p&gt;
+
+&lt;p&gt;As a young grad with a background in IT Support and Admin,  looking for work in the Bay Area. I have been using Twitter, LinkedIn and Tumblr to put myself out there and to also hear from companies I am interested in working for.&lt;/p&gt;
+
+&lt;p&gt;&lt;img height=&quot;50&quot; width=&quot;50&quot; alt=&quot;twitter&quot; src=&quot;http://t1.gstatic.com/images?q=tbn:ANd9GcSUtPSZ5dbSDsDs7CoNFjmzWZeBt7OabO8NXIPv2l4dOy2xMke0&quot; align=&quot;left&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitter may be one of the best tools for recent grads and people looking for a job. It allows you to broadcast yourself to companies and what you are doing in the world, but more importantly, many companies are using twitter to announce openings. I have been slowly following companies I am interested in to get news on new position opening and what is happening in the industry.&lt;/p&gt;
+
+&lt;p&gt;&lt;img height=&quot;50&quot; width=&quot;50&quot; alt=&quot;tumblr.&quot; src=&quot;http://media.tumblr.com/tumblr_ljv0b20OhP1qf95sb.png&quot; align=&quot;left&quot;/&gt; Tumblr might be a great way for a recent graduate to give themselves a web presence. It is easy to create and maintain a professional/personal blog. I am hoping to use tumblr to post information on exciting projects I might get to work on in the future and a spot to showcase past achievements. Creating a place to maintain my writing skills is very important to me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;left&quot; height=&quot;50&quot; width=&quot;50&quot; alt=&quot;LinkedIn&quot; src=&quot;http://cdn4.iconfinder.com/data/icons/elegantmediaicons/PNG/linkedin.png&quot;/&gt;&lt;br/&gt;LinkedIn is quickly becoming the largest professional social networking site. I am sure everyone has heard about it. For me it has been really helpful to use the connections I have built up to find on finding a personal contact when I apply for a position.&lt;/p&gt;
+
+&lt;p&gt;Reply back if you have any other tips. I would love to hear from you.&lt;/p&gt;
+
+&lt;p&gt;Steven&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Pepsi Refresh Grant - Northeast Elementary School</title>
+   <link href="http://bassettsj.me/2011/06/07/pepsi-refresh-grant"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/pepsi-refresh-grant</id>
+   <content type="html">&lt;object type=&quot;application/x-shockwave-flash&quot; width=&quot;400&quot; height=&quot;300&quot; data=&quot;http://www.flickr.com/apps/video/stewart.swf?v=71377&quot; classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot;&gt; &lt;param name=&quot;flashvars&quot; value=&quot;intl_lang=en-us&amp;amp;photo_secret=a48a8bd7f5&amp;amp;photo_id=5806845252&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.flickr.com/apps/video/stewart.swf?v=71377&quot; /&gt;&lt;param name=&quot;bgcolor&quot; value=&quot;#000000&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;&lt;embed type=&quot;application/x-shockwave-flash&quot; src=&quot;http://www.flickr.com/apps/video/stewart.swf?v=71377&quot; bgcolor=&quot;#000000&quot; allowfullscreen=&quot;true&quot; flashvars=&quot;intl_lang=en-us&amp;amp;photo_secret=a48a8bd7f5&amp;amp;photo_id=5806845252&quot; height=&quot;300&quot; width=&quot;400&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/bassettsj/5806845252/&quot; title=&quot;Pepsi Refresh Grant - Northeast Elementary School&quot; target=&quot;_blank&quot;&gt;Pepsi Refresh Grant - Northeast Elementary School&lt;/a&gt; on Flickr.&lt;/p&gt;&lt;p&gt;&lt;i&gt;Via Flickr:&lt;/i&gt;&lt;br/&gt;
+
+The school wanted to apply for the Pepsi Refresh Grant. We made this video with the help of the Northeast Elementary School PTO to start raising funds for the redevelopment of the grounds.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>3D rendering of a GIS Map of the terrain around the Portland Oregon, TriMetro Area</title>
+   <link href="http://bassettsj.me/2011/06/07/3d-terrain-map-of-portland"/>
+   <updated>2011-06-07T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/07/3d-terrain-map-of-portland</id>
+   <content type="html">&lt;iframe width=&quot;400&quot; height=&quot;300&quot; src=&quot;http://www.youtube.com/embed/mBeJb4TgJ6E?wmode=transparent&amp;autohide=1&amp;egm=0&amp;hd=1&amp;iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;showsearch=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;span&gt;This video was made by Steven Bassett to show an example of a 3D rendering of a GIS Map of the terrain around the Portland Oregon, TriMetro Area.&lt;/span&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Presentation on predicting change in Boulder, CO</title>
+   <link href="http://bassettsj.me/2011/06/06/presntation-on-predicting-change-in-boulder-co"/>
+   <updated>2011-06-06T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/06/presntation-on-predicting-change-in-boulder-co</id>
+   <content type="html">&lt;a href=&quot;http://public.iwork.com/document/?d=Change_in_Boulder%2C_Studio_2.key&amp;amp;a=p44845735&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_lmeetiEMPz1qd0d6lo1_500.jpg&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Here is a presentation on predicting where change would occur in Boulder, CO. We analyzed what areas were most likely to change significantly in the city.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Presentation to the City of Boulder - Google Maps &amp; Earth Web Mashups for Planning</title>
+   <link href="http://bassettsj.me/2011/06/06/presentation-to-the-city-of-boulder"/>
+   <updated>2011-06-06T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/06/presentation-to-the-city-of-boulder</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://media.tumblr.com/tumblr_lme321bbJY1qcx7jl.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is the keynote presentation I gave to the City of Boulder last May at the end of the Undergraduate Research Opportunity Grant project. The purpose was to research a web application and develop a simple proof of concept that allows use to show community information.&lt;/p&gt;
+
+&lt;p&gt;The City was interested in the results of the project that could be applied to a more narrow application, like a single planning project that effects the community.&lt;/p&gt;
+
+
+
+&lt;!-- &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://public.iwork.com/document/?a=p44845735&amp;amp;d=gis_zilifone.key&quot;&gt;&lt;strong&gt;View on iWork.com&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt; --&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Presentation on Modern Mapping Application in Urban Planning.</title>
+   <link href="http://bassettsj.me/2011/06/06/presentation-on-modern-mapping-in-urban-planning"/>
+   <updated>2011-06-06T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/06/presentation-on-modern-mapping-in-urban-planning</id>
+   <content type="html">&lt;a href=&quot;http://public.iwork.com/document/?a=p44845735&amp;amp;d=GIS_Systems_Analysis_58__Looking_at_GIS_Solutions_for_Municipalities.key&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_lme3ntM0VC1qd0d6lo1_500.png&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;At the end of my second Planning studio, we were given an independent research project. I spent a few weeks in December 2010 looking at modern mapping applications on line with an emphasis on the application to planning purposes. This project would later go on to develop into a Undergrad. Research Opportunity Grant Project during my final semester at CU Boulder.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Map: Showing areas of change in Boulder, CO</title>
+   <link href="http://bassettsj.me/2011/06/06/map-showing-areas-of-change"/>
+   <updated>2011-06-06T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/06/06/map-showing-areas-of-change</id>
+   <content type="html">&lt;img src=&quot;/tumblr_files/tumblr_lme71qkgSt1qd0d6lo1_500.png&quot;/&gt;&lt;br/&gt;&lt;p&gt;Example of a Google FusionTable Map of the City of Boulder.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.google.com/fusiontables/DataSource?snapid=S181571zG-wCJGcqIAG&amp;amp;hl=en_US&quot;&gt;Click here.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GIS Map of Portland Area, Planning for People and their Environment</title>
+   <link href="http://bassettsj.me/cartography/gis/2011/06/06/gis-map-of-portland-or"/>
+   <updated>2011-06-06T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/cartography/gis/2011/06/06/gis-map-of-portland-or</id>
+   <content type="html">&lt;a href=&quot;http://www.flickr.com/photos/57446581@N03/5805997973/&quot;&gt;&lt;img src=&quot;/tumblr_files/tumblr_lme9dh7aQc1qd0d6lo1_500.jpg&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;&lt;a title=&quot;GIS Map of Portland Area, Planning for People and their Environment&quot; href=&quot;http://www.flickr.com/photos/57446581@N03/5805997973/&quot; target=&quot;_blank&quot;&gt;GIS Map of Portland Area, Planning for People and their Environment&lt;/a&gt; on Flickr.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bio Cities Presentation</title>
+   <link href="http://bassettsj.me/presentations/2011/06/06/bio-city-presentation"/>
+   <updated>2011-06-06T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/presentations/2011/06/06/bio-city-presentation</id>
+   <content type="html">&lt;img src=&quot;/tumblr_files/tumblr_lme4dlCG4y1qd0d6lo1_500.png&quot;/&gt;
+&lt;p&gt;A case study on Curitiba, Brazil and the amazing planning efforts they have put into their commitment to society, environment and the quality of life. Please check out the TransMilinio Bus Rapid Transit system.  &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Using ArcScene to Render 3D Terrain - Portland, OR</title>
+   <link href="http://bassettsj.me/2011/05/14/using-arc-scene-to-render-3d-landscapes"/>
+   <updated>2011-05-14T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/05/14/using-arc-scene-to-render-3d-landscapes</id>
+   <content type="html">&lt;p&gt;&lt;iframe width=&quot;425&quot; height=&quot;349&quot; src=&quot;http://www.youtube.com/embed/mBeJb4TgJ6E&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Google Fusion Tables - make powerful maps quickly</title>
+   <link href="http://bassettsj.me/2011/05/05/google-fusion-tables-make-powerful-maps-quickly"/>
+   <updated>2011-05-05T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/05/05/google-fusion-tables-make-powerful-maps-quickly</id>
+   <content type="html">&lt;h2&gt;Done making a map using Google Fusion Tables - Boulder&amp;#8217;s Zoning Codes&lt;/h2&gt;
+
+&lt;p&gt;Many commercial mapping services offer an easy to use interface that allows cartographers to display their GIS data, but until recently you were only able to process the data on the standard ArcGIS desktop application, or another GIS application. It is exciting to see that cloud-based databases could provide a place of agencies and communities to contribute data and build geospatial information. &lt;br/&gt;Here is an example of a zoning map that was created and styles within Google Fusion Tables.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe scrolling=&quot;no&quot; src=&quot;http://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col0%3E%3E0%2C+col1%3E%3E0%2C+col2%3E%3E0%2C+col3%3E%3E0%2C+col4%3E%3E0%2C+col0%3E%3E1%2C+col2%3E%3E1+from+763007+&amp;amp;h=false&amp;amp;lat=40.01520799438074&amp;amp;lng=-105.27846336364746&amp;amp;z=16&amp;amp;t=2&amp;amp;l=col2%3E%3E1&quot; style=&quot;width:100%; min-height: 500px;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Google Fusion Tables - make powerful maps quickly</title>
+   <link href="http://bassettsj.me/2011/05/05/google-fusion-tables"/>
+   <updated>2011-05-05T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/05/05/google-fusion-tables</id>
+   <content type="html">&lt;h2&gt;Done making a map using Google Fusion Tables - Boulder&amp;#8217;s Zoning Codes&lt;/h2&gt;
+
+&lt;p&gt;Many commercial mapping services offer an easy to use interface that allows cartographers to display their GIS data, but until recently you were only able to process the data on the standard ArcGIS desktop application, or another GIS application. It is exciting to see that cloud-based databases could provide a place of agencies and communities to contribute data and build geospatial information. &lt;br/&gt;Here is an example of a zoning map that was created and styles within Google Fusion Tables.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe scrolling=&quot;no&quot; src=&quot;http://www.google.com/fusiontables/embedviz?viz=MAP&amp;amp;q=select+col0%3E%3E0%2C+col1%3E%3E0%2C+col2%3E%3E0%2C+col3%3E%3E0%2C+col4%3E%3E0%2C+col0%3E%3E1%2C+col2%3E%3E1+from+763007+&amp;amp;h=false&amp;amp;lat=40.01520799438074&amp;amp;lng=-105.27846336364746&amp;amp;z=16&amp;amp;t=2&amp;amp;l=col2%3E%3E1&quot; style=&quot;width:100%; min-height: 500px;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Almost done with Catography</title>
+   <link href="http://bassettsj.me/2011/04/10/almost-done-with-cartography"/>
+   <updated>2011-04-10T00:00:00-07:00</updated>
+   <id>http://bassettsj.me/2011/04/10/almost-done-with-cartography</id>
+   <content type="html">&lt;img src=&quot;/tumblr_files/tumblr_ljgwtlEQCU1qd0d6lo1_500.jpg&quot;/&gt;&lt;br/&gt;&lt;p&gt;Almost done with Cartography, it is pretty cool to see how far we have ome in producing maps in this class. I would love to continue learning more about GIS.&lt;/p&gt;
+</content>
+ </entry>
+ 
  
 </feed>

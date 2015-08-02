@@ -1,12 +1,4 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-		<title>reveal.js - Slide Notes</title>
-
-		<style>
-			body {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>reveal.js - Slide Notes</title><style>body {
 				font-family: Helvetica;
 			}
 
@@ -131,39 +123,7 @@
 
 			.elapsed .mute {
 				color: #ddd;
-			}
-
-		</style>
-	</head>
-
-	<body>
-
-		<div id="wrap-current-slide" class="slides">
-			<script>document.write( '<iframe width="1280" height="1024" id="current-slide" src="'+ window.opener.location.href +'"></iframe>' );</script>
-		</div>
-
-		<div id="wrap-next-slide" class="slides">
-			<script>document.write( '<iframe width="640" height="512" id="next-slide" src="'+ window.opener.location.href +'"></iframe>' );</script>
-			<span>UPCOMING:</span>
-		</div>
-
-		<div class="time">
-			<div class="clock">
-				<h2>Time</h2>
-				<span id="clock">0:00:00 AM</span>
-			</div>
-			<div class="elapsed">
-				<h2>Elapsed</h2>
-				<span id="hours">00</span><span id="minutes">:00</span><span id="seconds">:00</span>
-			</div>
-		</div>
-
-		<div id="notes"></div>
-
-		<script src="../../plugin/markdown/marked.js"></script>
-		<script>
-
-			window.addEventListener( 'load', function() {
+			}</style></head><body><div id="wrap-current-slide" class="slides"><script>document.write( '<iframe width="1280" height="1024" id="current-slide" src="'+ window.opener.location.href +'"></iframe>' );</script></div><div id="wrap-next-slide" class="slides"><script>document.write( '<iframe width="640" height="512" id="next-slide" src="'+ window.opener.location.href +'"></iframe>' );</script><span>UPCOMING:</span></div><div class="time"><div class="clock"><h2>Time</h2><span id="clock">0:00:00 AM</span></div><div class="elapsed"><h2>Elapsed</h2><span id="hours">00</span><span id="minutes">:00</span><span id="seconds">:00</span></div></div><div id="notes"></div><script src="../../plugin/markdown/marked.js"></script><script>window.addEventListener( 'load', function() {
 
 				if( window.opener && window.opener.location && window.opener.location.href ) {
 
@@ -252,8 +212,4 @@
 			function zeroPadInteger( num ) {
 				var str = "00" + parseInt( num );
 				return str.substring( str.length - 2 );
-			}
-
-		</script>
-	</body>
-</html>
+			}</script></body></html>

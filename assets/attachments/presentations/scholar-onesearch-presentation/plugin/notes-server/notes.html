@@ -1,14 +1,4 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-		<meta name="viewport" content="width=1150">
-
-		<title>reveal.js - Slide Notes</title>
-
-		<style>
-			body {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1150"><title>reveal.js - Slide Notes</title><style>body {
 				font-family: Helvetica;
 			}
 
@@ -85,27 +75,7 @@
 				font-weight: bold;
 				font-size: 14px;
 				color: rgba( 255, 255, 255, 0.9 );
-			}
-		</style>
-	</head>
-
-	<body>
-
-		<div id="wrap-current-slide" class="slides">
-			<iframe src="/?receiver" width="1280" height="1024" id="current-slide"></iframe>
-		</div>
-
-		<div id="wrap-next-slide" class="slides">
-			<iframe src="/?receiver" width="640" height="512" id="next-slide"></iframe>
-			<span>UPCOMING:</span>
-		</div>
-		<div id="notes"></div>
-
-		<script src="/socket.io/socket.io.js"></script>
-		<script src="/plugin/markdown/marked.js"></script>
-
-		<script>
-		var socketId = '{{socketId}}';
+			}</style></head><body><div id="wrap-current-slide" class="slides"><iframe src="/?receiver" width="1280" height="1024" id="current-slide"></iframe></div><div id="wrap-next-slide" class="slides"><iframe src="/?receiver" width="640" height="512" id="next-slide"></iframe><span>UPCOMING:</span></div><div id="notes"></div><script src="/socket.io/socket.io.js"></script><script src="/plugin/markdown/marked.js"></script><script>var socketId = '{{socketId}}';
 		var socket = io.connect(window.location.origin);
 		var notes = document.getElementById('notes');
 		var currentSlide = document.getElementById('current-slide');
@@ -135,8 +105,4 @@
 			else if (data.fragment === 'previous') {
 				currentSlide.contentWindow.Reveal.prevFragment();
 			}
-		});
-		</script>
-
-	</body>
-</html>
+		});</script></body></html>

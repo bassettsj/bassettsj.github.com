@@ -1,9 +1,0 @@
-{
-  "env" : "production",
-  "paths" : {
-    "assets" : "./assets",
-    "scriptMain" : "./_src/index.coffee",
-    "scss" : [  "./_sass/**/*.scss"],
-    "jekyll": [ "./_posts/**/*.md"]
-  }
-}
