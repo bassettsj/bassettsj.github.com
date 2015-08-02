@@ -17,6 +17,9 @@ exclude: [
   'Gemfile*',
   'bower.json'
 ]
+include: [
+  '.nojekyll'
+]
 
 pygments: false
 
