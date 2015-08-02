@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'sass', '>= 3.3.0'
+
 gem 'github-pages'
 gem 'redcarpet', '~> 2.3'
 gem 'albino', '~> 1.3'

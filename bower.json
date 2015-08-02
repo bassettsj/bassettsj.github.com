@@ -22,7 +22,7 @@
     "assets/bower_components"
   ],
   "devDependencies": {
-    "susy": "~2.1.2",
-    "prismjs": "*"
+    "prismjs": "*",
+    "scut": "~1.2.1"
   }
 }

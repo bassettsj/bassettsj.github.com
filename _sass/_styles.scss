@@ -70,7 +70,6 @@ input[type="button"]{
 
 .posts{
   article{
-    @include span( 12 of 12);
     margin-bottom: 3em;
     border-bottom: 0.0625em solid $lightest-gray;
   }
@@ -86,17 +85,7 @@ input[type="button"]{
     }
   }
   footer{
-    @include span(12 of 12);
     font-family: $sans-serif-font;
-    div{
-      @include breakpoint(medium) {
-        @include span(3 of 9);
-          &:last-child{
-            @include omega;
-          }
-
-        }
-    }
     h5{
       margin-bottom: 0.5em;
     }
