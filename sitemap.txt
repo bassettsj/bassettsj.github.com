@@ -9,6 +9,7 @@ http://bassettsj.me/sitemap.txt
 http://bassettsj.me/thank-you.html
 
 http://bassettsj.me/conferences/js/2015/02/04/forward-js-2
+http://bassettsj.me/js/2014/11/07/javascript-interview-questions
 http://bassettsj.me/conferences/drupal/design/2014/08/01/design-for-drupal
 http://bassettsj.me/conferences/js/2014/07/25/forward-js
 http://bassettsj.me/front-end-ops/2014/06/05/getting-going-with-gulp
