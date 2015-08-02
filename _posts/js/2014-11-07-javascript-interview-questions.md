@@ -1,12 +1,12 @@
 ---
-title: Common JavaScript Interview Questons
+title: Common JavaScript Interview Questions
 category: js
 tags:
  - js
  - interviews
  - professional development
 layout: post
-published: false
+published: true
 ---
 
 After interviewing at a bunch of start-ups and other companies over the past month. I have gotten a bunch of white-board challenges, I have previously never been asked to use a dry erase marker to solve problems. Besides learning how terrible my handwritten code punctuation is, I learned some neat tricks and tips for solving these problems.
@@ -30,7 +30,7 @@ After interviewing at a bunch of start-ups and other companies over the past mon
 
 ## \#4 Create a Modal
 
-<p data-height="268" data-theme-id="0" data-slug-hash="IdqaD" data-default-tab="result" data-user="bassettsj" class='codepen'>See the Pen <a href='http://codepen.io/bassettsj/pen/IdqaD/'>IdqaD</a> by bassettsj (<a href='http://codepen.io/bassettsj'>@bassettsj</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="500" data-theme-id="0" data-slug-hash="IdqaD" data-default-tab="result" data-user="bassettsj" class='codepen'>See the Pen <a href='http://codepen.io/bassettsj/pen/IdqaD/'>IdqaD</a> by bassettsj (<a href='http://codepen.io/bassettsj'>@bassettsj</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
 
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>

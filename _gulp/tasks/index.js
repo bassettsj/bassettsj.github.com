@@ -16,8 +16,15 @@ gulp.task('watchHtml', () => {
   gulp.watch(
     [
       '*',
-      '_(includes,layouts,posts,assets)/**/*',
-      '(info,profects,search,tumblr_files,archive)/**/*'
+      '_includes/**/*',
+      '_layouts/**/*',
+      '_posts/**/*',
+      'assets/**/*',
+      'info/**/*',
+      'projects/**/*',
+      'search/**/*',
+      'tumblr_files/**/*',
+      'archive/**/*'
     ],
     ['jekyll', 'html'],
     reload
