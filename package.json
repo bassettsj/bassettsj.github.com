@@ -42,5 +42,8 @@
     "minifyify": "^7.0.3",
     "require-dir": "^0.3.0"
   },
-  "homepage": "https://github.com/bassettsj/bassettsj.github.com"
+  "homepage": "https://github.com/bassettsj/bassettsj.github.com",
+  "dependencies": {
+    "critical": "^0.6.0"
+  }
 }
