@@ -209,3 +209,9 @@ blockquote{
   border-left: 0.5em solid $blockquote-border-color;
   font-style: italic;
 }
+
+
+pre {
+  max-width: 100%;
+  overflow-x: scroll;
+}

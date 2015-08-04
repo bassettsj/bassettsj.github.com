@@ -1,21 +1,30 @@
 import gulp from 'gulp'
-import browserify from 'gulp-browserify'
-import rename from 'gulp-rename'
+// import rename from 'gulp-rename'
+import source from 'vinyl-source-stream'
+import buffer from 'vinyl-buffer'
+import browserify from 'browserify'
+import babelify from 'babelify'
+import gutil from 'gulp-util'
+import sourcemaps from 'gulp-sourcemaps'
+import uglify from 'gulp-uglify'
 
 gulp.task('scripts', () => {
-  return gulp.src(['./_src/main.coffee'], { read: false })
-    .pipe(
-      browserify({
-        transforms: ['coffeeify', 'minifyify'],
-        extensions: ['.coffee'],
-        shim: {
-          prism: {
-            path: './bower_components/prismjs/prism.js',
-            exports: 'Prism'
-          }
-        }
+  let b = browserify({
+    entries: ['_src/index.js'],
+    debug: true,
+    transform: [
+      babelify.configure({
+        ignore: /(node_modules|bower_components)/
       })
-    )
-    .pipe(rename('main.pkg.js'))
+    ]
+  })
+
+  return b.bundle()
+    .pipe(source('main.pkg.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
+    .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./assets/js/'))
 })

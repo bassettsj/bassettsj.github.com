@@ -112,6 +112,13 @@ input[type="button"]{
   border-top: 0.065em solid $text-color;
 }
 
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
 
 .hightlight{
   border-radius: 0.25em;
