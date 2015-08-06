@@ -1,10 +1,13 @@
-import '../bower_components/prismjs/prism.js'
-import '../bower_components/prismjs/components/prism-coffeescript'
-import '../bower_components/prismjs/components/prism-bash'
+import Prism from 'prism'
+import 'prism-bash'
+import 'prism-coffeescript'
 
-function onLoad () {
-  global.Prism.highlightAll()
-  window.removeEventListener('load', onLoad)
+let onLoad = () => {
+  Prism.highlightAll()
+  global.removeEventListener('load', this.onLoad)
 }
 
-window.addEventListener('load', onLoad, false)
+
+alert('hi')
+
+global.addEventListener('load', onLoad, false)

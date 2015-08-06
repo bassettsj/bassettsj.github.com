@@ -3,11 +3,15 @@ import browserify from 'browserify'
 import browserSync from '../browser-sync'
 import watchify from 'watchify'
 import mergeStream from 'merge-stream'
-import bundleLogger from '../util/bundleLogger'
-import handleErrors from '../util/handleErrors'
+import bundleLogger from '../util/bundle-logger'
+// import handleErrors from '../util/handle-errors'
 import source from 'vinyl-source-stream'
 import {browserify as config} from '../config'
 import _ from 'lodash'
+import gutil from 'gulp-util'
+// import sourcemaps from 'gulp-sourcemaps'
+// import uglify from 'gulp-uglify'
+// import buffer from 'vinyl-buffer'
 
 export default function browserifyTask (devMode) {
 
@@ -28,15 +32,24 @@ export default function browserifyTask (devMode) {
       // Log when bundling starts
       bundleLogger.start(bundleConfig.outputName)
 
+      // if ('transforms' in bundleConfig && Array.isArray(bundleConfig)) {
+      //   bundleConfig.transforms.forEach(t => b.transform(t))
+      // }
+
       return b
         .bundle()
-        // Report compile errors
-        .on('error', handleErrors)
         // Use vinyl-source-stream to make the
         // stream gulp compatible. Specify the
         // desired output filename here.
         .pipe(source(bundleConfig.outputName))
+        // Report compile errors
+        // .on('error', handleErrors)
         // Specify the output destination
+        // .pipe(buffer())
+        // .pipe(sourcemaps.init({loadMaps: true}))
+        // .pipe(uglify())
+        .on('error', gutil.log)
+        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(bundleConfig.dest))
         .pipe(browserSync.reload({
           stream: true

@@ -20,4 +20,7 @@ _cache/flickr/*
 .sass-cache
 
 
+assets/js
+assets/css
+
 bower_components
