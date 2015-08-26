@@ -6,7 +6,7 @@ tags:
  - interviews
  - professional development
 layout: post
-published: true
+published: false
 ---
 
 These questions came from a recent technical phone interview from a company that is known for particularly difficult interviews.
@@ -15,7 +15,7 @@ These questions came from a recent technical phone interview from a company that
 
 The problem was to write a function that would remove duplicates from an array. Below was the most straight forward approach, although not very efficient.
 
-```js
+```javascript
 function removeDuplicates(list) {
 
  for (let i = 0; i < list.length; i++) {
@@ -63,7 +63,7 @@ let list = [0, 1, 1]
 
 The second problem was to take a class, `function Widget() {}`, with a method, `Widget.prototype.foo = function() {}`. There is an array full of widgets,  `var widgets = [ \*... an array of widgets ...*\]`, that the goal was to take that array and call the `.foo()` method on the ith widget after i seconds.
 
-```js
+```javascript
 widgets.forEach(function (widget, i) {
   (function(i, widget) {
    window.setTimeout(widget.foo, i * 1000);
@@ -78,7 +78,7 @@ In OOP:
 A - constructor, initializes a,b and has two methods foo, bar.
 B extends A - own constructor that calls in super constructor, inits c, overrides foo and has access to bar.
 
-```js
+```javascript
 function A (a, b) {
  this.a = a;
  this.b = b;
@@ -97,3 +97,7 @@ function B (a, b, c) {
 B.prototype = Object.create(A.prototype);
 B.prototype.foo = function anotherFoo() {};
 ```
+
+
+<p data-height="536" data-theme-id="18136" data-slug-hash="zGVgrE" data-default-tab="result" data-user="bassettsj" class='codepen'>See the Pen <a href='http://codepen.io/bassettsj/pen/zGVgrE/'>JS Interview Questions</a> by Steven (<a href='http://codepen.io/bassettsj'>@bassettsj</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
