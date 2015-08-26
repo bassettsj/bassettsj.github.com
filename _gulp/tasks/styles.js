@@ -2,7 +2,7 @@ import gulp from 'gulp'
 import sass from 'gulp-sass'
 import prefix from 'gulp-autoprefixer'
 import csso from 'gulp-csso'
-import config from '../config.json'
+import config from '../config'
 import browserSync from '../browser-sync'
 
 gulp.task('styles', () => {
