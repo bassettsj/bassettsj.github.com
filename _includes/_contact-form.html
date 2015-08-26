@@ -1,6 +1,6 @@
 <div class="form-wrapper">
   <form action="http://getsimpleform.com/messages?form_api_token=4fa7ddc0ffabd797002a05f4ef9bf5c6" method="post" class="block-form">
-    <input type='hidden' name='redirect_to' value='/thank-you.html' />
+    <input type='hidden' name='redirect_to' value='{{ site.production_url }}/thank-you.html' />
     <legend>Contact</legend>
     <label for="email" >Email</label>
     <input type='email' class="input-block-level" name='email' id="email" placeholder="john@example.com" />
