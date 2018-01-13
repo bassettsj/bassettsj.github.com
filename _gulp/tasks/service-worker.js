@@ -11,23 +11,19 @@ gulp.task('service-worker', ['styles', 'scripts', 'jekyll', 'html', 'critical', 
     runtimeCaching: [
       {
         urlPattern: new RegExp('https://unpkg.com'),
-        strategy: 'staleWhileRevalidate',        
+        handler: 'staleWhileRevalidate',        
       },
       {
         urlPattern: new RegExp('https://fonts.googleapis.com/'),
-        strategy: 'staleWhileRevalidate',
+        handler: 'staleWhileRevalidate',
       },
       {
         urlPattern: new RegExp('https://fonts.gstatic.com/'),
-        strategy: 'staleWhileRevalidate',
+        handler: 'staleWhileRevalidate',
       },
     ],
     swDest: `${dist}/sw.js`,
     clientsClaim: true,
     skipWaiting: true,
-  }).then(() => {
-    console.info('Service worker generation completed.');
-  }).catch((error) => {
-    console.warn('Service worker generation failed: ' + error);
   });
 });
