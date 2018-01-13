@@ -1,5 +1,4 @@
 import gulp from 'gulp'
-// import rename from 'gulp-rename'
 import source from 'vinyl-source-stream'
 import buffer from 'vinyl-buffer'
 import browserify from 'browserify'
@@ -13,9 +12,7 @@ gulp.task('scripts', () => {
     entries: ['_src/index.js'],
     debug: true,
     transform: [
-      babelify.configure({
-        ignore: /(node_modules|bower_components)/
-      })
+      'babelify'
     ]
   })
 

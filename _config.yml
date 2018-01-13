@@ -1,6 +1,6 @@
 # This is the default format.
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title
+permalink: /:categories/:year/:month/:day/:title/
 
 exclude: [
   ".rvmrc",
@@ -44,7 +44,7 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 
-production_url: http://bassettsj.me
+production_url: https://bassettsj.github.io
 assetPath: /assets
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
@@ -153,7 +153,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: true
+  enable_coderay: true
 
   coderay:
     coderay_wrap: div
