@@ -22,7 +22,7 @@ gulp.task('service-worker', ['styles', 'scripts', 'jekyll', 'html', 'critical', 
         handler: 'staleWhileRevalidate',
       },
       {
-        urlPatterns: new RegExp('https://www.google-analytics.com/analytics.js'),
+        urlPattern: new RegExp('https://www.google-analytics.com/analytics.js'),
         handler: 'staleWhileRevalidate',
       }
     ],
