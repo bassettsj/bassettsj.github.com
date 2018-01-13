@@ -15,7 +15,8 @@ exclude: [
   'bower_components',
   'gulpfile*',
   'Gemfile*',
-  'bower.json'
+  'bower.json',
+  'yarn*',
 ]
 include: [
   '.nojekyll'
