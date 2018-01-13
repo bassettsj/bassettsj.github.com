@@ -1,0 +1,19 @@
+---
+permalink: manifest.json
+---
+
+{
+  "lang": "{{ site.manifest_lang }}",
+  "background_color": "#{{ site.manifest_background_color }}",
+  "name": "{{ site.manifest_name }}",
+  "short_name": "{{ site.manifest_short_name }}",
+  "display": "{{ site.manifest_display}}",
+  "start_url": "/?utm_source=homescreen",
+  "icons": [
+    {
+      "src": "/apple-touch-icon-114x114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    }
+  ]
+}

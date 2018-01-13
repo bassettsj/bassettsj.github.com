@@ -164,3 +164,10 @@ kramdown:
     coderay_css: style
 
 baseurl: '/'
+
+
+manifest_name: Steven Bassett
+manifest_short_name: bassettsj
+manifest_lang: en
+manifest_background_color: f8f8f8
+manifest_display: standalone
