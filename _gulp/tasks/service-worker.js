@@ -7,8 +7,16 @@ const dist = config.paths.swDist;
 gulp.task('service-worker', ['styles', 'scripts', 'jekyll', 'html', 'critical', 'images'], () => {
   return workbox.generateSW({
     globDirectory: dist,
-    globPatterns: ['**/*.{html,js,css,png,gif,svg,jpeg}'],
+    globPatterns: [
+      'index.html',
+      'assets/js/**/*.js',
+      'assets/css/**/*.css',
+    ],
     runtimeCaching: [
+      {
+        urlPattern: new RegExp('bassettsj.me'),
+        handler: 'staleWhileRevalidate',
+      },
       {
         urlPattern: new RegExp('https://unpkg.com'),
         handler: 'staleWhileRevalidate',        
