@@ -21,6 +21,10 @@ gulp.task('service-worker', ['styles', 'scripts', 'jekyll', 'html', 'critical', 
         urlPattern: new RegExp('https://fonts.gstatic.com/'),
         handler: 'staleWhileRevalidate',
       },
+      {
+        urlPatterns: new RegExp('https://www.google-analytics.com/analytics.js'),
+        handler: 'staleWhileRevalidate',
+      }
     ],
     swDest: `${dist}/sw.js`,
     clientsClaim: true,
