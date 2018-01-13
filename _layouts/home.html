@@ -14,7 +14,10 @@ layout: default
             {% if post.coverimage %}
             <figure class="site-post-cover-img">
               <a href="{{ post.url }}">
-                <st-img src="{{ post.coverimage.src }}" class="" alt="{{  post.coverimage.alt }}">
+                <st-img src="{{ post.coverimage.src }}" class="" alt="{{  post.coverimage.alt }}"></st-img>
+                <noscript>
+                  <img src="{{ post.coverimage.src }}" class="" alt="{{  post.coverimage.alt }}" >
+                </noscript>
               </a>
             </figure>
             {% endif %}
