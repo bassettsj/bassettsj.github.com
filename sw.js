@@ -20,155 +20,155 @@ importScripts('workbox-sw.prod.v2.1.2.js');
 const fileManifest = [
   {
     "url": "2011/04/10/almost-done-with-cartography/index.html",
-    "revision": "0d212a0f087ee7fe744552271b6bce71"
+    "revision": "a7803a9f71fb64444b2d1592e259e9cc"
   },
   {
     "url": "2011/05/05/google-fusion-tables-make-powerful-maps-quickly/index.html",
-    "revision": "dff40b41dda816d43c0a03f6772c27c0"
+    "revision": "d97d1d5314c1f143615d423a247ae596"
   },
   {
     "url": "2011/05/05/google-fusion-tables/index.html",
-    "revision": "6a389ca846962e4decff190e74a9c89b"
+    "revision": "2abacf0ed1353e28b15509dbf1ef1c93"
   },
   {
     "url": "2011/05/14/using-arc-scene-to-render-3d-landscapes/index.html",
-    "revision": "b6b538cd5cc8b786c5686d0d7dd7bb9c"
+    "revision": "823df3193e32e54a97f9b074b167f951"
   },
   {
     "url": "2011/06/06/map-showing-areas-of-change/index.html",
-    "revision": "68a1d7fdc33a73a61232d7fad96f5228"
+    "revision": "0c5169d39901ecb22bbe0f324d81f684"
   },
   {
     "url": "2011/06/06/presentation-on-modern-mapping-in-urban-planning/index.html",
-    "revision": "bbd86f1dbbdc5fa0d9f7cc37e72adcd9"
+    "revision": "9e97f44853e217ef4a2fc570df17f369"
   },
   {
     "url": "2011/06/06/presentation-to-the-city-of-boulder/index.html",
-    "revision": "47f511bb89c87980bb3f4ced66dd1e02"
+    "revision": "ca757a71310533495904986639cec01e"
   },
   {
     "url": "2011/06/06/presntation-on-predicting-change-in-boulder-co/index.html",
-    "revision": "62de36c786aad3cb5bffe1ea37868d64"
+    "revision": "2a7dbfd60b03006ff2c7b4effd4c4953"
   },
   {
     "url": "2011/06/07/3d-terrain-map-of-portland/index.html",
-    "revision": "c11ad2f8f8888846579e311e7c38aafd"
+    "revision": "5778313098c1a4fd831c837f9094ce9e"
   },
   {
     "url": "2011/06/07/pepsi-refresh-grant/index.html",
-    "revision": "df38f60c7051183c6a7284f53f1a2496"
+    "revision": "dd2fb038642f6d36b202da80727c3cf2"
   },
   {
     "url": "2011/06/07/putting-yourself-out-there/index.html",
-    "revision": "883180a9dbfab2e16291f1f816f7ced3"
+    "revision": "3d096f4a3d9f931ce646e5eaca504ed3"
   },
   {
     "url": "2011/06/07/red-rocks-ecological-assessment/index.html",
-    "revision": "ec4592a1ef609329ef437f2007fc5521"
+    "revision": "69b13d2c4aa1b474b242baa887a4900c"
   },
   {
     "url": "2011/06/07/social-issues-of-smoking/index.html",
-    "revision": "5e9390ea3ba1e1cb9461c349bb320042"
+    "revision": "3b0cb8e098fed328016ba86133b9530b"
   },
   {
     "url": "2011/06/07/spring-2011-digital-cartography-example/index.html",
-    "revision": "8b08c347f1d5c848a0b0080a1c7a0402"
+    "revision": "fbf4bcb2a1f7d2e71aca334e8931b521"
   },
   {
     "url": "2011/06/07/user-exchange-movie/index.html",
-    "revision": "8e4eae9088de69cb105fbd6990c45ae2"
+    "revision": "fd93f87779c0d201917d46db1516a6c3"
   },
   {
     "url": "2011/06/07/wayfinding-cu/index.html",
-    "revision": "f5f41116057bca198addc084eeabf637"
+    "revision": "46218bb8ce0512c968233b3c2c611142"
   },
   {
     "url": "2011/06/09/my-chattaqua/index.html",
-    "revision": "aeb710e96ae443edba24a5b2d49c2261"
+    "revision": "a45d4dafa336a0da507eb93c297f52a5"
   },
   {
     "url": "2011/06/09/portfolio-scanning-and-sorting/index.html",
-    "revision": "6ba1f39ff053434e4bb0be5d99a18c14"
+    "revision": "67da8d55a71f1bac22ea714de6583c7e"
   },
   {
     "url": "2011/06/09/using-web-cartography-in-urban-planning/index.html",
-    "revision": "7bccce2b457787eb0167e16d8bf56cda"
+    "revision": "6912bb45bd5633e782d3d2939160a716"
   },
   {
     "url": "2011/11/30/focus-free/index.html",
-    "revision": "06b9077880c474b8ad00826478ef2976"
+    "revision": "14599abc74f718c451c37c0c1f1d4222"
   },
   {
     "url": "2012/03/03/ada-checklist-website-project/index.html",
-    "revision": "e2400a76fb77253a4ea7ac428c057171"
+    "revision": "8c29f2ae99688533eefab562f65f9e5f"
   },
   {
     "url": "2012/03/03/new-england-ada-learning-coming-soon/index.html",
-    "revision": "d697b8c4c48180b48a99df8483e3fd71"
+    "revision": "5c5d5fd246bd9aff67480803a0d825d4"
   },
   {
     "url": "2012/03/04/bus-stop-boardings-in-boulder-co/index.html",
-    "revision": "0d043af66428bb72124dc70994fdf08d"
+    "revision": "d32bfc1f3841c8b11ec4bae2228c13c4"
   },
   {
     "url": "2012/03/04/flood-plains-in-boulder-co/index.html",
-    "revision": "98decfa2d91ed5eb550ae4baf9663c7b"
+    "revision": "7c1893e7c837a074f29649272d6af919"
   },
   {
     "url": "2012/03/04/harvart-art-museum/index.html",
-    "revision": "db50b3b7fc8f1e5a7c61cc0041c9d845"
+    "revision": "3e422ba800b1f8c8f2bc52b73c841e8e"
   },
   {
     "url": "2012/03/04/land-use-zoning-in-boulder-co/index.html",
-    "revision": "419088eaa5c40a5f3c2550c2286bc6f2"
+    "revision": "e663224f88355efe7ac7e69080620bae"
   },
   {
     "url": "2012/03/04/map-of-my-foursquare-checkin-history/index.html",
-    "revision": "a1071becfa074cbfdb8f008ebeddee81"
+    "revision": "a186256cbff788de182e61937b9c5135"
   },
   {
     "url": "2012/03/04/my-new-job-at-ihcd/index.html",
-    "revision": "50b8d20a62ab85692f9dd80c795ddbc6"
+    "revision": "9df03aa5eb7339bd359997121b3bf28a"
   },
   {
     "url": "2012/03/04/predicted-areas-of-growth-boulder-co/index.html",
-    "revision": "f01f58d7923f5297247e968f1402cee4"
+    "revision": "db3dc92ed136eec0be66e4b234386709"
   },
   {
     "url": "2012/03/04/predicted-areas-of-population-growth-in-boulder-co/index.html",
-    "revision": "c11a94cc2c1d35f0b2f9857e541bf02d"
+    "revision": "5bfe45034829f1b6d867ac405ec40a96"
   },
   {
     "url": "2012/04/10/bridge-water-state-lecture-on-a11y/index.html",
-    "revision": "035defd6fdd8eba0ff575a8d6a05f046"
+    "revision": "e9839a284b82ed9918b0de70016d74df"
   },
   {
     "url": "2012/04/11/new-england-ada-center-blog/index.html",
-    "revision": "938b58dbcf931a3b489ec2f37d1a8a5e"
+    "revision": "70c0eb138c779da58b5ec9a47090feca"
   },
   {
     "url": "2012/05/08/minuteman-classic-web-redesign/index.html",
-    "revision": "4f380d3e69c67821dafd5b8e5abb4d5d"
+    "revision": "681b44e05edc0641815192d9158aa5a3"
   },
   {
     "url": "2012/05/08/ten-principles-of-inclusive-web-design/index.html",
-    "revision": "bee6223b977f521c1463d4e3428ab14b"
+    "revision": "6354fb797361d20513d8b6d4242f33b7"
   },
   {
     "url": "2012/05/11/a-lesson-learned-in-accessibility/index.html",
-    "revision": "ae382b2bf3956be0af469dcae622c4c9"
+    "revision": "d04fb315ec285e504611f270f34ea259"
   },
   {
     "url": "2012/05/29/agining-professors-are-creating-a-faculty-bottleneck/index.html",
-    "revision": "b66a619b3ebfd1bec92b554912929588"
+    "revision": "ec869e618e436cc1095cf1760c897b91"
   },
   {
     "url": "2013/10/25/bad-camp-2013/index.html",
-    "revision": "b5588575efb32ff03b5101f85f290eb9"
+    "revision": "5a6d0e29f8e88b3187e24bf7761a6665"
   },
   {
     "url": "2014/06/03/drupalcon-austin/index.html",
-    "revision": "9f215c5a78ee550c322eecc9a8fdc8ee"
+    "revision": "9eabd8e1332ad11b1e829aa43b8b14f5"
   },
   {
     "url": "404.html",
@@ -520,59 +520,63 @@ const fileManifest = [
   },
   {
     "url": "blogging/2013/01/13/hello-world/index.html",
-    "revision": "41c559c236d312bd11ca9c9f1c700f3e"
+    "revision": "7fdbc47cb5c7776647b15a5e4c826558"
   },
   {
     "url": "cartography/gis/2011/06/06/gis-map-of-portland-or/index.html",
-    "revision": "f31507fbc59b0a35725700167f25c823"
+    "revision": "a29e0a98c9641bf166e30c494c7abf67"
   },
   {
     "url": "conferences/2013/03/03/code4lib/index.html",
-    "revision": "3f0b95ffbff882306d8d091b43f62c00"
+    "revision": "22c088c70b9432cb35b00c0413169b4e"
   },
   {
     "url": "conferences/2013/06/26/design-4-drupal-boston/index.html",
-    "revision": "ab445104a69381811d6417ad778c86f5"
+    "revision": "512546e408dbbb0dbfb191983c37ae91"
   },
   {
     "url": "conferences/2013/06/30/responsive-images/index.html",
-    "revision": "63f7f0c46e2a7acc896d8bf70f5f5144"
+    "revision": "0a402ec7adaa4fffc780224acafb2577"
   },
   {
     "url": "conferences/2013/07/13/nyc-camp-2013/index.html",
-    "revision": "b1b3f4d2bc7b59ed3a88510fad8db935"
+    "revision": "b031c14d85c31a41b1bd18175f5a4c80"
   },
   {
     "url": "conferences/2013/07/15/higher-ed-summit-nyc-camp/index.html",
-    "revision": "000b07d715924765b251c6b913762708"
+    "revision": "5c156059db4bdadd7dbdaccf1a81088e"
   },
   {
     "url": "conferences/drupal/design/2014/08/01/design-for-drupal/index.html",
-    "revision": "135fa6de3ed4a5a2b934fd65345372bc"
+    "revision": "90890eff601b077d190f3e040f6c9b35"
   },
   {
     "url": "conferences/js/2014/07/25/forward-js/index.html",
-    "revision": "bbb83d47de298a55af2f20ce19e700fd"
+    "revision": "4b6258b44f43e3b8b0d34fa13723bbc2"
   },
   {
     "url": "conferences/js/2015/02/04/forward-js-2/index.html",
-    "revision": "80dc6aeca079bc815f140ec536d8f563"
+    "revision": "d65f8d0e68c3b9427a5ac36a6dcbdc45"
   },
   {
     "url": "drupal products/2013/01/20/using-web-api-in-drupal-entities/index.html",
-    "revision": "1df691ee5a35aa8353b50bbb55021117"
+    "revision": "b70186669e4c215e27b1d316513bb830"
   },
   {
     "url": "drupal/2013/09/17/feature-driven-development/index.html",
-    "revision": "0fe95550fbf6525e221fd00f4e1ec542"
+    "revision": "ea84823e1da322fb258426eb06cd059d"
   },
   {
     "url": "drush/2013/10/23/drush-resources/index.html",
-    "revision": "518261039477dfd73deb9cb85ea52c0e"
+    "revision": "d5ea3dfe4b519125c16a92af8fc77524"
   },
   {
     "url": "front-end-ops/2014/06/05/getting-going-with-gulp/index.html",
-    "revision": "f68009d694077194010fa54072764324"
+    "revision": "aae040845429521837245f2c3dbca0ac"
+  },
+  {
+    "url": "icon-512x512.png",
+    "revision": "71836402e25cdd717f895960e79fbb2b"
   },
   {
     "url": "index.html",
@@ -584,79 +588,79 @@ const fileManifest = [
   },
   {
     "url": "js/2014/11/07/javascript-interview-questions/index.html",
-    "revision": "3959354675671674c49e057c50784e8d"
+    "revision": "f3878f9a63cf0b8f4544ac6330a7813e"
   },
   {
     "url": "links/2011/12/12/learn-the-basics-of-coding/index.html",
-    "revision": "42e67b9515a348da5caafde2a0bafd82"
+    "revision": "0c639472643798a0a9805190b24ba242"
   },
   {
     "url": "presentations/2011/06/06/bio-city-presentation/index.html",
-    "revision": "0be8d9f39815b02a52094f5b1787f554"
+    "revision": "044ff9d72416a9b1863aceaea2a6b146"
   },
   {
     "url": "presentations/2013/10/13/scholar-onesearch-presentation/index.html",
-    "revision": "7fab9b7ea382104431c3d9b7eeb1eb8c"
+    "revision": "22c2a882e149137fb690e554a533c936"
   },
   {
     "url": "presentations/2014/01/29/github-for-collaboration/index.html",
-    "revision": "18b3c3676438ddcf97d29178452241cb"
+    "revision": "599f6941126fdb40f9428e7364874bab"
   },
   {
     "url": "presentations/2014/06/02/gettings-started-with-grunt/index.html",
-    "revision": "a2a8a651803cdc27039352f9c6ff32d4"
+    "revision": "aba44066a18ce24ab7fabe11369e9efc"
   },
   {
     "url": "projects/2011/12/01/ada-checklist/index.html",
-    "revision": "1d3d2e4c49d7d7b0e32ec0e9532d4921"
+    "revision": "5f9a0ce24666670c0fccc6ca71944caa"
   },
   {
     "url": "projects/2012/05/01/new-england-ada-learning/index.html",
-    "revision": "8d81d1873f0e388658cf3b1f8e221f19"
+    "revision": "7ac07c2b34d0c15b851f3ba02fdc20c4"
   },
   {
     "url": "projects/2012/06/01/ihcd-store-project/index.html",
-    "revision": "a1e14de7235f06cdc489af694c5a10af"
+    "revision": "3075d0fc2187729c9d1bc087c1c9d53e"
   },
   {
     "url": "projects/2012/07/04/minutemanclassic/index.html",
-    "revision": "1bed618aa918b82b123a190d1c265f7a"
+    "revision": "636cab78a4c6ae3fa7fb2112832f61ea"
   },
   {
     "url": "projects/2012/09/15/digital-media-commons/index.html",
-    "revision": "1248d03eb10b68f28d062898a6b6b3f7"
+    "revision": "680bec29ec65738cf1a8bd2b19312996"
   },
   {
     "url": "projects/2013/07/01/library-solr-search/index.html",
-    "revision": "4c937e2aebace7a41a50543cbd858707"
+    "revision": "485bcb2c2a100ba3304a5379edd2d7e5"
   },
   {
     "url": "projects/2013/07/17/scholor-one-search/index.html",
-    "revision": "68aede8f83c6569bd39c909351284f8f"
+    "revision": "ad49c5b8b94c942d20667b4f7992629a"
   },
   {
     "url": "projects/2013/08/21/drs/index.html",
-    "revision": "74ea862f572dbc13729d02906661a471"
+    "revision": "2e3fbb229053bc18e275e8a4d86f588f"
   },
   {
     "url": "projects/2013/11/30/sinberbest/index.html",
-    "revision": "85f95c987507dad3acf204030717fcd6"
+    "revision": "239ebc718e45d0fce8034a65e2129b22"
   },
   {
     "url": "projects/2014/01/01/greenbiz/index.html",
-    "revision": "8eb6fb9cdd43fc8dbfadce641a587efa"
+    "revision": "7162104d6bdf76239b3142a2870fa81c"
   },
   {
     "url": "projects/2014/02/01/bookshare/index.html",
-    "revision": "7e6a5820d526660d6b1ae82cb3419cab"
+    "revision": "4ce8392694d589bab55f584f1f10e021"
   },
   {
     "url": "projects/2014/02/01/cvt-angular/index.html",
-    "revision": "9bd10d460f15027c9b53f10ebe5ea5f9"
+    "revision": "4e9220aaadd10756d21260184b518404"
   },
   {
     "url": "projects/2014/02/01/kalatheme/index.html",
-    "revision": "d02a81a2a519300c6254996a16aa8683"
+    "revision": "c9cebbd37ce5a793d31fc726f5a21040"
   },
   {
     "url": "projects/index.html",
@@ -700,3 +704,4 @@ workboxSW.precache(fileManifest);
 workboxSW.router.registerRoute(/https:\/\/unpkg.com/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
 workboxSW.router.registerRoute(/https:\/\/fonts.googleapis.com\//, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
 workboxSW.router.registerRoute(/https:\/\/fonts.gstatic.com\//, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
+workboxSW.router.registerRoute(/https:\/\/www.google-analytics.com\/analytics.js/, workboxSW.strategies.staleWhileRevalidate({}), 'GET');
