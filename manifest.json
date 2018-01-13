@@ -1,0 +1,15 @@
+{
+  "lang": "en",
+  "background_color": "#f8f8f8",
+  "name": "Steven Bassett",
+  "short_name": "bassettsj",
+  "display": "standalone",
+  "start_url": "/?utm_source=homescreen",
+  "icons": [
+    {
+      "src": "/apple-touch-icon-114x114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    }
+  ]
+}
