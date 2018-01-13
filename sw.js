@@ -512,7 +512,7 @@ const fileManifest = [
   },
   {
     "url": "assets/js/main.pkg.js",
-    "revision": "1657551d4350e86cfee81b12c57df29d"
+    "revision": "80d09c77d807c6f59f6e4146c4299527"
   },
   {
     "url": "blogging/2013/01/13/hello-world/index.html",
