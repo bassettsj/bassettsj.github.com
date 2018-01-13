@@ -3,6 +3,7 @@ export default {
   paths: {
     assets: './assets',
     scss: [  './_sass/**/*.scss'],
-    jekyll: [ './_posts/**/*.md']
+    jekyll: [ './_posts/**/*.md'],
+    swDist: './_site',
   }
 }

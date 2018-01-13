@@ -35,4 +35,4 @@ gulp.task('dev', ['watch', 'serve'])
 
 gulp.task('default', ['styles', 'scripts', 'jekyll', 'html'])
 
-gulp.task('build', ['styles', 'scripts', 'jekyll', 'html', 'critical', 'images']);
+gulp.task('build', ['styles', 'scripts', 'jekyll', 'html', 'critical', 'images', 'service-worker']);
