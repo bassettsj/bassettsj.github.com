@@ -4,11 +4,19 @@ import '../bower_components/prismjs/components/prism-bash'
 
 function onLoad () {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(registration => {
-      console.log('SW registered: ', registration);
-    }).catch(registrationError => {
-      console.log('SW registration failed: ', registrationError);
-    });
+    if (location.protocol !== 'https') {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (const registration of registrations) {
+          registration.unregister();
+        }
+      });
+    } else {
+      navigator.serviceWorker.register('/sw.js').then(registration => {
+        console.log('SW registered: ', registration);
+      }).catch(registrationError => {
+        console.log('SW registration failed: ', registrationError);
+      });
+    }
   }
   global.Prism.highlightAll()
   window.removeEventListener('load', onLoad)

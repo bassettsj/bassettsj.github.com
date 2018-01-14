@@ -14,7 +14,7 @@ gulp.task('service-worker', ['styles', 'scripts', 'jekyll', 'html', 'critical', 
     ],
     runtimeCaching: [
       {
-        urlPattern: /(bassettsj\.github\.io|bassettsj\.me)/,
+        urlPattern: /(bassettsj\.github\.io|bassettsj\.me|(\/))/,
         handler: 'staleWhileRevalidate',
       },
       {
