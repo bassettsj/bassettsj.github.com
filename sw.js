@@ -24,7 +24,7 @@ const fileManifest = [
   },
   {
     "url": "assets/js/main.pkg.js",
-    "revision": "0814f0df11d6d7ac58c51788761c6f7a"
+    "revision": "228b08d6a2aad6cc07230ffe0e06a1fc"
   },
   {
     "url": "assets/css/i.css",
