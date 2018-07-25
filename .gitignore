@@ -19,5 +19,4 @@ resume_steven
 _cache/flickr/*
 .sass-cache
 
-
-bower_components
+*.log

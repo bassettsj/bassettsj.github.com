@@ -51,10 +51,15 @@
     "minifyify": "^7.0.3",
     "pretty-hrtime": "^1.0.0",
     "require-dir": "^0.3.0",
+    "scut": "1.2.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.3.1",
     "workbox-build": "^2.1.2"
   },
-  "homepage": "https://github.com/bassettsj/bassettsj.github.com"
+  "homepage": "https://github.com/bassettsj/bassettsj.github.com",
+  "dependencies": {
+    "perfume.js": "^0.8.0",
+    "prismjs": "^1.15.0"
+  }
 }

@@ -1,6 +1,14 @@
-import '../bower_components/prismjs/prism.js'
-import '../bower_components/prismjs/components/prism-coffeescript'
-import '../bower_components/prismjs/components/prism-bash'
+import 'prismjs/prism.js';
+import 'prismjs/components/prism-coffeescript';
+import 'prismjs/components/prism-bash';
+import Perfume from 'perfume.js';
+
+const perfume = new Perfume({
+  googleAnalytics: true,
+  firstPaint: true,
+  firstContentfulPaint: true,
+  timeToInteractive: true,
+});
 
 function onLoad () {
   if ('serviceWorker' in navigator) {

@@ -8,7 +8,7 @@ import browserSync from '../browser-sync'
 gulp.task('styles', () => {
   gulp.src(config.paths.scss)
     .pipe(sass({
-      includePaths: ['./bower_components'],
+      includePaths: ['node_modules'],
       sourcemap: true
     }))
     .pipe(prefix())
