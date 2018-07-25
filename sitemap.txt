@@ -1,8 +1,8 @@
 
 https://bassettsj.github.io/atom.xml
-https://bassettsj.github.io/archive/
-https://bassettsj.github.io/search/
 https://bassettsj.github.io/projects/
+https://bassettsj.github.io/search/
+https://bassettsj.github.io/archive/
 https://bassettsj.github.io/info/
 https://bassettsj.github.io/
 https://bassettsj.github.io/manifest.json
