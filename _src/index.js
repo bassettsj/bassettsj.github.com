@@ -4,7 +4,10 @@ import 'prismjs/components/prism-bash';
 import Perfume from 'perfume.js';
 
 const perfume = new Perfume({
-  googleAnalytics: true,
+  googleAnalytics: {
+    enable: true,
+    timingVar: document.title || 'Steven Bassett',
+  },
   firstPaint: true,
   firstContentfulPaint: true,
   timeToInteractive: true,
